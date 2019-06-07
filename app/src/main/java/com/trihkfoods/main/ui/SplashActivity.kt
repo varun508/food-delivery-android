@@ -9,7 +9,7 @@ class SplashActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // navigate to the main activity after all the pre-processing is done
-        startActivity(Intent(this, MainActivity::class.java))
+        // navigate to the GetStarted activity after all the pre-processing is done
+        startActivity(Intent(this, GetStartedActivity::class.java))
     }
 }
