@@ -1,4 +1,4 @@
-package com.trihkfoods.main
+package com.trihkfoods.main.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,6 +10,6 @@ class SplashActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
 
         // navigate to the main activity after all the pre-processing is done
-        startActivity(Intent(this,MainActivity::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
     }
 }
