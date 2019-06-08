@@ -13,5 +13,9 @@
         <item name="android:windowBackground">@drawable/background_splash</item>
     </style>
 
+    <style name="OnBoardingTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
 
 </resources>

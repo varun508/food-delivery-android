@@ -3,7 +3,8 @@ package com.trihkfoods.main.ui.screens
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.trihkfoods.main.R
-import com.trihkfoods.main.utils.changeStatusBarColor
+import kotlinx.android.synthetic.main.activity_get_started.*
+
 
 class GetStartedActivity : AppCompatActivity() {
 
@@ -12,8 +13,5 @@ class GetStartedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_started)
-
-        // Change the status bar color to white on API >= 23 (Android Marshmallow)
-        changeStatusBarColor(mStatusBarColor)
     }
 }
