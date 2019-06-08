@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "797334286",
+    "firebase_url": "https://trihk-android.firebaseio.com",
+    "project_id": "trihk-android",
+    "storage_bucket": "trihk-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797334286:android:6e850b47daa8c627",
+        "android_client_info": {
+          "package_name": "com.trihkfoods.main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797334286-job8mphjhgvqk4j2nnkg2e2ueb6ojt5o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.trihkfoods.main",
+            "certificate_hash": "06f0158df7df0c4d86f98bee13348493d7dd3f8d"
+          }
+        },
+        {
+          "client_id": "797334286-26rfhftd4g20o0mhonbaobmv3q0d873g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD38iu_WtllwouxKjjPCaH6O_5ZmZt_r1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797334286-26rfhftd4g20o0mhonbaobmv3q0d873g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

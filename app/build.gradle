@@ -7,8 +7,6 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        renderscriptTargetApi 28
-        renderscriptSupportModeEnabled true
         applicationId "com.trihkfoods.main"
         minSdkVersion 19
         targetSdkVersion 28
@@ -41,7 +39,11 @@ dependencies {
     // Library to add blur effect to views
     implementation "com.github.mmin18:realtimeblurview:$blurviewVersion"
 
+    // Firebase dependencies
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+apply plugin: 'com.google.gms.google-services'

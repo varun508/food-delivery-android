@@ -8,8 +8,6 @@ import kotlinx.android.synthetic.main.activity_get_started.*
 
 class GetStartedActivity : AppCompatActivity() {
 
-    private val mStatusBarColor = R.color.white
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_started)
