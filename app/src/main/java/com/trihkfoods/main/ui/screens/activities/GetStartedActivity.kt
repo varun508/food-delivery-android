@@ -13,11 +13,20 @@ import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
 import com.trihkfoods.main.utils.debugLog
 import kotlinx.android.synthetic.main.activity_get_started.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlin.coroutines.CoroutineContext
 
 
-class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
+class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, CoroutineScope {
 
     private val tag = "GetStartedActivity"
+
+
+    private val job = Job()
+    override val coroutineContext: CoroutineContext
+        get() = job + Dispatchers.Main
 
     private val images = arrayOf(R.drawable.gs_image_a, R.drawable.gs_image_b, R.drawable.gs_image_c)
     private val titles = arrayOf(
@@ -40,6 +49,7 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
         autoSlidingViewPagerAgs?.run {
             adapter = GetStartedPagerAdapter(this@GetStartedActivity, images)
             addOnPageChangeListener(this@GetStartedActivity)
+            setupAutoPageTransition()
         }
     }
 
@@ -64,13 +74,12 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
      * and for below the deprecated method is used
      */
     @Suppress("DEPRECATION")
-    private fun getHtmlText(): Spanned {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
-        } else {
-            Html.fromHtml("&#8226;")
-        }
-    }
+    private fun getHtmlText() =
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
+            else
+                Html.fromHtml("&#8226;")
+
 
     override fun onPageScrollStateChanged(state: Int) {
     }
@@ -79,7 +88,6 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
     }
 
     override fun onPageSelected(position: Int) {
-        debugLog(tag, position.toString())
         textSwitcherAgs.setText(titles[position])
         selectDot(position)
     }

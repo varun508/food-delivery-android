@@ -6,6 +6,11 @@ import android.util.Log
 import androidx.core.view.size
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.trihkfoods.main.utils.debugLog
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class AutoSlidingViewPager(context: Context, attrs: AttributeSet) : ViewPager(context, attrs) {
 
@@ -21,10 +26,13 @@ class AutoSlidingViewPager(context: Context, attrs: AttributeSet) : ViewPager(co
     /**
      * Changes the current page after the timeout
      */
-    fun setupAutoPageTransition(time: Long) {
-        postDelayed({
-            val item = (currentItem + 1)/3
-            setCurrentItem(item, true)
-        }, time)
+    fun CoroutineScope.setupAutoPageTransition() {
+        launch(Dispatchers.Main) {
+            while (true) {
+                delay(3500)
+                val position = (currentItem + 1) % 3
+                setCurrentItem(position, true)
+            }
+        }
     }
 }
