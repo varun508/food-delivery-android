@@ -21,19 +21,18 @@ import kotlin.coroutines.CoroutineContext
 
 class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, CoroutineScope {
 
-    private val tag = "GetStartedActivity"
-
-
     private val job = Job()
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
 
     private val images = arrayOf(R.drawable.gs_image_a, R.drawable.gs_image_b, R.drawable.gs_image_c)
-    private val titles = arrayOf(
-            "Bored of the usual?\nLet's pump it up\nTRIHK it up"
-            , "Uncage variety of cuisines and chef specials"
-            , "Uncage your hunger for Traditional Recipe Inside Home Kitchen"
-    )
+    private val titles by lazy {
+        arrayOf(
+            getString(R.string.get_started_text_1),
+            getString(R.string.get_started_text_2),
+            getString(R.string.get_started_text_3)
+        )
+    }
     private var mDotViews: Array<TextView>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,17 +53,18 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
     }
 
     private fun addDotIndicator() {
-        mDotViews = arrayOf(TextView(this), TextView(this), TextView(this))
-        mDotViews?.forEach {
-            createDot(it)
-            dotLayoutAgs.addView(it)
+        mDotViews = arrayOf(TextView(this), TextView(this), TextView(this)).apply {
+            forEach {
+                createDot(it)
+                dotLayoutAgs.addView(it)
+            }
         }
     }
 
     private fun createDot(view: TextView) {
         view.run {
             text = getHtmlText()
-            textSize = 35f
+            textSize = 24f
             setTextColor(ContextCompat.getColor(this@GetStartedActivity, R.color.white_50))
         }
     }
@@ -75,10 +75,10 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
      */
     @Suppress("DEPRECATION")
     private fun getHtmlText() =
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
-            else
-                Html.fromHtml("&#8226;")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
+        else
+            Html.fromHtml("&#8226;")
 
 
     override fun onPageScrollStateChanged(state: Int) {

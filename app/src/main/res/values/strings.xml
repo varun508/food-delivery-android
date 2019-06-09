@@ -2,4 +2,8 @@
     <string name="app_name">Trihk</string>
 
     <string name="tag_get_started_activity">GetStartedActivity</string>
+
+    <string name="get_started_text_1">Bored of the usual?\nLet\'s pump it up\nTRIHK it up</string>
+    <string name="get_started_text_2">Uncage variety of cuisines and chef specials</string>
+    <string name="get_started_text_3">Uncage your hunger for Traditional Recipe Inside Home Kitchen</string>
 </resources>
