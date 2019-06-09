@@ -102,4 +102,8 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        autoSlidingViewPagerAgs.removeOnPageChangeListener(this)
+    }
 }
