@@ -2,26 +2,25 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rootView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.screens.GetStartedActivity">
 
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPagerAgs"
+    <com.trihkfoods.main.ui.widgets.viewpager.AutoSlidingViewPager
+        android:id="@+id/autoSlidingViewPagerAgs"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
     <com.github.mmin18.widget.RealtimeBlurView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="250dp"
-        app:realtimeBlurRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewPagerAgs"
+        app:layout_constraintBottom_toBottomOf="@+id/autoSlidingViewPagerAgs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:realtimeBlurRadius="10dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
