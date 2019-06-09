@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Trihk</string>
 
-    <string name="tag_get_started_activity"></string>
+    <string name="tag_get_started_activity">GetStartedActivity</string>
 </resources>
