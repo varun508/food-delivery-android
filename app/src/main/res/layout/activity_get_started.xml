@@ -10,9 +10,7 @@
     <com.trihkfoods.main.ui.widgets.viewpager.AutoSlidingViewPager
         android:id="@+id/autoSlidingViewPagerAgs"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_height="match_parent" />
 
 
     <com.github.mmin18.widget.RealtimeBlurView
@@ -64,7 +62,7 @@
 
     <LinearLayout
         android:id="@+id/dotLayoutAgs"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
@@ -74,7 +72,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvSignInAgs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_regular"
@@ -88,17 +86,17 @@
         android:drawablePadding="@dimen/padding_regular"
         android:paddingEnd="@dimen/padding_big"
         android:paddingBottom="@dimen/padding_medium"
-        android:text="Sign in"
+        android:text="@string/sign_in"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSetLocationAgs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintStart_toEndOf="@+id/tvSetLocationAgs"
+        app:layout_constraintTop_toTopOf="@+id/tvSetLocationAgs" />
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvSetLocationAgs"
         android:drawableEnd="@drawable/ic_compass_solid_white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -113,10 +111,10 @@
         android:paddingTop="@dimen/padding_medium"
         android:paddingEnd="@dimen/padding_big"
         android:paddingBottom="@dimen/padding_medium"
-        android:text="Set delivery location"
+        android:text="@string/set_delivery_location"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/realtimeBlurViewAgs"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/tvSignInAgs"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 

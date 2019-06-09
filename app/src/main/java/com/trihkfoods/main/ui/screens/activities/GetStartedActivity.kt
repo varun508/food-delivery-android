@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
 import com.trihkfoods.main.utils.debugLog
+import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_get_started.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -41,7 +42,8 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
 
         setupViewPager()
         addDotIndicator()
-        onPageSelected(0)
+        tvSignInAgs.scaleOnPress()
+        tvSetLocationAgs.scaleOnPress()
     }
 
     private fun setupViewPager() {
@@ -50,6 +52,7 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
             addOnPageChangeListener(this@GetStartedActivity)
             setupAutoPageTransition()
         }
+        onPageSelected(0)
     }
 
     private fun addDotIndicator() {
@@ -64,7 +67,7 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
     private fun createDot(view: TextView) {
         view.run {
             text = getHtmlText()
-            textSize = 24f
+            textSize = 35f
             setTextColor(ContextCompat.getColor(this@GetStartedActivity, R.color.white_50))
         }
     }
