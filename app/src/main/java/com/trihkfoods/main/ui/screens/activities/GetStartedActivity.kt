@@ -1,11 +1,17 @@
 package com.trihkfoods.main.ui.screens.activities
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
+import android.text.Spanned
 import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.core.text.HtmlCompat
 import androidx.viewpager.widget.ViewPager
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
+import com.trihkfoods.main.utils.debugLog
 import kotlinx.android.synthetic.main.activity_get_started.*
 
 
@@ -19,13 +25,15 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
             , "Uncage variety of cuisines and chef specials"
             , "Uncage your hunger for Traditional Recipe Inside Home Kitchen"
     )
-    private val mDotViews: Array<TextView>? = null
+    private var mDotViews: Array<TextView>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_started)
 
         setupViewPager()
+        addDotIndicator()
+        onPageSelected(0)
     }
 
     private fun setupViewPager() {
@@ -36,6 +44,32 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
     }
 
     private fun addDotIndicator() {
+        mDotViews = arrayOf(TextView(this), TextView(this), TextView(this))
+        mDotViews?.forEach {
+            createDot(it)
+            dotLayoutAgs.addView(it)
+        }
+    }
+
+    private fun createDot(view: TextView) {
+        view.run {
+            text = getHtmlText()
+            textSize = 35f
+            setTextColor(ContextCompat.getColor(this@GetStartedActivity, R.color.white_50))
+        }
+    }
+
+    /**
+     * This API was deprecated in Android version N, for api above N the new method is being used
+     * and for below the deprecated method is used
+     */
+    @Suppress("DEPRECATION")
+    private fun getHtmlText(): Spanned {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
+        } else {
+            Html.fromHtml("&#8226;")
+        }
     }
 
     override fun onPageScrollStateChanged(state: Int) {
@@ -45,7 +79,16 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
     }
 
     override fun onPageSelected(position: Int) {
+        debugLog(tag, position.toString())
         textSwitcherAgs.setText(titles[position])
+        selectDot(position)
+    }
+
+    private fun selectDot(position: Int) {
+        mDotViews?.forEachIndexed { index, textView ->
+            if (index == position) textView.setTextColor(ContextCompat.getColor(this@GetStartedActivity, R.color.white))
+            else textView.setTextColor(ContextCompat.getColor(this@GetStartedActivity, R.color.white_50))
+        }
     }
 
 }

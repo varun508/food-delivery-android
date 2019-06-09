@@ -22,7 +22,6 @@ class AutoSlidingViewPager(context: Context, attrs: AttributeSet) : ViewPager(co
      * Changes the current page after the timeout
      */
     fun setupAutoPageTransition(time: Long) {
-        Log.d("size",size.toString())
         postDelayed({
             val item = (currentItem + 1)/3
             setCurrentItem(item, true)
