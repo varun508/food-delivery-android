@@ -12,17 +12,17 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".ui.screens.GetStartedActivity"
+            android:name=".ui.screens.activities.GetStartedActivity"
             android:theme="@style/GetStartedTheme" />
         <activity
-            android:name=".ui.screens.SplashActivity"
+            android:name=".ui.screens.activities.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.screens.MainActivity" />
+        <activity android:name=".ui.screens.activities.MainActivity" />
     </application>
 
 </manifest>

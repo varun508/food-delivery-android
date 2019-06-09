@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.screens.GetStartedActivity">
+    tools:context=".ui.screens.activities.GetStartedActivity">
 
 
     <com.trihkfoods.main.ui.widgets.viewpager.AutoSlidingViewPager
@@ -14,13 +14,55 @@
 
 
     <com.github.mmin18.widget.RealtimeBlurView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="250dp"
+        android:id="@+id/realtimeBlurViewAgs"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:maxHeight="350dp"
         app:layout_constraintBottom_toBottomOf="@+id/autoSlidingViewPagerAgs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:realtimeBlurRadius="10dp" />
+        app:realtimeBlurRadius="25dp"
+        app:realtimeOverlayColor="#3bbb" />
 
+    <TextSwitcher
+        android:id="@+id/textSwitcherAgs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="72dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/manrope_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/manrope_bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </TextSwitcher>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/dotLayoutAgs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/realtimeBlurViewAgs" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

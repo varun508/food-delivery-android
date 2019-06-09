@@ -6,6 +6,8 @@
     <ImageView
         android:id="@+id/imageViewSlideItemLgs"
         android:layout_width="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
         android:layout_height="match_parent" />
 
 </FrameLayout>

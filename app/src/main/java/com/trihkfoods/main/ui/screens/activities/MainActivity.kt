@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.screens
+package com.trihkfoods.main.ui.screens.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

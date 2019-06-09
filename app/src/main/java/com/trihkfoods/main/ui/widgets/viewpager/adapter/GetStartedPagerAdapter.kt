@@ -9,10 +9,9 @@ import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import com.squareup.picasso.Picasso
 import com.trihkfoods.main.R
-import com.trihkfoods.main.ui.widgets.viewpager.adapterdata.GetStartedItem
 import java.lang.Exception
 
-class GetStartedPagerAdapter(context: Context, private val items: Array<GetStartedItem>) : PagerAdapter() {
+class GetStartedPagerAdapter(context: Context, private val images: Array<Int>) : PagerAdapter() {
 
     private val mLayoutInflater = LayoutInflater.from(context)
 
@@ -24,19 +23,22 @@ class GetStartedPagerAdapter(context: Context, private val items: Array<GetStart
         }
     }
 
-    override fun getCount() = items.size
+    override fun getCount() = images.size
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val resourceToInflate = R.layout.layout_get_started_slide_item
         val view = mLayoutInflater.inflate(resourceToInflate, container, false)
 
         val backgroundImageView = view.findViewById<ImageView>(R.id.imageViewSlideItemLgs)
-        val image = items[position].backgroundImage
 
         // Using picasso to load and cache the image for the next use
-        Picasso.get().load(image).into(backgroundImageView)
+        Picasso.get().load(images[position]).into(backgroundImageView)
 
         container.addView(view)
         return view
+    }
+
+    override fun destroyItem(container: ViewGroup, position: Int, obj: Any) {
+        container.removeView(obj as FrameLayout)
     }
 }
