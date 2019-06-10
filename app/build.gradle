@@ -40,6 +40,7 @@ dependencies {
     def picassoVersion = '2.71828'
     def coroutinesVersion = '1.3.0-M1'
     def stethoVersion = '1.5.1'
+    def navigationVersion = '2.0.0'
 
     // Library to add blur effect to views
     implementation "com.github.mmin18:realtimeblurview:$blurviewVersion"
@@ -55,6 +56,10 @@ dependencies {
 
     // Facebook stetho debugging library
     implementation "com.facebook.stetho:stetho:$stethoVersion"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 
 
     testImplementation 'junit:junit:4.12'
