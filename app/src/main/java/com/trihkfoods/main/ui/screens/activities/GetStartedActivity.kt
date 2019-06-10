@@ -1,17 +1,15 @@
 package com.trihkfoods.main.ui.screens.activities
 
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
-import android.text.Spanned
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import androidx.viewpager.widget.ViewPager
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
-import com.trihkfoods.main.utils.debugLog
 import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_get_started.*
 import kotlinx.coroutines.CoroutineScope
@@ -42,6 +40,7 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
 
         setupViewPager()
         addDotIndicator()
+        onPageSelected(0)
         tvSignInAgs.scaleOnPress()
         tvSetLocationAgs.scaleOnPress()
     }
@@ -52,7 +51,6 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
             addOnPageChangeListener(this@GetStartedActivity)
             setupAutoPageTransition()
         }
-        onPageSelected(0)
     }
 
     private fun addDotIndicator() {
