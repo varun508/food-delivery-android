@@ -46,3 +46,7 @@ fun View.scaleOnPress() {
         }
     }
 }
+
+fun View.onClick(block: () -> Unit) {
+    setOnClickListener { block() }
+}

@@ -10,6 +10,7 @@ import androidx.core.text.HtmlCompat
 import androidx.viewpager.widget.ViewPager
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
+import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_get_started.*
 import kotlinx.coroutines.CoroutineScope
@@ -24,14 +25,16 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
 
-    private val images = arrayOf(R.drawable.gs_image_a, R.drawable.gs_image_b, R.drawable.gs_image_c)
-    private val titles by lazy {
+    private val mViewPagerImages = arrayOf(R.drawable.gs_image_a, R.drawable.gs_image_b, R.drawable.gs_image_c)
+    private val mPageTitles by lazy {
         arrayOf(
             getString(R.string.get_started_text_1),
             getString(R.string.get_started_text_2),
             getString(R.string.get_started_text_3)
         )
     }
+    private val mColorWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white) }
+    private val mColorAlphaWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white_50) }
     private var mDotViews: Array<TextView>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,13 +44,12 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
         setupViewPager()
         addDotIndicator()
         onPageSelected(0)
-        tvSignInAgs.scaleOnPress()
-        tvSetLocationAgs.scaleOnPress()
+        setupClickEvents()
     }
 
     private fun setupViewPager() {
         autoSlidingViewPagerAgs?.run {
-            adapter = GetStartedPagerAdapter(this@GetStartedActivity, images)
+            adapter = GetStartedPagerAdapter(this@GetStartedActivity, mViewPagerImages)
             addOnPageChangeListener(this@GetStartedActivity)
             setupAutoPageTransition()
         }
@@ -66,7 +68,7 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
         view.run {
             text = getHtmlText()
             textSize = 35f
-            setTextColor(ContextCompat.getColor(this@GetStartedActivity, R.color.white_50))
+            setTextColor(mColorWhite)
         }
     }
 
@@ -82,6 +84,28 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
             Html.fromHtml("&#8226;")
 
 
+    private fun selectDot(position: Int) {
+        mDotViews?.forEachIndexed { index, textView ->
+            if (index == position) textView.setTextColor(mColorWhite)
+            else textView.setTextColor(mColorAlphaWhite)
+        }
+    }
+
+    private fun setupClickEvents() {
+        tvSignInAgs?.run {
+            scaleOnPress()
+            onClick {
+                // Navigate to AuthenticationActivity
+            }
+        }
+        tvSetLocationAgs?.run {
+            scaleOnPress()
+            onClick {
+                // Navigate to Location picker
+            }
+        }
+    }
+
     override fun onPageScrollStateChanged(state: Int) {
     }
 
@@ -89,15 +113,8 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
     }
 
     override fun onPageSelected(position: Int) {
-        textSwitcherAgs.setText(titles[position])
+        textSwitcherAgs.setText(mPageTitles[position])
         selectDot(position)
-    }
-
-    private fun selectDot(position: Int) {
-        mDotViews?.forEachIndexed { index, textView ->
-            if (index == position) textView.setTextColor(ContextCompat.getColor(this@GetStartedActivity, R.color.white))
-            else textView.setTextColor(ContextCompat.getColor(this@GetStartedActivity, R.color.white_50))
-        }
     }
 
     override fun onStop() {
