@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
-import androidx.viewpager.widget.ViewPager
 import com.trihkfoods.main.R
+import com.trihkfoods.main.ui.eventlisteners.BasePageChangeListener
 import com.trihkfoods.main.ui.screens.authentication.AuthenticationActivity
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
 import com.trihkfoods.main.utils.navigateTo
@@ -22,7 +22,7 @@ import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
 
-class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, CoroutineScope {
+class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, CoroutineScope {
 
     private val job = Job()
     override val coroutineContext: CoroutineContext
@@ -53,7 +53,6 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
     private fun setupViewPager() {
         autoSlidingViewPagerAgs?.run {
             adapter = GetStartedPagerAdapter(this@GetStartedActivity, mViewPagerImages)
-            addOnPageChangeListener(this@GetStartedActivity)
             setupAutoPageTransition()
         }
     }
@@ -104,12 +103,6 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
         }
     }
 
-    override fun onPageScrollStateChanged(state: Int) {
-    }
-
-    override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-    }
-
     override fun onPageSelected(position: Int) {
         textSwitcherAgs.setText(mPageTitles[position])
         selectDot(position)
@@ -118,5 +111,10 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
     override fun onStop() {
         super.onStop()
         autoSlidingViewPagerAgs.removeOnPageChangeListener(this)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        autoSlidingViewPagerAgs.addOnPageChangeListener(this)
     }
 }
