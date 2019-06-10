@@ -3,13 +3,16 @@ package com.trihkfoods.main.ui.screens
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import androidx.viewpager.widget.ViewPager
 import com.trihkfoods.main.R
+import com.trihkfoods.main.ui.screens.authentication.AuthenticationActivity
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
+import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_get_started.*
@@ -94,15 +97,10 @@ class GetStartedActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, 
     private fun setupClickEvents() {
         tvSignInAgs?.run {
             scaleOnPress()
-            onClick {
-                // Navigate to AuthenticationActivity
-            }
+            onClick { navigateTo(AuthenticationActivity::class.java) }
         }
         tvSetLocationAgs?.run {
             scaleOnPress()
-            onClick {
-                // Navigate to Location picker
-            }
         }
     }
 

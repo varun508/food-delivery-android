@@ -4,15 +4,13 @@
     <set>
         <objectAnimator
                 android:propertyName="scaleX"
-                android:duration="800"
+                android:duration="150"
                 android:valueTo="1f"
-                android:startOffset="300"
                 android:valueType="floatType"/>
         <objectAnimator
                 android:propertyName="scaleY"
-                android:duration="800"
+                android:duration="150"
                 android:valueTo="1f"
-                android:startOffset="300"
                 android:valueType="floatType"/>
     </set>
 </set>
