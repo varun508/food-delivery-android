@@ -69,25 +69,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/txt_pin_entry"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/margin_biggest"
-        android:background="@drawable/curved_corner_rectangle_white_50"
-        android:fontFamily="@font/manrope_semibold"
-        android:hint="Enter OTP"
-        android:inputType="phone"
+        android:cursorVisible="true"
+        android:digits="1234567890"
+        android:inputType="number"
+        android:layoutDirection="ltr"
         android:maxLength="6"
-        android:padding="@dimen/padding_medium"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textIsSelectable="false"
         android:textSize="@dimen/text_size_body_regular"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:pinAnimationType="popIn"
+        app:pinBackgroundDrawable="@drawable/curved_corner_rectangle_white_50" />
 
 
     <TextView
@@ -110,8 +110,8 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pin_entry"
+        app:layout_constraintVertical_bias="1.0" />
 
 
     <TextView
