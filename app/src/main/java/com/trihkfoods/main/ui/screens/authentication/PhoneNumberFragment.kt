@@ -21,7 +21,7 @@ class PhoneNumberFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         tvContinueFpn.scaleOnPress()
         tvContinueFpn.onClick {
-            findNavController().navigate(R.id.action_phoneNumberFragment_to_phoneVerificationFragment)
+            findNavController().navigate(R.id.action_phoneNumberFragment_to_registrationFragment)
         }
     }
 }
