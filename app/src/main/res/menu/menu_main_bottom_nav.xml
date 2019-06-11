@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:icon="@drawable/ic_hamburger_solid_black"
+        android:title="Trihk" />
+
+
+    <item
+        android:icon="@drawable/ic_search_solid_black"
+        android:title="Explore" />
+
+
+    <item
+        android:icon="@drawable/ic_shopping_bag_solid_black"
+        android:title="Cart" />
+
+    <item
+        android:icon="@drawable/ic_user_solid_black"
+        android:title="Account" />
+
+
+</menu>
