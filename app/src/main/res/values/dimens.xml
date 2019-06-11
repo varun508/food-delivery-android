@@ -13,6 +13,7 @@
     <dimen name="margin_big">20.0dip</dimen>
     <dimen name="margin_bigger">24.0dip</dimen>
     <dimen name="margin_biggest">34.0dip</dimen>
+    <dimen name="margin_huge">44.0dip</dimen>
     <dimen name="margin_medium">16.0dip</dimen>
     <dimen name="margin_regular">8.0dip</dimen>
     <dimen name="margin_small">4.0dip</dimen>

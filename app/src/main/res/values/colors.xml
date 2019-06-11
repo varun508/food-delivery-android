@@ -5,6 +5,8 @@
     <color name="trihk_yellow">#F9B33D</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    
+
     <color name="white_50">#66FFFFFF</color>
+    <color name="white_80">#AAFFFFFF</color>
+    <color name="light_gray">#EEEEEE</color>
 </resources>
