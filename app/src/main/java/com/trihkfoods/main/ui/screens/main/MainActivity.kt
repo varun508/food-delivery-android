@@ -8,6 +8,7 @@ import com.trihkfoods.main.ui.screens.main.account.AccountFragment
 import com.trihkfoods.main.ui.screens.main.cart.CartFragment
 import com.trihkfoods.main.ui.screens.main.explore.ExploreFragment
 import com.trihkfoods.main.ui.screens.main.food.FoodFragment
+import com.trihkfoods.main.utils.changeStatusBarColor
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,5 +30,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        changeStatusBarColor(R.color.white)
     }
 }

@@ -15,11 +15,11 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/mainBottomNav"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:backgroundTint="@color/white"
+        app:itemIconTint="@color/icon_tint_bottom_navigation"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_main_bottom_nav" />
 
