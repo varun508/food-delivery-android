@@ -9,4 +9,5 @@
     <color name="white_50">#66FFFFFF</color>
     <color name="white_80">#AAFFFFFF</color>
     <color name="light_gray">#EEEEEE</color>
+    <color name="gray">#AAAAAA</color>
 </resources>

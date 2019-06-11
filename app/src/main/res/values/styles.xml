@@ -24,4 +24,10 @@
         <item name="colorAccent">@color/white</item>
     </style>
 
+    <!-- Authentication screen theme. -->
+    <style name="BottomNavigationItemText">
+        <item name="android:fontFamily">@font/manrope_bold</item>
+    </style>
+
+
 </resources>
