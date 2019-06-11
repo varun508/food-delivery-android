@@ -27,4 +27,10 @@
     <dimen name="horizontal_guideline_regular">16dp</dimen>
     <dimen name="horizontal_guideline_small">10dp</dimen>
 
+    <dimen name="text_size_body_small">14sp</dimen>
+    <dimen name="text_size_body_regular">16sp</dimen>
+    <dimen name="text_size_body_big">18sp</dimen>
+    <dimen name="text_size_title_regular">20sp</dimen>
+    <dimen name="text_size_heading_regular">22sp</dimen>
+
 </resources>

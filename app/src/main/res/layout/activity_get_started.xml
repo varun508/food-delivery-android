@@ -44,7 +44,7 @@
             android:fontFamily="@font/manrope_bold"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textSize="@dimen/text_size_body_big" />
 
         <TextView
             android:layout_width="match_parent"
@@ -56,7 +56,7 @@
             android:fontFamily="@font/manrope_bold"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="17sp" />
+            android:textSize="@dimen/text_size_body_big" />
 
     </TextSwitcher>
 
