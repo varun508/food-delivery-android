@@ -15,14 +15,14 @@ class MainActivity : AppCompatActivity() {
     private val exploreFragment = ExploreFragment()
     private val cartFragment = CartFragment()
     private val accountFragment = AccountFragment()
-    private var lastFragmentId = R.id.food_fragment
+    private var lastFragmentId = R.id.action_food_fragment
 
     private val fragmentTags by lazy {
         mapOf<Int, String>(
-                R.id.food_fragment to foodFragment.javaClass.simpleName,
-                R.id.feed_fragment to mFeedFragment.javaClass.simpleName,
-                R.id.group_fragment to mGroupFragment.javaClass.simpleName,
-                R.id.notification_fragment to mNotificationFragment.javaClass.simpleName
+                R.id.action_food_fragment to foodFragment.javaClass.simpleName,
+                R.id.action_explore_fragment to exploreFragment.javaClass.simpleName,
+                R.id.action_cart_fragment to cartFragment.javaClass.simpleName,
+                R.id.action_account_fragment to accountFragment.javaClass.simpleName
         )
     }
 

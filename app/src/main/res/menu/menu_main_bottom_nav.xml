@@ -4,20 +4,24 @@
 
     <item
         android:icon="@drawable/ic_hamburger_solid_black"
-        android:title="Trihk" />
+        android:title="Trihk"
+        android:id="@+id/action_food_fragment"/>
 
 
     <item
         android:icon="@drawable/ic_search_solid_black"
+        android:id="@+id/action_explore_fragment"
         android:title="Explore" />
 
 
     <item
         android:icon="@drawable/ic_shopping_bag_solid_black"
+        android:id="@+id/action_cart_fragment"
         android:title="Cart" />
 
     <item
         android:icon="@drawable/ic_user_solid_black"
+        android:id="@+id/action_account_fragment"
         android:title="Account" />
 
 
