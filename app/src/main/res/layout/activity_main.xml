@@ -17,6 +17,9 @@
         android:id="@+id/mainBottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom" />
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_main_bottom_nav" />
 
 </FrameLayout>
