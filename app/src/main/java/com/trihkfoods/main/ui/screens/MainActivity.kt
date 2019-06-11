@@ -2,6 +2,7 @@ package com.trihkfoods.main.ui.screens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.trihkfoods.main.R
 
 class MainActivity : AppCompatActivity() {
 
