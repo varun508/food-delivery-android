@@ -42,6 +42,7 @@ dependencies {
     def coroutinesVersion = '1.3.0-M1'
     def stethoVersion = '1.5.1'
     def navigationVersion = '2.0.0'
+    def picassoTransformationVersion = '2.2.1'
 
     // Library to add blur effect to views
     implementation "com.github.mmin18:realtimeblurview:$blurviewVersion"
@@ -51,6 +52,9 @@ dependencies {
 
     // Image loading library
     implementation "com.squareup.picasso:picasso:$picassoVersion"
+
+    // Picasso image transformations
+    implementation "jp.wasabeef:picasso-transformations:$picassoTransformationVersion"
 
     // Kotlin coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
