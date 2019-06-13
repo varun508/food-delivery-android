@@ -14,10 +14,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val foodFragment = FoodFragment()
-    private val exploreFragment = ExploreFragment()
-    private val cartFragment = CartFragment()
-    private val accountFragment = AccountFragment()
+    private val foodFragment by lazy { FoodFragment() }
+    private val exploreFragment by lazy { ExploreFragment() }
+    private val cartFragment by lazy { CartFragment() }
+    private val accountFragment by lazy { AccountFragment() }
     private var lastFragmentId = R.id.action_food_fragment
 
     private val fragmentTags by lazy {

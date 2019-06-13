@@ -31,9 +31,9 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
     private val mViewPagerImages = arrayOf(R.drawable.gs_image_a, R.drawable.gs_image_b, R.drawable.gs_image_c)
     private val mPageTitles by lazy {
         arrayOf(
-                getString(R.string.get_started_text_1),
-                getString(R.string.get_started_text_2),
-                getString(R.string.get_started_text_3)
+            getString(R.string.get_started_text_1),
+            getString(R.string.get_started_text_2),
+            getString(R.string.get_started_text_3)
         )
     }
     private val mColorWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white) }
@@ -80,16 +80,15 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
      */
     @Suppress("DEPRECATION")
     private fun getHtmlText() =
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
-            else
-                Html.fromHtml("&#8226;")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
+        else
+            Html.fromHtml("&#8226;")
 
 
     private fun selectDot(position: Int) {
         mDotViews?.forEachIndexed { index, textView ->
-            if (index == position) textView.setTextColor(mColorWhite)
-            else textView.setTextColor(mColorAlphaWhite)
+            textView.setTextColor(if (index == position) mColorWhite else mColorAlphaWhite)
         }
     }
 
