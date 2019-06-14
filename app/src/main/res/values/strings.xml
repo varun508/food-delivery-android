@@ -9,4 +9,6 @@
 
     <string name="set_delivery_location">Set delivery location</string>
     <string name="sign_in">Sign in</string>
+    <string name="toolbar_your_location">Your location</string>
+    <string name="toolbar_text_offers">Offers</string>
 </resources>
