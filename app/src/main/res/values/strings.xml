@@ -3,9 +3,13 @@
 
     <string name="tag_get_started_activity">GetStartedActivity</string>
 
-    <string name="get_started_text_1">Bored of the usual?\nLet\'s pump it up\nTRIHK it up</string>
-    <string name="get_started_text_2">Uncage variety of cuisines and chef specials</string>
-    <string name="get_started_text_3">Uncage your hunger for Traditional Recipe Inside Home Kitchen</string>
+    <string name="get_started_title_text_1">No Minimum Order</string>
+    <string name="get_started_title_text_2">Live Order Tracking</string>
+    <string name="get_started_title_text_3">Lightning-Fast Delivery</string>
+
+    <string name="get_started_body_text_1">Order in for yourself or for the group, with no restrictions on order value</string>
+    <string name="get_started_body_text_2">Know where your order is at all times, from the restaurant to your doorstep</string>
+    <string name="get_started_body_text_3">Experience Trihk\'s superfast delivery for food delivered fresh and on time</string>
 
     <string name="set_delivery_location">Set delivery location</string>
     <string name="sign_in">Sign in</string>

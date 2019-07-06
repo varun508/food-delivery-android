@@ -28,7 +28,7 @@
         android:background="@drawable/curved_corner_bottom_rectangle_white"
         android:contentDescription="@null"
         android:padding="@dimen/padding_big"
-        android:src="@drawable/illustration_registration_form"
+        android:src="@drawable/image_getting_started_3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

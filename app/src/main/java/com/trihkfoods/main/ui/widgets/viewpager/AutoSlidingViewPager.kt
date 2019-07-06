@@ -29,7 +29,7 @@ class AutoSlidingViewPager(context: Context, attrs: AttributeSet) : ViewPager(co
     fun CoroutineScope.setupAutoPageTransition() {
         launch(Dispatchers.Main) {
             while (true) {
-                delay(3500)
+                delay(5000)
                 val position = (currentItem + 1) % 3
                 setCurrentItem(position, true)
             }

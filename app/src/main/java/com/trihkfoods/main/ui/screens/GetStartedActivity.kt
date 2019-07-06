@@ -3,7 +3,6 @@ package com.trihkfoods.main.ui.screens
 import android.os.Build
 import android.os.Bundle
 import android.text.Html
-import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -28,14 +27,23 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
 
-    private val mViewPagerImages = arrayOf(R.drawable.gs_image_a, R.drawable.gs_image_b, R.drawable.gs_image_c)
+    private val mViewPagerImages = arrayOf(R.drawable.image_getting_started_1, R.drawable.image_getting_started_2, R.drawable.image_getting_started_3)
     private val mPageTitles by lazy {
         arrayOf(
-            getString(R.string.get_started_text_1),
-            getString(R.string.get_started_text_2),
-            getString(R.string.get_started_text_3)
+                getString(R.string.get_started_title_text_1),
+                getString(R.string.get_started_title_text_2),
+                getString(R.string.get_started_title_text_3)
         )
     }
+
+    private val mPageBodyText by lazy {
+        arrayOf(
+                getString(R.string.get_started_body_text_1),
+                getString(R.string.get_started_body_text_2),
+                getString(R.string.get_started_body_text_3)
+        )
+    }
+
     private val mColorWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white) }
     private val mColorAlphaWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white_50) }
     private var mDotViews: Array<TextView>? = null
@@ -80,10 +88,10 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
      */
     @Suppress("DEPRECATION")
     private fun getHtmlText() =
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-            Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
-        else
-            Html.fromHtml("&#8226;")
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
+            else
+                Html.fromHtml("&#8226;")
 
 
     private fun selectDot(position: Int) {
@@ -93,15 +101,12 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
     }
 
     private fun setupClickEvents() {
-        tvSignInAgs?.run {
-            scaleOnPress()
-            onClick { navigateTo(AuthenticationActivity::class.java) }
-        }
-        tvSetLocationAgs?.scaleOnPress()
+        tvSignInAgs?.run { onClick { navigateTo(AuthenticationActivity::class.java) } }
     }
 
     override fun onPageSelected(position: Int) {
-        textSwitcherAgs.setText(mPageTitles[position])
+        textSwitcherBodyAgs.setText(mPageBodyText[position])
+        textSwitcherTitleAgs.setText(mPageTitles[position])
         selectDot(position)
     }
 
