@@ -46,7 +46,7 @@ object ServiceGenerator {
     }
 
 
-    fun addBasicInterceptors() {
+    private fun addBasicInterceptors() {
         if (!client.interceptors().contains(httpLoggingInterceptor)) {
             client.addInterceptor(httpLoggingInterceptor)
         }
