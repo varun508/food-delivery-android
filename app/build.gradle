@@ -2,15 +2,17 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
+apply plugin: 'kotlin-kapt'
+
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.trihkfoods.main"
         renderscriptSupportModeEnabled true
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -43,7 +45,9 @@ dependencies {
     def retrofitVersion = '2.6.0'
     def stethoVersion = '1.5.1'
     def navigationVersion = '2.0.0'
+    def loggingInterceptorVersion = '3.11.0'
     def picassoTransformationVersion = '2.2.1'
+    def moshiVersion = '1.8.0'
 
     // Library to add blur effect to views
     implementation "com.github.mmin18:realtimeblurview:$blurviewVersion"
@@ -68,6 +72,10 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
 
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
+
 
     implementation('com.alimuzaffar.lib:pinentryedittext:2.0.6') {
         exclude group: 'androidx.appcompat', module: 'appcompat'

@@ -1,6 +1,7 @@
 package com.trihkfoods.main.data
 
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import java.util.concurrent.TimeUnit
 
@@ -16,19 +17,27 @@ object ServiceGenerator {
         .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
         .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)
         .retryOnConnectionFailure(false)
-        .build()
+
 
     private val retrofitBuilder = Retrofit.Builder()
         .baseUrl(BASE_URL)
-        .client(client)
 
     private val retrofit = retrofitBuilder.build()
 
-    private val httpLogginInterceptor =
+    private val httpLoggingInterceptor: HttpLoggingInterceptor = HttpLoggingInterceptor()
+        .setLevel(HttpLoggingInterceptor.Level.BASIC)
 
-    fun <T> createService(serviceClass: Class<T>) : T {
+
+    fun <T> createService(serviceClass: Class<T>): T {
 
     }
 
     fun <T> createService(serviceClass: Class<T>) = retrofit.create(serviceClass)
+
+
+    fun addBasicInterceptors(){
+        if(!client.interceptors().contains(httpLoggingInterceptor)){
+            client.
+        }
+    }
 }
