@@ -1,4 +1,4 @@
-package com.trihkfoods.main.data
+package com.trihkfoods.main.data.network
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -24,20 +24,27 @@ object ServiceGenerator {
 
     private val retrofit = retrofitBuilder.build()
 
-    private val httpLoggingInterceptor: HttpLoggingInterceptor = HttpLoggingInterceptor()
-        .setLevel(HttpLoggingInterceptor.Level.BASIC)
-
+    private val httpLoggingInterceptor: HttpLoggingInterceptor by lazy {
+        HttpLoggingInterceptor()
+            .setLevel(HttpLoggingInterceptor.Level.BASIC)
+    }
 
     fun <T> createService(serviceClass: Class<T>): T {
 
     }
 
-    fun <T> createService(serviceClass: Class<T>) = retrofit.create(serviceClass)
+    fun <T> createService(serviceClass: Class<T>, token: String?): T {
+
+        token?.run {
+
+        }
+        return retrofit.create(serviceClass)
+    }
 
 
-    fun addBasicInterceptors(){
-        if(!client.interceptors().contains(httpLoggingInterceptor)){
-            client.
+    fun addBasicInterceptors() {
+        if (!client.interceptors().contains(httpLoggingInterceptor)) {
+            client.addInterceptor(httpLoggingInterceptor)
         }
     }
 }
