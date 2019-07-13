@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_auth" app:startDestination="@id/phoneNumberFragment">
+    android:id="@+id/navigation_auth"
+    app:startDestination="@id/phoneNumberFragment">
 
-    <fragment android:id="@+id/phoneNumberFragment"
-              android:name="com.trihkfoods.main.ui.screens.authentication.PhoneNumberFragment"
-              android:label="PhoneNumberFragment">
-        <action android:id="@+id/action_phoneNumberFragment_to_phoneVerificationFragment"
-                app:destination="@id/phoneVerificationFragment" />
-        <action android:id="@+id/action_phoneNumberFragment_to_registrationFragment"
-                app:destination="@id/registrationFragment"/>
+    <fragment
+        android:id="@+id/phoneNumberFragment"
+        android:name="com.trihkfoods.main.ui.screens.authentication.PhoneNumberFragment"
+        android:label="PhoneNumberFragment">
+        <action
+            android:id="@+id/action_phoneNumberFragment_to_phoneVerificationFragment"
+            app:destination="@id/phoneVerificationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_phoneNumberFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
     </fragment>
-    <fragment android:id="@+id/phoneVerificationFragment"
-              android:name="com.trihkfoods.main.ui.screens.authentication.PhoneVerificationFragment"
-              android:label="PhoneVerificationFragment"/>
+    <fragment
+        android:id="@+id/phoneVerificationFragment"
+        android:name="com.trihkfoods.main.ui.screens.authentication.PhoneVerificationFragment"
+        android:label="PhoneVerificationFragment" />
     <fragment
         android:id="@+id/registrationFragment"
         android:name="com.trihkfoods.main.ui.screens.authentication.RegistrationFragment"
