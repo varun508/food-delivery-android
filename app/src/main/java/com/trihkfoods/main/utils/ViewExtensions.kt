@@ -4,6 +4,7 @@ import android.animation.AnimatorInflater
 import android.content.Context
 import android.view.MotionEvent
 import android.view.View
+import androidx.core.animation.doOnEnd
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.eventlisteners.ViewBoundTouchEventListener
 
@@ -18,7 +19,7 @@ fun View.scaleOnPress() {
         setTarget(this@scaleOnPress)
     }
 
-    setOnTouchListener(object : ViewBoundTouchEventListener() {
+    val listener = object : ViewBoundTouchEventListener() {
         override fun touchCancel() {
             scaleUp?.start()
         }
@@ -28,13 +29,14 @@ fun View.scaleOnPress() {
         }
 
         override fun touchUp() {
-            if (scaleDown?.isRunning == true)
-                scaleDown.pause()
-            performClick()
-            scaleDown?.resume()
             scaleUp?.start()
         }
-    })
+    }
+
+    setOnTouchListener(listener)
+
+
+    scaleUp?.doOnEnd { if (listener.mIsWithinView) performClick() }
 }
 
 fun View.onClick(block: () -> Unit) {

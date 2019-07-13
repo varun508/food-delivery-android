@@ -20,9 +20,6 @@ class PhoneVerificationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tvContinueFpn?.run {
-            scaleOnPress()
-            onClick { activity?.navigateTo(MainActivity::class.java) }
-        }
+
     }
 }

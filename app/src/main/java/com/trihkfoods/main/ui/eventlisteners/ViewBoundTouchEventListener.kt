@@ -7,7 +7,7 @@ import android.view.View
 
 abstract class ViewBoundTouchEventListener : View.OnTouchListener {
 
-    private var mIsWithinView: Boolean = false
+    var mIsWithinView: Boolean = false
 
     override fun onTouch(view: View, event: MotionEvent): Boolean {
         when (event.action) {
@@ -26,8 +26,8 @@ abstract class ViewBoundTouchEventListener : View.OnTouchListener {
 
             MotionEvent.ACTION_MOVE -> {
                 if (mIsWithinView && !isTouchInsideViewBounds(view, event)) {
-                    touchCancel()
                     mIsWithinView = false
+                    touchCancel()
                 }
                 return true
             }

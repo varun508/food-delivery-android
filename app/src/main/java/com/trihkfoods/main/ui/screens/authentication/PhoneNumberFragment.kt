@@ -19,9 +19,5 @@ class PhoneNumberFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tvContinueFpn?.run {
-            scaleOnPress()
-            onClick { findNavController().navigate(R.id.action_phoneNumberFragment_to_registrationFragment) }
-        }
     }
 }

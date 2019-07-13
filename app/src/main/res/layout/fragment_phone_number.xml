@@ -2,8 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/trihk_red">
+    android:layout_height="match_parent">
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -20,129 +19,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/vertical_guideline_big" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="350dp"
-        android:background="@drawable/curved_corner_bottom_rectangle_white"
-        android:contentDescription="@null"
-        android:padding="@dimen/padding_big"
-        android:src="@drawable/illustration_ask_phone_number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="@dimen/horizontal_guideline_regular" />
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_biggest"
-        android:fontFamily="@font/manrope_extrabold"
-        android:gravity="center"
-        android:text="Enter your mobile number"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_title_regular"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:fontFamily="@font/manrope_semibold"
-        android:gravity="center"
-        android:text="Mobile number helps us to reach you for booking and for awesome offers"
-        android:textColor="@color/white_80"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_biggest"
-        android:background="@drawable/curved_corner_rectangle_white_50"
-        android:fontFamily="@font/manrope_semibold"
-        android:hint="Your mobile number"
-        android:inputType="phone"
-        android:maxLength="10"
-        android:padding="@dimen/padding_medium"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="@dimen/text_size_body_regular"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_regular"
-        android:fontFamily="@font/manrope_semibold"
-        android:text="+91 -"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_body_regular"
-        app:layout_constraintBottom_toBottomOf="@+id/editText"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/editText" />
-
-
-    <TextView
-        android:id="@+id/tvContinueFpn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_biggest"
-        android:layout_marginBottom="@dimen/margin_big"
-        android:background="@drawable/curved_corner_rectangle_white"
-        android:drawableEnd="@drawable/ic_arrow_circle_right_solid_trihk_red"
-        android:drawablePadding="@dimen/padding_medium"
-        android:fontFamily="@font/manrope_bold"
-        android:gravity="end"
-        android:padding="@dimen/padding_medium"
-        android:text="Continue"
-        android:textColor="@color/trihk_red"
-        android:textSize="@dimen/text_size_body_regular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pin_entry"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:drawablePadding="@dimen/padding_medium"
-        android:fontFamily="@font/manrope_bold"
-        android:gravity="start"
-        android:padding="@dimen/padding_medium"
-        android:text="exit"
-        android:textColor="@color/white_80"
-        android:textSize="@dimen/text_size_body_regular"
-        app:layout_constraintBottom_toBottomOf="@+id/tvContinueFpn"
-        app:layout_constraintEnd_toStartOf="@+id/tvContinueFpn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/tvContinueFpn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

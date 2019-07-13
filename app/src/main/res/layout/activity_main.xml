@@ -17,7 +17,6 @@
         android:id="@+id/mainBottomNav"
         android:layout_width="match_parent"
         app:itemTextColor="@color/item_tint_bottom_navigation"
-        app:itemHorizontalTranslationEnabled="false"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:backgroundTint="@color/white"

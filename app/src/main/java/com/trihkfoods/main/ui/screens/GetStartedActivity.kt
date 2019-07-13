@@ -27,26 +27,36 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
 
-    private val mViewPagerImages = arrayOf(R.drawable.image_getting_started_1, R.drawable.image_getting_started_2, R.drawable.image_getting_started_3)
+    private val mViewPagerImages = arrayOf(
+        R.drawable.image_getting_started_1,
+        R.drawable.image_getting_started_2,
+        R.drawable.image_getting_started_3
+    )
     private val mPageTitles by lazy {
         arrayOf(
-                getString(R.string.get_started_title_text_1),
-                getString(R.string.get_started_title_text_2),
-                getString(R.string.get_started_title_text_3)
+            getString(R.string.get_started_title_text_1),
+            getString(R.string.get_started_title_text_2),
+            getString(R.string.get_started_title_text_3)
         )
     }
 
     private val mPageBodyText by lazy {
         arrayOf(
-                getString(R.string.get_started_body_text_1),
-                getString(R.string.get_started_body_text_2),
-                getString(R.string.get_started_body_text_3)
+            getString(R.string.get_started_body_text_1),
+            getString(R.string.get_started_body_text_2),
+            getString(R.string.get_started_body_text_3)
         )
     }
 
     private val mColorWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white) }
     private val mColorAlphaWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white_50) }
-    private var mDotViews: Array<TextView>? = null
+    private val mDotViews by lazy {
+        arrayOf(
+            TextView(this@GetStartedActivity),
+            TextView(this@GetStartedActivity),
+            TextView(this@GetStartedActivity)
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,7 +76,7 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
     }
 
     private fun addDotIndicator() {
-        mDotViews = arrayOf(TextView(this), TextView(this), TextView(this)).apply {
+        mDotViews.apply {
             forEach {
                 createDot(it)
                 dotLayoutAgs.addView(it)
@@ -88,20 +98,23 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
      */
     @Suppress("DEPRECATION")
     private fun getHtmlText() =
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
-            else
-                Html.fromHtml("&#8226;")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+            Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
+        else
+            Html.fromHtml("&#8226;")
 
 
     private fun selectDot(position: Int) {
-        mDotViews?.forEachIndexed { index, textView ->
+        mDotViews.forEachIndexed { index, textView ->
             textView.setTextColor(if (index == position) mColorWhite else mColorAlphaWhite)
         }
     }
 
     private fun setupClickEvents() {
-        tvSignInAgs?.run { onClick { navigateTo(AuthenticationActivity::class.java) } }
+        tvSignInAgs?.run {
+            scaleOnPress()
+            onClick { navigateTo(AuthenticationActivity::class.java) }
+        }
     }
 
     override fun onPageSelected(position: Int) {

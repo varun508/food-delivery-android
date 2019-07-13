@@ -19,9 +19,5 @@ class RegistrationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tvContinueFpn?.run {
-            scaleOnPress()
-            onClick { findNavController().navigate(R.id.action_registrationFragment_to_phoneVerificationFragment) }
-        }
     }
 }
