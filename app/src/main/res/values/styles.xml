@@ -4,7 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/trihk_red</item>
         <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">@color/white</item>
+        <item name="colorAccent">@color/gray</item>
     </style>
 
     <!-- Splash screen theme. -->
@@ -21,7 +21,7 @@
     <!-- Authentication screen theme. -->
     <style name="AuthenticationTheme" parent="AppTheme">
         <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">@color/white</item>
+        <item name="colorAccent">@color/gray</item>
     </style>
 
     <!-- Authentication screen theme. -->

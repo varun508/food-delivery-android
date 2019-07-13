@@ -7,7 +7,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:background="@drawable/border_bottom_gray"
+        android:background="@drawable/border_bottom_light_gray"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
         app:elevation="0dp">
@@ -24,7 +24,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_medium"
                 android:layout_marginTop="@dimen/margin_regular"
-                android:drawableStart="@drawable/ic_compass_solid_trihk_green"
                 android:drawablePadding="@dimen/padding_small"
                 android:fontFamily="@font/manrope_bold"
                 android:gravity="center"
@@ -51,7 +50,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/margin_medium"
-                android:drawableStart="@drawable/ic_percentage_solid_trihk_red"
                 android:drawablePadding="@dimen/padding_regular"
                 android:fontFamily="@font/manrope_extrabold"
                 android:text="@string/toolbar_text_offers"

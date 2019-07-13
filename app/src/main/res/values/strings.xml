@@ -15,4 +15,7 @@
     <string name="sign_in">Sign in</string>
     <string name="toolbar_your_location">Your location</string>
     <string name="toolbar_text_offers">Offers</string>
+
+
+    <string name="content_desc_back_button">Go back</string>
 </resources>

@@ -35,4 +35,7 @@ class AutoSlidingViewPager(context: Context, attrs: AttributeSet) : ViewPager(co
             }
         }
     }
+
+
+
 }
