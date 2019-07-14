@@ -17,16 +17,19 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
-
-    <!-- Authentication screen theme. -->
-    <style name="AuthenticationTheme" parent="AppTheme">
-        <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">@color/gray</item>
-    </style>
-
     <!-- Authentication screen theme. -->
     <style name="BottomNavigationItemText">
         <item name="android:fontFamily">@font/manrope_bold</item>
+    </style>
+
+
+    <style name="AuthenticationActivityEditText">
+        <item name="android:paddingBottom">@dimen/padding_regular</item>
+        <item name="android:paddingTop">@dimen/padding_regular</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="android:textSize">@dimen/text_size_body_big</item>
+        <item name="android:background">@drawable/border_bottom_gray_thick</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
 

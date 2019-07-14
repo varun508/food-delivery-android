@@ -21,7 +21,7 @@ class PhoneNumberFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         tvVerifyPhoneVerification?.run{
             scaleOnPress()
-            onClick { findNavController().navigate(R.id.action_phoneNumberFragment_to_phoneVerificationFragment) }
+            onClick { findNavController().navigate(R.id.action_phoneNumberFragment_to_registrationFragment) }
         }
     }
 }

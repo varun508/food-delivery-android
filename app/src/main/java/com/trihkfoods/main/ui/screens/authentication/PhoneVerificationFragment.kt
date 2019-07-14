@@ -28,6 +28,5 @@ class PhoneVerificationFragment : Fragment() {
             scaleOnPress()
             onClick { activity?.navigateFinishing(MainActivity::class.java) }
         }
-
     }
 }

@@ -10,6 +10,7 @@ import com.trihkfoods.main.R
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.fragment_phone_number.*
+import kotlinx.android.synthetic.main.fragment_registration.*
 
 class RegistrationFragment : Fragment() {
 
@@ -19,5 +20,9 @@ class RegistrationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        tvSignUpFragmentRegistration?.run{
+            scaleOnPress()
+            onClick { findNavController().navigate(R.id.action_registrationFragment_to_phoneVerificationFragment) }
+        }
     }
 }
