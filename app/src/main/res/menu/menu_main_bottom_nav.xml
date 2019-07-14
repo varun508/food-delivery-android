@@ -3,22 +3,26 @@
 
 
     <item
-        android:title="Trihk"
-        android:id="@+id/action_food_fragment"/>
+        android:id="@+id/action_food_fragment"
+        android:icon="@drawable/menu_item_trihk"
+        android:title="Trihk" />
 
 
     <item
         android:id="@+id/action_explore_fragment"
-        android:title="Explore" />
+        android:title="Explore"
+        android:icon="@drawable/ic_search"/>
 
 
     <item
         android:id="@+id/action_cart_fragment"
-        android:title="Cart" />
+        android:title="Cart"
+        android:icon="@drawable/menu_item_cart"/>
 
     <item
         android:id="@+id/action_account_fragment"
-        android:title="Account" />
+        android:title="Account"
+        android:icon="@drawable/menu_item_user"/>
 
 
 </menu>

@@ -19,7 +19,7 @@
 
     <!-- Authentication screen theme. -->
     <style name="BottomNavigationItemText">
-        <item name="android:fontFamily">@font/manrope_bold</item>
+        <item name="android:fontFamily">@font/manrope_semibold</item>
     </style>
 
 
