@@ -7,6 +7,4 @@
 
     <include layout="@layout/layout_location_toolbar" />
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

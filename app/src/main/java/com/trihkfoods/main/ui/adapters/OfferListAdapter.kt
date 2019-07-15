@@ -1,24 +1,37 @@
 package com.trihkfoods.main.ui.adapters
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.trihkfoods.main.R
+import com.trihkfoods.main.data.model.Offer
+import com.trihkfoods.main.databinding.ListItemOffersBinding
+import java.util.ArrayList
 
-class OfferListAdapter : RecyclerView.Adapter<OfferListAdapter.ViewHolder>() {
+class OfferListAdapter(private val offers: ArrayList<Offer>) : RecyclerView.Adapter<OfferListAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent)
 
-    }
-
-    override fun getItemCount(): Int {
-        return 0;
-    }
+    override fun getItemCount() = offers.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(offers[position])
     }
 
+    class ViewHolder(private val binding: ListItemOffersBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    /** Will change @param itemView to the binding */
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+        fun bind(offer: Offer) {
+            binding.offer = offer
+        }
+
+        companion object {
+            fun from(parent: ViewGroup): ViewHolder {
+                val inflater = LayoutInflater.from(parent.context)
+                val binding = ListItemOffersBinding.inflate(inflater, parent, false)
+                return ViewHolder(binding)
+            }
+        }
+    }
 }
