@@ -25,6 +25,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     dataBinding {
         enabled true
     }
@@ -50,7 +55,6 @@ dependencies {
     def stethoVersion = '1.5.1'
     def navigationVersion = '2.0.0'
     def loggingInterceptorVersion = '3.11.0'
-    def picassoTransformationVersion = '2.2.1'
     def moshiVersion = '1.8.0'
 
     // Library to add blur effect to views
@@ -61,10 +65,7 @@ dependencies {
 
     // Image loading library
     implementation "com.github.bumptech.glide:glide:$glideVersion"
-    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
-
-    // Picasso image transformations
-    implementation "jp.wasabeef:picasso-transformations:$picassoTransformationVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
 
     // Kotlin coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"

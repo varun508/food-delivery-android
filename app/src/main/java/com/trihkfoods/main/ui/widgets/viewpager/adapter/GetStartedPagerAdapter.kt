@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
-import com.squareup.picasso.Picasso
+import com.bumptech.glide.Glide
 import com.trihkfoods.main.R
 import java.lang.Exception
 
@@ -32,7 +32,7 @@ class GetStartedPagerAdapter(context: Context, private val images: Array<Int>) :
         val backgroundImageView = view.findViewById<ImageView>(R.id.imageViewSlideItemLgs)
 
         // Using picasso to load and cache the image for the next use
-        Picasso.get().load(images[position]).into(backgroundImageView)
+        Glide.with(backgroundImageView.context).load(images[position]).into(backgroundImageView)
 
         container.addView(view)
         return view
