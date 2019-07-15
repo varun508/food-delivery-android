@@ -11,12 +11,11 @@
     <string name="get_started_body_text_2">Know where your order is at all times, from the restaurant to your doorstep</string>
     <string name="get_started_body_text_3">Experience Trihk\'s superfast delivery for food delivered fresh and on time</string>
 
-    <string name="set_delivery_location">Set delivery location</string>
-    <string name="sign_in">Sign in</string>
-    <string name="toolbar_your_location">Your location</string>
-    <string name="toolbar_text_offers">Offers</string>
-
+    <string name="button_text_set_delivery_location">Set delivery location</string>
+    <string name="button_text_sign_in">Sign in</string>
+    <string name="button_text_offers">Offers</string>
 
     <string name="content_desc_back_button">Go back</string>
-    <string name="offers">Offers</string>
+    <string name="content_desc_offer_image">Offer</string>
+
 </resources>

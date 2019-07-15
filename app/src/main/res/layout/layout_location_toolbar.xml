@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/margin_medium"
                 android:fontFamily="@font/manrope_medium"
-                android:text="@string/offers"
+                android:text="@string/button_text_offers"
                 android:textColor="@color/trihk_red"
                 android:textSize="@dimen/text_size_body_regular"
                 app:layout_constraintBottom_toBottomOf="parent"
