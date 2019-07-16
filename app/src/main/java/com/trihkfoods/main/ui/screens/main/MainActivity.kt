@@ -1,12 +1,11 @@
 package com.trihkfoods.main.ui.screens.main
 
-import android.accounts.Account
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentManager
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.screens.main.account.AccountFragment
-import com.trihkfoods.main.ui.screens.main.cart.CartFragment
+import com.trihkfoods.main.ui.screens.main.offers.OffersFragment
 import com.trihkfoods.main.ui.screens.main.explore.ExploreFragment
 import com.trihkfoods.main.ui.screens.main.food.FoodFragment
 import com.trihkfoods.main.utils.changeStatusBarColor
@@ -16,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private val foodFragment by lazy { FoodFragment() }
     private val exploreFragment by lazy { ExploreFragment() }
-    private val cartFragment by lazy { CartFragment() }
+    private val offersFragment by lazy { OffersFragment() }
     private val accountFragment by lazy { AccountFragment() }
     private var lastFragmentId = R.id.action_food_fragment
 
@@ -24,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         mapOf(
                 R.id.action_food_fragment to foodFragment.javaClass.simpleName,
                 R.id.action_explore_fragment to exploreFragment.javaClass.simpleName,
-                R.id.action_cart_fragment to cartFragment.javaClass.simpleName,
+                R.id.action_cart_fragment to offersFragment.javaClass.simpleName,
                 R.id.action_account_fragment to accountFragment.javaClass.simpleName
         )
     }
@@ -78,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             when (id) {
                 R.id.action_food_fragment -> foodFragment
                 R.id.action_explore_fragment -> exploreFragment
-                R.id.action_cart_fragment -> cartFragment
+                R.id.action_cart_fragment -> offersFragment
                 R.id.action_account_fragment -> accountFragment
                 else -> foodFragment
             }

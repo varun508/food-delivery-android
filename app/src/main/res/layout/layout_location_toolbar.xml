@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_medium"
             android:fontFamily="@font/manrope_medium"
-            android:text="@string/button_text_offers"
+            android:text="Cart"
             android:textColor="@color/trihk_red"
             android:textSize="@dimen/text_size_body_regular"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -75,7 +75,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView14"
             app:layout_constraintEnd_toStartOf="@+id/textView14"
             app:layout_constraintTop_toTopOf="@+id/textView14"
-            app:srcCompat="@drawable/ic_discount_solid" />
+            app:srcCompat="@drawable/ic_cart_solid" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

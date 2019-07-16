@@ -5,23 +5,23 @@
     <item
         android:id="@+id/action_food_fragment"
         android:icon="@drawable/menu_item_trihk"
-        android:title="Trihk" />
+        android:title="@string/text_bottom_nav_trihk" />
 
 
     <item
         android:id="@+id/action_explore_fragment"
-        android:title="Explore"
+        android:title="@string/text_bottom_nav_explore"
         android:icon="@drawable/ic_search"/>
 
 
     <item
         android:id="@+id/action_cart_fragment"
-        android:title="Cart"
-        android:icon="@drawable/menu_item_cart"/>
+        android:title="@string/text_bottom_nav_offers"
+        android:icon="@drawable/menu_item_offers"/>
 
     <item
         android:id="@+id/action_account_fragment"
-        android:title="Account"
+        android:title="@string/text_bottom_nav_account"
         android:icon="@drawable/menu_item_user"/>
 
 

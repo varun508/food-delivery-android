@@ -19,5 +19,9 @@
     <string name="content_desc_offer_image">Offer</string>
     <string name="error_text_internet_connection_lost">Unable to connect to the internet. Please check your connection</string>
     <string name="error_text_try_again">Try again</string>
+    <string name="text_bottom_nav_explore">Explore</string>
+    <string name="text_bottom_nav_offers">Offers</string>
+    <string name="text_bottom_nav_account">Account</string>
+    <string name="text_bottom_nav_trihk">Trihk</string>
 
 </resources>
