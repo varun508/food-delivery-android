@@ -17,5 +17,7 @@
 
     <string name="content_desc_back_button">Go back</string>
     <string name="content_desc_offer_image">Offer</string>
+    <string name="error_text_internet_connection_lost">Unable to connect to the internet. Please check your connection</string>
+    <string name="error_text_try_again">Try again</string>
 
 </resources>

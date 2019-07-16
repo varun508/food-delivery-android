@@ -21,11 +21,11 @@ class MainActivity : AppCompatActivity() {
     private var lastFragmentId = R.id.action_food_fragment
 
     private val fragmentTags by lazy {
-        mapOf<Int, String>(
-            R.id.action_food_fragment to foodFragment.javaClass.simpleName,
-            R.id.action_explore_fragment to exploreFragment.javaClass.simpleName,
-            R.id.action_cart_fragment to cartFragment.javaClass.simpleName,
-            R.id.action_account_fragment to accountFragment.javaClass.simpleName
+        mapOf(
+                R.id.action_food_fragment to foodFragment.javaClass.simpleName,
+                R.id.action_explore_fragment to exploreFragment.javaClass.simpleName,
+                R.id.action_cart_fragment to cartFragment.javaClass.simpleName,
+                R.id.action_account_fragment to accountFragment.javaClass.simpleName
         )
     }
 
@@ -71,16 +71,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun FragmentManager.addFragment(id: Int, tag: String) {
         beginTransaction().add(R.id.mainFragmentContainer, getFragmentById(id), tag)
-            .commit()
+                .commit()
     }
 
     private fun getFragmentById(id: Int) =
-        when (id) {
-            R.id.action_food_fragment -> foodFragment
-            R.id.action_explore_fragment -> exploreFragment
-            R.id.action_cart_fragment -> cartFragment
-            R.id.action_account_fragment -> accountFragment
-            else -> foodFragment
-        }
+            when (id) {
+                R.id.action_food_fragment -> foodFragment
+                R.id.action_explore_fragment -> exploreFragment
+                R.id.action_cart_fragment -> cartFragment
+                R.id.action_account_fragment -> accountFragment
+                else -> foodFragment
+            }
 
 }
