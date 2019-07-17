@@ -48,7 +48,7 @@
         <item name="autoSizeStepGranularity">1sp</item>
     </style>
 
-    <style name="GetStartedPrimaryButtonAppearance" >
+    <style name="GetStartedPrimaryButtonAppearance" parent="AutoTextCaptionToBodySmall">
         <item name="android:drawablePadding">@dimen/padding_regular</item>
         <item name="android:fontFamily">@font/manrope_bold</item>
         <item name="android:gravity">center</item>
@@ -56,11 +56,6 @@
         <item name="android:paddingTop">@dimen/padding_medium</item>
         <item name="android:paddingEnd">@dimen/padding_big</item>
         <item name="android:paddingBottom">@dimen/padding_medium</item>
-        <item name="autoSizeTextType">uniform</item>
-        <item name="autoSizeMaxTextSize">@dimen/text_size_body_small</item>
-        <item name="autoSizeMinTextSize">@dimen/text_size_caption</item>
-        <item name="autoSizeStepGranularity">1sp</item>
-        <item name="android:textSize">@dimen/text_size_body_small</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
@@ -89,9 +84,6 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="GetSStartedTextSwitcherAppearance">
-
-    </style>
 
     <style name="GetStartedTextSwitcherAppearance">
         <item name="android:layout_width">0dp</item>

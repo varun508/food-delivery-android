@@ -16,9 +16,7 @@ import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_get_started.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
+import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 
 
@@ -52,9 +50,9 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
 
     private val mDotViews by lazy {
         arrayOf(
-                TextView(this@GetStartedActivity),
-                TextView(this@GetStartedActivity),
-                TextView(this@GetStartedActivity)
+            TextView(this@GetStartedActivity),
+            TextView(this@GetStartedActivity),
+            TextView(this@GetStartedActivity)
         )
     }
 
@@ -71,7 +69,10 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
         onPageSelected(0)
         setupClickEvents()
 
-        debugLog("textsize",tvSignInAgs?.textSize.toString())
+        launch(Dispatchers.Main) {
+            delay(3000)
+            debugLog("textsize", (tvSignInAgs.textSize / resources.displayMetrics.scaledDensity).toString())
+        }
     }
 
     private fun setupViewPager() {
