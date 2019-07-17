@@ -24,5 +24,7 @@
     <string name="text_bottom_nav_account">Account</string>
     <string name="text_bottom_nav_trihk">Trihk</string>
     <string name="trihk_name_desc">Traditional Recipe Inside Home Kitchen</string>
+    <string name="button_text_continue">Continue</string>
+    <string name="text_country_code_india">+91</string>
 
 </resources>

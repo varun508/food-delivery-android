@@ -41,6 +41,21 @@
         <item name="autoSizeStepGranularity">1sp</item>
     </style>
 
+    <style name="AutoTextBodySmallToBodyRegular">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">@dimen/text_size_body_regular</item>
+        <item name="autoSizeMinTextSize">@dimen/text_size_body_small</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+
+
+    <style name="AutoTextBodyBigToTitleRegular">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">@dimen/text_size_title_regular</item>
+        <item name="autoSizeMinTextSize">@dimen/text_size_body_big</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+
     <style name="AutoTextCaptionToBodySmall">
         <item name="autoSizeTextType">uniform</item>
         <item name="autoSizeMaxTextSize">@dimen/text_size_body_small</item>
@@ -91,5 +106,20 @@
         <item name="android:inAnimation">@anim/slide_in_right</item>
         <item name="android:outAnimation">@anim/slide_out_left</item>
     </style>
+
+    <style name="BaseAppTitleTextAppearance" parent="AutoTextBodyBigToTitleRegular">
+        <item name="autoSizeStepGranularity">2sp</item>
+        <item name="android:fontFamily">@font/manrope_extrabold</item>
+        <item name="android:minHeight">35dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="BaseAppBodyTextAppearance" parent="AutoTextCaptionToBodySmall">
+        <item name="android:layout_height">20dp</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+        <item name="android:fontFamily">@font/manrope_medium</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
 
 </resources>
