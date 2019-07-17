@@ -11,6 +11,7 @@ import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.eventlisteners.BasePageChangeListener
 import com.trihkfoods.main.ui.screens.authentication.AuthenticationActivity
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
+import com.trihkfoods.main.utils.debugLog
 import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
@@ -32,6 +33,7 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
         R.drawable.image_getting_started_2,
         R.drawable.image_getting_started_3
     )
+
     private val mPageTitles by lazy {
         arrayOf(
             getString(R.string.get_started_title_text_1),
@@ -48,15 +50,17 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
         )
     }
 
-    private val mColorWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white) }
-    private val mColorAlphaWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white_50) }
     private val mDotViews by lazy {
         arrayOf(
-            TextView(this@GetStartedActivity),
-            TextView(this@GetStartedActivity),
-            TextView(this@GetStartedActivity)
+                TextView(this@GetStartedActivity),
+                TextView(this@GetStartedActivity),
+                TextView(this@GetStartedActivity)
         )
     }
+
+    private val mColorWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white) }
+    private val mColorAlphaWhite by lazy { ContextCompat.getColor(this@GetStartedActivity, R.color.white_50) }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +70,8 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
         addDotIndicator()
         onPageSelected(0)
         setupClickEvents()
+
+        debugLog("textsize",tvSignInAgs?.textSize.toString())
     }
 
     private fun setupViewPager() {

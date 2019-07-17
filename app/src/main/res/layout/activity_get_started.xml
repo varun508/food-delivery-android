@@ -13,145 +13,100 @@
         android:layout_height="match_parent" />
 
 
-    <com.github.mmin18.widget.RealtimeBlurView
-        android:id="@+id/realtimeBlurViewAgs"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        app:layout_constraintBottom_toBottomOf="@+id/autoSlidingViewPagerAgs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:realtimeBlurRadius="25dp"
-        app:realtimeOverlayColor="#3bbb" />
-
-    <TextSwitcher
-        android:id="@+id/textSwitcherTitleAgs"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:inAnimation="@anim/slide_in_right"
-        android:outAnimation="@anim/slide_out_left"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dotLayoutAgs">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/manrope_bold"
-            android:gravity="center"
-            android:paddingStart="@dimen/padding_bigger"
-            android:paddingEnd="@dimen/padding_bigger"
-            android:paddingBottom="@dimen/padding_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_body_big" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/manrope_bold"
-            android:gravity="center"
-            android:paddingStart="@dimen/padding_bigger"
-            android:paddingEnd="@dimen/padding_bigger"
-            android:paddingBottom="@dimen/padding_regular"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_body_big" />
-
-    </TextSwitcher>
-
-    <TextSwitcher
-        android:id="@+id/textSwitcherBodyAgs"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:inAnimation="@anim/slide_in_right"
-        android:outAnimation="@anim/slide_out_left"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSwitcherTitleAgs">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/manrope_semibold"
-            android:gravity="center"
-            android:paddingStart="@dimen/padding_bigger"
-            android:paddingEnd="@dimen/padding_bigger"
-            android:paddingBottom="@dimen/padding_regular"
-            android:textColor="@color/white_80" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/manrope_semibold"
-            android:gravity="center"
-            android:paddingStart="@dimen/padding_bigger"
-            android:paddingEnd="@dimen/padding_bigger"
-            android:paddingBottom="@dimen/padding_regular"
-            android:textColor="@color/white_80" />
-
-    </TextSwitcher>
-
-
-    <LinearLayout
-        android:id="@+id/dotLayoutAgs"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/blurContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/realtimeBlurViewAgs" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
 
-    <TextView
-        android:id="@+id/tvSignInAgs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_regular"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:background="@drawable/curved_corner_rectangle_trihk_red"
-        android:drawableEnd="@drawable/ic_arrow_circle_right_solid_white"
-        android:drawablePadding="@dimen/padding_regular"
-        android:fontFamily="@font/manrope_bold"
-        android:gravity="center"
-        android:paddingStart="@dimen/padding_big"
-        android:paddingTop="@dimen/padding_medium"
-        android:paddingEnd="@dimen/padding_big"
-        android:paddingBottom="@dimen/padding_medium"
-        android:text="@string/button_text_sign_in"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/tvSetLocationAgs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvSetLocationAgs"
-        app:layout_constraintTop_toTopOf="@+id/tvSetLocationAgs" />
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:id="@+id/realtimeBlurViewAgs"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/blurContainer"
+            app:layout_constraintEnd_toEndOf="@id/blurContainer"
+            app:layout_constraintStart_toStartOf="@id/blurContainer"
+            app:layout_constraintTop_toTopOf="@+id/blurContainer"
+            app:realtimeBlurRadius="25dp"
+            app:realtimeOverlayColor="#3bbb" />
 
 
-    <TextView
-        android:id="@+id/tvSetLocationAgs"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_medium"
-        android:layout_marginEnd="@dimen/margin_regular"
-        android:layout_marginBottom="@dimen/margin_big"
-        android:background="@drawable/curved_corner_rectangle_white_50"
-        android:drawableEnd="@drawable/ic_compass_solid_white"
-        android:drawablePadding="@dimen/padding_regular"
-        android:fontFamily="@font/manrope_bold"
-        android:gravity="center"
-        android:paddingStart="@dimen/padding_big"
-        android:paddingTop="@dimen/padding_medium"
-        android:paddingEnd="@dimen/padding_big"
-        android:paddingBottom="@dimen/padding_medium"
-        android:text="@string/button_text_set_delivery_location"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/realtimeBlurViewAgs"
-        app:layout_constraintEnd_toStartOf="@+id/tvSignInAgs"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextSwitcher
+            android:id="@+id/textSwitcherTitleAgs"
+            style="@style/GetStartedTextSwitcherAppearance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dotLayoutAgs">
+
+            <TextView style="@style/GetStartedTextSwitcherTitleText" />
+
+            <TextView style="@style/GetStartedTextSwitcherTitleText" />
+
+        </TextSwitcher>
+
+        <TextSwitcher
+            android:id="@+id/textSwitcherBodyAgs"
+            style="@style/GetStartedTextSwitcherAppearance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textSwitcherTitleAgs">
+
+            <TextView style="@style/GetStartedTextSwitcherBodyText" />
+
+            <TextView style="@style/GetStartedTextSwitcherBodyText" />
+
+        </TextSwitcher>
+
+
+        <LinearLayout
+            android:id="@+id/dotLayoutAgs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/blurContainer" />
+
+
+        <TextView
+            android:id="@+id/tvSignInAgs"
+            style="@style/GetStartedPrimaryButtonAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_regular"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@drawable/curved_corner_rectangle_trihk_red"
+            android:drawableEnd="@drawable/ic_arrow_circle_right_solid_white"
+            android:text="@string/button_text_sign_in"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSetLocationAgs"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvSetLocationAgs"
+            app:layout_constraintTop_toTopOf="@+id/tvSetLocationAgs" />
+
+
+        <TextView
+            android:id="@+id/tvSetLocationAgs"
+            style="@style/GetStartedPrimaryButtonAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_biggest"
+            android:layout_marginEnd="@dimen/margin_regular"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:background="@drawable/curved_corner_rectangle_white_50"
+            android:drawableEnd="@drawable/ic_compass_solid_white"
+            android:text="@string/button_text_set_delivery_location"
+            app:layout_constraintBottom_toBottomOf="@+id/blurContainer"
+            app:layout_constraintEnd_toStartOf="@+id/tvSignInAgs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSwitcherBodyAgs" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,5 +23,6 @@
     <string name="text_bottom_nav_offers">Offers</string>
     <string name="text_bottom_nav_account">Account</string>
     <string name="text_bottom_nav_trihk">Trihk</string>
+    <string name="trihk_name_desc">Traditional Recipe Inside Home Kitchen</string>
 
 </resources>
