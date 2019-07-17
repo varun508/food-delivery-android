@@ -68,11 +68,6 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
         addDotIndicator()
         onPageSelected(0)
         setupClickEvents()
-
-        launch(Dispatchers.Main) {
-            delay(3000)
-            debugLog("textsize", (tvSignInAgs.textSize / resources.displayMetrics.scaledDensity).toString())
-        }
     }
 
     private fun setupViewPager() {
