@@ -6,14 +6,30 @@
     android:layout_height="match_parent">
 
 
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/vertical_guideline_big" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/vertical_guideline_big" />
+
+
     <TextView
         android:id="@+id/textView2"
         style="@style/BaseAppTitleTextAppearance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Hello, Varun!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -62,8 +78,8 @@
         android:text="Verify phone"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
+        app:layout_constraintStart_toStartOf="@+id/pinEntryEditText" />
 
     <TextView
         android:id="@+id/textView4"

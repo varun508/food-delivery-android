@@ -6,14 +6,30 @@
     android:layout_height="match_parent">
 
 
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/vertical_guideline_big" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/vertical_guideline_big" />
+
+
     <TextView
         android:id="@+id/textView2"
+        style="@style/BaseAppTitleTextAppearance"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Create new account"
-        style="@style/BaseAppTitleTextAppearance"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -46,8 +62,10 @@
 
     <TextView
         android:id="@+id/tvSignUpFragmentRegistration"
+        style="@style/AutoTextBodyRegularToBodyBig"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_biggest"
         android:layout_marginBottom="@dimen/margin_bigger"
         android:background="@drawable/curved_corner_rectangle_trihk_red"
         android:drawableEnd="@drawable/ic_arrow_circle_right_solid_white"
@@ -55,12 +73,10 @@
         android:padding="@dimen/padding_medium"
         android:text="Create Account"
         android:textColor="@color/white"
-        style="@style/AutoTextBodyRegularToBodyBig"
-        android:layout_marginTop="@dimen/margin_biggest"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editText5"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editText5"
         app:layout_constraintTop_toBottomOf="@+id/editText5"
         app:layout_constraintVertical_bias="1.0" />
 
