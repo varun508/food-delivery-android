@@ -58,6 +58,7 @@ dependencies {
     def navigationVersion = '2.0.0'
     def loggingInterceptorVersion = '3.11.0'
     def moshiVersion = '1.8.0'
+    def moshiConverterVersion = '2.4.0'
     def lifecycle_version = '2.0.0'
 
     // Library to add blur effect to views
@@ -83,6 +84,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$loggingInterceptorVersion"
     implementation "com.squareup.moshi:moshi-kotlin:$moshiVersion"
+    implementation "com.squareup.retrofit2:converter-moshi:$moshiConverterVersion"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion"
 
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"

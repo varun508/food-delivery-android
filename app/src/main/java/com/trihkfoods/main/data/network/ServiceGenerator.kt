@@ -1,9 +1,11 @@
 package com.trihkfoods.main.data.network
 
+import com.squareup.moshi.Moshi
 import com.trihkfoods.main.data.network.interceptor.AccessTokenInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
 object ServiceGenerator {
@@ -22,6 +24,7 @@ object ServiceGenerator {
 
     private val retrofitBuilder = Retrofit.Builder()
         .baseUrl(BASE_URL)
+        .addConverterFactory(MoshiConverterFactory.create())
 
     private var retrofit: Retrofit = retrofitBuilder.build()
 
