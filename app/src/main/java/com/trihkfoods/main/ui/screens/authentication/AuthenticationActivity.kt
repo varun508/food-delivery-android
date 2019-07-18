@@ -2,10 +2,14 @@ package com.trihkfoods.main.ui.screens.authentication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import com.trihkfoods.main.R
+import com.trihkfoods.main.databinding.ActivityAuthenticationBinding
 import com.trihkfoods.main.utils.changeStatusBarColor
 import com.trihkfoods.main.utils.debugLog
 import com.trihkfoods.main.utils.onClick
@@ -16,10 +20,13 @@ class AuthenticationActivity : AppCompatActivity(), NavController.OnDestinationC
 
     private val navController by lazy { findNavController(R.id.navHostFragmentAuth) }
     private var nextDestinationId: Int = R.id.action_phoneNumberFragment_to_registrationFragment
+    private val viewModel by lazy { ViewModelProviders.of(this)[AuthenticationViewModel::class.java] }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_authentication)
+        val binding =
+            DataBindingUtil.setContentView<ActivityAuthenticationBinding>(this, R.layout.activity_authentication)
+        binding.viewModel = viewModel
 
         changeStatusBarColor(R.color.white)
         setupOnContinueClickListener()
