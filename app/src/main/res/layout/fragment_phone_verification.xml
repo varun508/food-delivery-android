@@ -1,90 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.trihkfoods.main.ui.screens.authentication.AuthenticationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/vertical_guideline_big" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/vertical_guideline_big" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/vertical_guideline_big" />
-
-
-    <TextView
-        android:id="@+id/textView2"
-        style="@style/BaseAppTitleTextAppearance"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Hello, Varun!"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        style="@style/BaseAppBodyTextAppearance"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/vertical_guideline_big" />
 
 
-    <com.alimuzaffar.lib.pin.PinEntryEditText
-        android:id="@+id/pinEntryEditText"
-        style="@style/AutoTextBodyRegularToBodyBig"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_biggest"
-        android:cursorVisible="true"
-        android:digits="1234567890"
-        android:inputType="number"
-        android:layoutDirection="ltr"
-        android:maxLength="6"
-        android:textColor="@color/black"
-        android:textIsSelectable="false"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:pinAnimationType="popIn" />
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/BaseAppTitleTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hello, Varun!"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/BaseAppBodyTextAppearance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
-    <TextView
-        android:id="@+id/textView4"
-        style="@style/BaseAppBodyTextAppearance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:text="Didn't receive the code? Resend"
-        app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
-        app:layout_constraintStart_toStartOf="@+id/pinEntryEditText"
-        app:layout_constraintTop_toBottomOf="@+id/pinEntryEditText" />
-
-    <TextView
-        android:id="@+id/textView10"
-        style="@style/BaseAppBodyTextAppearance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_small"
-        android:text="in 00:56"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/pinEntryEditText"
+            style="@style/AutoTextBodyRegularToBodyBig"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_biggest"
+            android:cursorVisible="true"
+            android:digits="1234567890"
+            android:inputType="number"
+            android:layoutDirection="ltr"
+            android:maxLength="6"
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:pinAnimationType="popIn" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/BaseAppBodyTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Didn't receive the code? Resend"
+            app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
+            app:layout_constraintStart_toStartOf="@+id/pinEntryEditText"
+            app:layout_constraintTop_toBottomOf="@+id/pinEntryEditText" />
+
+        <TextView
+            android:id="@+id/textView10"
+            style="@style/BaseAppBodyTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="in 00:56"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
