@@ -12,8 +12,12 @@ class AuthenticationViewModel : ViewModel() {
 
     init {
         GlobalScope.launch(Dispatchers.IO) {
-            val result = ServiceGenerator.createService(AuthService::class.java).checkUserExistence("9871235033")
-            debugLog("result", result.toString())
+            try {
+                val result = ServiceGenerator.createService(AuthService::class.java).checkUserExistence("9871235033")
+                debugLog("result", result.toString())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 }

@@ -10,27 +10,27 @@ import java.util.concurrent.TimeUnit
 
 object ServiceGenerator {
 
-    private const val BASE_URL = "http://localhost:3000/v1/"
+    private const val BASE_URL = "http://192.168.1.3:3000/v1/"
     private const val CONNECT_TIMEOUT = 30L
     private const val READ_TIMEOUT = 20L
     private const val WRITE_TIMEOUT = 20L
 
     private val client = OkHttpClient.Builder()
-        .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)
-        .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
-        .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)
-        .retryOnConnectionFailure(false)
+            .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)
+            .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
+            .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)
+            .retryOnConnectionFailure(false)
 
 
     private val retrofitBuilder = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .addConverterFactory(MoshiConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .addConverterFactory(MoshiConverterFactory.create())
 
     private var retrofit: Retrofit = retrofitBuilder.build()
 
     private val httpLoggingInterceptor: HttpLoggingInterceptor by lazy {
         HttpLoggingInterceptor()
-            .setLevel(HttpLoggingInterceptor.Level.BASIC)
+                .setLevel(HttpLoggingInterceptor.Level.BASIC)
     }
 
     fun <T> createService(serviceClass: Class<T>): T {
@@ -52,6 +52,8 @@ object ServiceGenerator {
     private fun addBasicInterceptors() {
         if (!client.interceptors().contains(httpLoggingInterceptor)) {
             client.addInterceptor(httpLoggingInterceptor)
+            retrofitBuilder.client(client.build())
+            retrofit = retrofitBuilder.build()
         }
     }
 }
