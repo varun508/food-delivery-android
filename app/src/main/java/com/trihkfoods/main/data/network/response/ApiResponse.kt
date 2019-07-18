@@ -26,9 +26,6 @@ open class ApiResponse<T> {
 
     inner class ApiErrorResponse<T> internal constructor(val errorMessage: String) : ApiResponse<T>()
 
-
-    /**
-     * This class handles 204 responses
-     */
+    // This class handles 204 responses
     inner class ApiEmptyResponse<T> : ApiResponse<T>()
 }

@@ -11,7 +11,6 @@ import androidx.navigation.findNavController
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ActivityAuthenticationBinding
 import com.trihkfoods.main.utils.changeStatusBarColor
-import com.trihkfoods.main.utils.debugLog
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_authentication.*
