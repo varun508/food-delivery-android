@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -59,26 +56,6 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-
-    <TextView
-        android:id="@+id/tvSignUpFragmentRegistration"
-        style="@style/AutoTextBodyRegularToBodyBig"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_biggest"
-        android:layout_marginBottom="@dimen/margin_bigger"
-        android:background="@drawable/curved_corner_rectangle_trihk_red"
-        android:drawableEnd="@drawable/ic_arrow_circle_right_solid_white"
-        android:fontFamily="@font/manrope_extrabold"
-        android:padding="@dimen/padding_medium"
-        android:text="Create Account"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText5"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText5"
-        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editText2"
