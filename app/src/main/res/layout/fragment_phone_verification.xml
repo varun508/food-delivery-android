@@ -58,7 +58,6 @@
         android:maxLength="6"
         android:textColor="@color/black"
         android:textIsSelectable="false"
-        android:textSize="@dimen/text_size_body_regular"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView"

@@ -121,5 +121,9 @@
         <item name="android:textColor">@color/gray</item>
     </style>
 
+    <style name="TrihkRedProgressBarTheme">
+        <item name="colorAccent">@color/trihk_red</item>
+    </style>
+
 
 </resources>

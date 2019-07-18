@@ -34,8 +34,6 @@ fun View.scaleOnPress() {
     }
 
     setOnTouchListener(listener)
-
-
     scaleUp?.doOnEnd { if (listener.mIsWithinView) performClick() }
 }
 

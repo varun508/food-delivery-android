@@ -94,11 +94,7 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
         }
     }
 
-    /**
-     * This API was deprecated in Android version N, for api above N the new method is being used
-     * and for below the deprecated method is used
-     */
-    @Suppress("DEPRECATION")
+
     private fun getHtmlText() =
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
             Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)
