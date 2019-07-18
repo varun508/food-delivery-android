@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 
 object ServiceGenerator {
 
-    private const val BASE_URL = "http://localhost:3000/v1"
+    private const val BASE_URL = "http://localhost:3000/v1/"
     private const val CONNECT_TIMEOUT = 30L
     private const val READ_TIMEOUT = 20L
     private const val WRITE_TIMEOUT = 20L
