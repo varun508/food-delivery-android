@@ -4,28 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/border_bottom_light_gray_regular"
-    android:orientation="vertical"
-    android:paddingTop="@dimen/padding_regular"
-    android:paddingBottom="@dimen/padding_regular"
-    android:paddingStart="@dimen/padding_medium"
-    android:paddingEnd="@dimen/padding_regular">
+    android:padding="@dimen/padding_medium">
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/image_chef_sample"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView19"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView6"
         style="@style/AutoTextBodyRegularToBodyBig"
         android:layout_width="0dp"
-        android:layout_marginEnd="@dimen/margin_medium"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
         android:fontFamily="@font/manrope_bold"
         android:text="Shiva Trihk Cook"
         android:textColor="@color/black"
@@ -41,9 +38,59 @@
         android:layout_height="wrap_content"
         android:isIndicator="true"
         android:numStars="5"
-
+        android:rating="4.4"
         android:stepSize="0.1"
+        android:theme="@style/RatingBarTheme"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView17"
+        style="@style/AutoTextCaptionToBodySmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/border_bottom_light_gray_regular"
+        android:fontFamily="@font/manrope_semibold"
+        android:paddingBottom="@dimen/padding_small"
+        android:text="North Indian, South Indian, Mughlai"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView18"
+        style="@style/AutoTextCaptionToBodySmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_regular"
+        android:drawableStart="@drawable/ic_restaurant_cutlery_circular_solid"
+        android:drawablePadding="@dimen/padding_regular"
+        android:drawableTint="@color/trihk_orange"
+        android:fontFamily="@font/manrope_semibold"
+        android:gravity="center_vertical"
+        android:text="Serves Veg and Non-Veg"
+        android:textColor="@color/trihk_orange"
+        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView19"
+        style="@style/AutoTextCaptionToBodySmall"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:drawableStart="@drawable/ic_rupee_circle_solid"
+        android:drawablePadding="@dimen/padding_regular"
+        android:drawableTint="@color/trihk_green"
+        android:fontFamily="@font/manrope_semibold"
+        android:gravity="center_vertical"
+        android:text="150 for two"
+        android:textColor="@color/trihk_green"
+        app:layout_constraintEnd_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 </androidx.constraintlayout.widget.ConstraintLayout>
