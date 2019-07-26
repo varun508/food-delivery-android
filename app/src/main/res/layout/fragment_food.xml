@@ -18,7 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include"
@@ -26,21 +27,59 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChefs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/rvChefs"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/margin_big"
         android:orientation="vertical"
-        android:padding="@dimen/padding_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvOffers"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
         tools:listitem="@tools:sample/avatars" />
 
 
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_marginTop="@dimen/margin_big"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_big"
+        android:background="@drawable/curved_corner_rectangle_trihk_red"
+        android:backgroundTint="@color/light_gray"
+        android:drawableStart="@drawable/ic_search_solid"
+        android:drawableTint="@color/gray"
+        android:fontFamily="@font/manrope_semibold"
+        android:drawablePadding="@dimen/padding_regular"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:paddingStart="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_regular"
+        android:paddingEnd="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_regular"
+        android:text="Search for dishes, chefs, cuisines"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvOffers" />
 
-
-
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/curved_corner_rectangle_trihk_red"
+        android:backgroundTint="@color/light_gray"
+        android:paddingStart="@dimen/padding_medium"
+        android:tint="@color/gray"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:paddingTop="@dimen/padding_regular"
+        android:paddingEnd="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView16"
+        app:srcCompat="@drawable/ic_sort_solid" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
