@@ -63,6 +63,13 @@
         <item name="autoSizeStepGranularity">1sp</item>
     </style>
 
+    <style name="AutoTextSmallToCaption">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">@dimen/text_size_caption</item>
+        <item name="autoSizeMinTextSize">@dimen/text_size_small</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+    </style>
+
     <style name="GetStartedPrimaryButtonAppearance" parent="AutoTextCaptionToBodySmall">
         <item name="android:drawablePadding">@dimen/padding_regular</item>
         <item name="android:fontFamily">@font/manrope_bold</item>

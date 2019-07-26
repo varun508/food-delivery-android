@@ -29,6 +29,7 @@
 
     <dimen name="text_size_body_small">14.0sp</dimen>
     <dimen name="text_size_caption">12.0sp</dimen>
+    <dimen name="text_size_small">10.0sp</dimen>
     <dimen name="text_size_heading_big">34.0sp</dimen>
     <dimen name="text_size_heading_huge">45.0sp</dimen>
     <dimen name="text_size_title_big">24.0sp</dimen>

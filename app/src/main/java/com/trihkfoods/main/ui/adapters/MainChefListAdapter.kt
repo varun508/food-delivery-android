@@ -11,7 +11,7 @@ class MainChefListAdapter : RecyclerView.Adapter<MainChefListAdapter.ViewHolder>
         return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.layout_item_chef, parent, false))
     }
 
-    override fun getItemCount() = 5
+    override fun getItemCount() = 8
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
     }
