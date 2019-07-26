@@ -3,6 +3,7 @@ package com.trihkfoods.main.ui.screens.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentManager
+import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.screens.main.account.AccountFragment
 import com.trihkfoods.main.ui.screens.main.offers.OffersFragment
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         changeStatusBarColor(R.color.white)
         bindUI()
+        RecyclerView.RecycledViewPool()
     }
 
     private fun bindUI() {
