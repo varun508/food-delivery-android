@@ -3,7 +3,6 @@ package com.trihkfoods.main.ui.screens.authentication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -14,7 +13,7 @@ import com.trihkfoods.main.ui.screens.main.MainActivity
 import com.trihkfoods.main.utils.changeStatusBarColor
 import com.trihkfoods.main.utils.navigateFinishing
 import com.trihkfoods.main.utils.onClick
-import com.trihkfoods.main.utils.scaleOnPress
+import com.trihkfoods.main.bindings.scaleOnPress
 import kotlinx.android.synthetic.main.activity_authentication.*
 
 class AuthenticationActivity : AppCompatActivity(), NavController.OnDestinationChangedListener {
