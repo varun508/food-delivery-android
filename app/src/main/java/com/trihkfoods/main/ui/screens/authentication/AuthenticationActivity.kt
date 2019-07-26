@@ -10,7 +10,9 @@ import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ActivityAuthenticationBinding
+import com.trihkfoods.main.ui.screens.main.MainActivity
 import com.trihkfoods.main.utils.changeStatusBarColor
+import com.trihkfoods.main.utils.navigateFinishing
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_authentication.*
@@ -36,7 +38,13 @@ class AuthenticationActivity : AppCompatActivity(), NavController.OnDestinationC
     private fun setupOnContinueClickListener() {
         tvContinueAuthActivity?.run {
             scaleOnPress()
-            onClick { navController.navigate(nextDestinationId) }
+            onClick {
+                if (nextDestinationId == 0) {
+                    navigateFinishing(MainActivity::class.java)
+                    return@onClick
+                }
+                navController.navigate(nextDestinationId)
+            }
         }
     }
 

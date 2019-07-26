@@ -10,18 +10,4 @@ import kotlinx.coroutines.launch
 
 class AuthenticationViewModel : ViewModel() {
 
-    init {
-        GlobalScope.launch(Dispatchers.IO) {
-            try {
-                val result = ServiceGenerator.createService(AuthService::class.java).checkUserExistence("9871235033")
-                debugLog("result", result.toString())
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        }
-    }
-}
-
-enum class AuthenticationState {
-    REST, BUSY, ERROR, SUCCESS
 }

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
-     android:ordering="sequentially">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:ordering="sequentially">
     <set>
         <objectAnimator
-                android:propertyName="scaleX"
-                android:duration="150"
-                android:valueTo="0.9f"
-                android:valueType="floatType"/>
+            android:duration="150"
+            android:propertyName="scaleX"
+            android:valueTo="0.9f"
+            android:valueType="floatType" />
         <objectAnimator
-                android:propertyName="scaleY"
-                android:duration="150"
-                android:valueTo="0.9f"
-                android:valueType="floatType"/>
+            android:duration="150"
+            android:propertyName="scaleY"
+            android:valueTo="0.9f"
+            android:valueType="floatType" />
     </set>
 </set>

@@ -14,13 +14,33 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOffers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="@dimen/padding_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include"
         tools:listitem="@tools:sample/avatars" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rvChefs"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvOffers"
+        tools:listitem="@tools:sample/avatars" />
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

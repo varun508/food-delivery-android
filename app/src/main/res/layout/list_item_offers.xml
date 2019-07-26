@@ -10,11 +10,12 @@
 
     <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/ivListItemOffers"
-        scaleOnPress="true"
         android:layout_width="180dp"
+
         android:layout_height="180dp"
-        android:layout_marginEnd="@dimen/margin_big"
+        android:layout_marginStart="@dimen/margin_medium"
         android:contentDescription="@string/content_desc_offer_image"
+        app:scaleOnPress="@{true}"
         app:sourceUrl="@{offer.imageUrl}" />
 
 </layout>
