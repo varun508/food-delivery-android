@@ -11,7 +11,6 @@ import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.eventlisteners.BasePageChangeListener
 import com.trihkfoods.main.ui.screens.authentication.AuthenticationActivity
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
-import com.trihkfoods.main.utils.debugLog
 import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
@@ -27,9 +26,9 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
         get() = job + Dispatchers.Main
 
     private val mViewPagerImages = arrayOf(
-        R.drawable.image_getting_started_1,
-        R.drawable.image_getting_started_2,
-        R.drawable.image_getting_started_3
+        R.drawable.image_temp_getting_started_1,
+        R.drawable.image_temp_getting_started_2,
+        R.drawable.image_temp_getting_started_3
     )
 
     private val mPageTitles by lazy {

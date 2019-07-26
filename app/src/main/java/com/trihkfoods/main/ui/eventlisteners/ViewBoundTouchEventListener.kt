@@ -18,38 +18,34 @@ abstract class ViewBoundTouchEventListener : View.OnTouchListener {
             }
 
             MotionEvent.ACTION_UP -> {
-                touchRelease()
+                if (mIsWithinView) touchUp()
                 return true
             }
 
             MotionEvent.ACTION_MOVE -> {
                 if (mIsWithinView && !isTouchInsideViewBounds(view, event)) {
                     mIsWithinView = false
-                    touchRelease()
+                    touchCancel()
                 }
                 return true
             }
 
             MotionEvent.ACTION_CANCEL -> {
-                touchRelease()
+                touchCancel()
                 return true
             }
             else -> return false
         }
     }
 
-
-    /** This method is called when the finger is lifted up */
-    abstract fun touchRelease()
-
     /** This method is called when the finger is moved outside the bounds of the view */
-    private fun touchCancel() {}
+    abstract fun touchCancel()
 
     /** This method is called when the view is touched */
     abstract fun touchDown()
 
     /** This method is called when the touch is released on the view */
-    private fun touchUp() {}
+    abstract fun touchUp()
 
 
     private fun isTouchInsideViewBounds(view: View, event: MotionEvent): Boolean {

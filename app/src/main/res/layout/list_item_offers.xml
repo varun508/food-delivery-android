@@ -5,17 +5,16 @@
 
         <variable
             name="offer"
-            type="com.trihkfoods.main.data.model.Offer" />
+            type="com.trihkfoods.main.ui.tempmodels.Offer" />
     </data>
 
     <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/ivListItemOffers"
         android:layout_width="180dp"
-
         android:layout_height="180dp"
         android:layout_marginStart="@dimen/margin_medium"
         android:contentDescription="@string/content_desc_offer_image"
         app:scaleOnPress="@{true}"
-        app:sourceUrl="@{offer.imageUrl}" />
+        app:sourceUrl="@{offer.imageResource}" />
 
 </layout>

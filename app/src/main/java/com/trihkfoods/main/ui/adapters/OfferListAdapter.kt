@@ -1,12 +1,9 @@
 package com.trihkfoods.main.ui.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.trihkfoods.main.R
-import com.trihkfoods.main.data.model.Offer
+import com.trihkfoods.main.ui.tempmodels.Offer
 import com.trihkfoods.main.databinding.ListItemOffersBinding
 import java.util.ArrayList
 

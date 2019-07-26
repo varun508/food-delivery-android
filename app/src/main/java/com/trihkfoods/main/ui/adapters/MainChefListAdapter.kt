@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.R
 
 class MainChefListAdapter : RecyclerView.Adapter<MainChefListAdapter.ViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent)
 
     override fun getItemCount() = 8
@@ -25,7 +26,7 @@ class MainChefListAdapter : RecyclerView.Adapter<MainChefListAdapter.ViewHolder>
                 return ViewHolder(view)
             }
         }
-        
+
         fun bind() {}
     }
 }

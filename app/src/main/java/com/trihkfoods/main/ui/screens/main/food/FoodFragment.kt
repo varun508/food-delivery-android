@@ -8,35 +8,45 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.trihkfoods.main.R
-import com.trihkfoods.main.data.model.Offer
+import com.trihkfoods.main.ui.tempmodels.Offer
 import com.trihkfoods.main.ui.adapters.MainChefListAdapter
 import com.trihkfoods.main.ui.adapters.OfferListAdapter
 import kotlinx.android.synthetic.main.fragment_food.*
 
 class FoodFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_food, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = OfferListAdapter(
-            arrayListOf(
-                Offer("", "", "https://im4.ezgif.com/tmp/ezgif-4-03f6970fcd2d.png"),
-                Offer("", "", "https://im4.ezgif.com/tmp/ezgif-4-03f6970fcd2d.png"),
-                Offer("", "", "https://im4.ezgif.com/tmp/ezgif-4-03f6970fcd2d.png"),
-                Offer("", "", "https://im4.ezgif.com/tmp/ezgif-4-03f6970fcd2d.png")
-            )
-        )
 
-        rvOffers.adapter = adapter
-        rvOffers.layoutManager = LinearLayoutManager(requireContext()).also {
-            it.orientation = LinearLayout.HORIZONTAL
+        inflateDummyChefList()
+        inflateDummyOfferList()
+    }
+
+    private fun inflateDummyOfferList() {
+        val offers = arrayListOf<Offer>()
+        repeat(4) {
+            offers += Offer("", "",R.drawable.image_temp_offer)
         }
+        rvOffers?.run {
+            adapter = OfferListAdapter(offers)
+            layoutManager = LinearLayoutManager(requireContext()).also {
+                it.orientation = LinearLayout.HORIZONTAL
+            }
+        }
+    }
 
-        rvChefs.adapter = MainChefListAdapter()
-        rvChefs.layoutManager= LinearLayoutManager(requireContext())
-
+    private fun inflateDummyChefList() {
+        rvChefs?.run {
+            adapter = MainChefListAdapter()
+            layoutManager = LinearLayoutManager(requireContext())
+        }
     }
 }
