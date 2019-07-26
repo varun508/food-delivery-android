@@ -15,6 +15,6 @@
         android:layout_marginStart="@dimen/margin_medium"
         android:contentDescription="@string/content_desc_offer_image"
         app:scaleOnPress="@{true}"
-        app:sourceUrl="@{offer.imageResource}" />
+        app:sourceResource="@{offer.imageResource}" />
 
 </layout>

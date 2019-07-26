@@ -12,9 +12,11 @@ import com.trihkfoods.main.ui.eventlisteners.ViewBoundTouchEventListener
 fun View.scaleOnPress() {
 
     val scaleDown =
-        AnimatorInflater.loadAnimator(context, R.animator.scale_down)?.apply { setTarget(this@scaleOnPress) }
+        AnimatorInflater.loadAnimator(context, R.animator.scale_down)
+            ?.apply { setTarget(this@scaleOnPress) }
     val scaleUp =
-        AnimatorInflater.loadAnimator(context, R.animator.scale_normal)?.apply { setTarget(this@scaleOnPress) }
+        AnimatorInflater.loadAnimator(context, R.animator.scale_normal)
+            ?.apply { setTarget(this@scaleOnPress) }
 
     val releaseListener = object : AnimationEndListener {
         override fun onAnimationEnd(p0: Animator?) {
@@ -28,13 +30,16 @@ fun View.scaleOnPress() {
     }
 
     val listener = object : ViewBoundTouchEventListener() {
+        override fun touchCancel() {
+            scaleDown?.addListener(releaseListener)
+        }
+
+        override fun touchUp() {
+            scaleDown?.addListener(releaseListener)
+        }
 
         override fun touchDown() {
             scaleDown?.start()
-        }
-
-        override fun touchRelease() {
-            scaleDown?.addListener(releaseListener)
         }
     }
 
