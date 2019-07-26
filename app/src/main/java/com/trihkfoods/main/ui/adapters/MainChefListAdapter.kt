@@ -8,7 +8,7 @@ import com.trihkfoods.main.R
 
 class MainChefListAdapter : RecyclerView.Adapter<MainChefListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.layout_item_chef, parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.list_item_chef_main, parent, false))
     }
 
     override fun getItemCount() = 8
