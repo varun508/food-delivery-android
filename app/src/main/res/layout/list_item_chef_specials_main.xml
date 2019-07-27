@@ -20,7 +20,7 @@
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:contentDescription="@null"
-            app:cornerRadius="@{16}"
+            app:cornerRadius="@{24}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
