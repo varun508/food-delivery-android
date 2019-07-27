@@ -7,19 +7,34 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemChefMainBinding
 import com.trihkfoods.main.ui.tempmodels.Chef
+import kotlinx.android.synthetic.main.list_item_chef_main.view.*
 
 class MainChefListAdapter(private val chefs: ArrayList<Chef>) :
     RecyclerView.Adapter<MainChefListAdapter.ViewHolder>() {
+
+    private var expandedPosition = -1
+    private val viewPool = RecyclerView.RecycledViewPool()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent)
 
     override fun getItemCount() = chefs.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(chefs[position])
+        val chef = chefs[position]
+
+        holder.binding.root.run {
+            setOnClickListener {
+                chef.expanded = position == expandedPosition
+                expandedPosition = if (chef.expanded) -1 else position
+                notifyItemChanged(position)
+            }
+
+            rvChefSpecialsMain.setRecycledViewPool(viewPool)
+        }
+        holder.bind(chef)
     }
 
-    class ViewHolder(private val binding: ListItemChefMainBinding) :
+    class ViewHolder(val binding: ListItemChefMainBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         companion object {

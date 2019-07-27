@@ -57,7 +57,7 @@ class FoodFragment : Fragment() {
         repeat(3) { foodItems += FoodItem("", R.drawable.image_temp_food_item) }
 
         val chefs = arrayListOf<Chef>()
-        repeat(4) { chefs += Chef("", R.drawable.image_temp_chef, foodItems) }
+        repeat(10) { chefs += Chef("", R.drawable.image_temp_chef, foodItems) }
 
         rvChefs?.run {
             adapter = MainChefListAdapter(chefs)
