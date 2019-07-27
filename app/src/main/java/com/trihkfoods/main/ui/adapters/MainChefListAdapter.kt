@@ -1,32 +1,36 @@
 package com.trihkfoods.main.ui.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.trihkfoods.main.R
+import com.trihkfoods.main.databinding.ListItemChefMainBinding
+import com.trihkfoods.main.ui.tempmodels.Chef
 
-class MainChefListAdapter : RecyclerView.Adapter<MainChefListAdapter.ViewHolder>() {
+class MainChefListAdapter(private val chefs: ArrayList<Chef>) :
+    RecyclerView.Adapter<MainChefListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent)
 
-    override fun getItemCount() = 8
+    override fun getItemCount() = chefs.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind()
+        holder.bind(chefs[position])
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(private val binding: ListItemChefMainBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         companion object {
 
             fun from(parent: ViewGroup): ViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
-                val view = inflater.inflate(R.layout.list_item_chef_main, parent, false)
-                return ViewHolder(view)
+                val binding = ListItemChefMainBinding.inflate(inflater, parent, false)
+                return ViewHolder(binding)
             }
         }
 
-        fun bind() {}
+        fun bind(chef: Chef) {
+            binding.chef = chef
+        }
     }
 }

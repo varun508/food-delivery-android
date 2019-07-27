@@ -1,5 +1,6 @@
 package com.trihkfoods.main.bindings
 
+import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.ImageView
 import androidx.core.graphics.drawable.DrawableCompat
@@ -16,7 +17,7 @@ fun View.scale(boolean: Boolean) {
     if (boolean) scaleOnPress()
 }
 
-@BindingAdapter(value = ["sourceResource", "cornerRadius"])
+@BindingAdapter(value = ["sourceResource", "cornerRadius"], requireAll = false)
 fun ImageView.loadImageFromResource(sourceResource: Int?, cornerRadius: Int?) {
     if (cornerRadius != null && cornerRadius > 0) {
         val options =

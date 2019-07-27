@@ -12,6 +12,7 @@ import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.FragmentFoodBinding
 import com.trihkfoods.main.ui.adapters.MainChefListAdapter
 import com.trihkfoods.main.ui.adapters.OfferListAdapter
+import com.trihkfoods.main.ui.tempmodels.Chef
 import com.trihkfoods.main.ui.tempmodels.Offer
 import kotlinx.android.synthetic.main.fragment_food.*
 
@@ -40,9 +41,8 @@ class FoodFragment : Fragment() {
 
     private fun inflateDummyOfferList() {
         val offers = arrayListOf<Offer>()
-        repeat(4) {
-            offers += Offer("", "", R.drawable.image_temp_offer)
-        }
+        repeat(4) { offers += Offer("", "", R.drawable.image_temp_offer) }
+
         rvOffers?.run {
             adapter = OfferListAdapter(offers)
             layoutManager = LinearLayoutManager(requireContext()).also {
@@ -52,8 +52,11 @@ class FoodFragment : Fragment() {
     }
 
     private fun inflateDummyChefList() {
+        val chefs = arrayListOf<Chef>()
+        repeat(4) { chefs += Chef("", R.drawable.image_temp_chef, R.drawable.image_temp_food_item) }
+
         rvChefs?.run {
-            adapter = MainChefListAdapter()
+            adapter = MainChefListAdapter(chefs)
             layoutManager = LinearLayoutManager(requireContext())
         }
     }
