@@ -35,13 +35,13 @@ fun View.scaleOnPress() {
         }
 
         override fun touchUp() {
-            scaleDown?.addListener(releaseListener)
-        }
-
-        override fun touchDown() {
             if (scaleDown?.isRunning == true)
                 scaleDown.addListener(releaseListener)
             else scaleUp?.start()
+        }
+
+        override fun touchDown() {
+            scaleDown?.start()
         }
     }
 

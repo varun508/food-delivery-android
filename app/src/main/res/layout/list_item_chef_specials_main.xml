@@ -12,6 +12,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
         android:background="@drawable/curved_corner_rectangle_stroke_light_gray_transparent_regular"
         android:orientation="vertical">
 

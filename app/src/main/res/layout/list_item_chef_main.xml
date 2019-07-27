@@ -14,12 +14,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_bottom_light_gray_regular"
-        android:padding="@dimen/padding_medium">
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium">
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_medium"
             app:cornerRadius="@{16}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView6"
@@ -48,6 +50,7 @@
             android:isIndicator="true"
             android:numStars="5"
             android:rating="4.4"
+            android:layout_marginEnd="@dimen/margin_medium"
             android:stepSize="0.1"
             android:theme="@style/RatingBarTheme"
             app:layout_constraintBottom_toBottomOf="@+id/textView6"
@@ -64,7 +67,7 @@
             android:fontFamily="@font/manrope_semibold"
             android:paddingBottom="@dimen/padding_small"
             android:text="North Indian, South Indian, Mughlai"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBar"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
