@@ -13,6 +13,7 @@ import com.trihkfoods.main.databinding.FragmentFoodBinding
 import com.trihkfoods.main.ui.adapters.MainChefListAdapter
 import com.trihkfoods.main.ui.adapters.OfferListAdapter
 import com.trihkfoods.main.ui.tempmodels.Chef
+import com.trihkfoods.main.ui.tempmodels.FoodItem
 import com.trihkfoods.main.ui.tempmodels.Offer
 import kotlinx.android.synthetic.main.fragment_food.*
 
@@ -52,8 +53,11 @@ class FoodFragment : Fragment() {
     }
 
     private fun inflateDummyChefList() {
+        val foodItems = arrayListOf<FoodItem>()
+        repeat(3) { foodItems += FoodItem("", R.drawable.image_temp_food_item) }
+
         val chefs = arrayListOf<Chef>()
-        repeat(4) { chefs += Chef("", R.drawable.image_temp_chef, R.drawable.image_temp_food_item) }
+        repeat(4) { chefs += Chef("", R.drawable.image_temp_chef, foodItems) }
 
         rvChefs?.run {
             adapter = MainChefListAdapter(chefs)

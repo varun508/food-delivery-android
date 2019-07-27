@@ -21,19 +21,17 @@ fun View.scaleOnPress() {
 
     val releaseListener = object : AnimationEndListener {
         override fun onAnimationEnd(p0: Animator?) {
-            if (scaleDown?.isRunning == true)
-                scaleDown.doOnEnd {
-                    scaleUp?.start()
-                    it.removeListener(this)
-                }
-            else scaleUp?.start()
+            scaleUp?.start()
+            scaleDown?.removeListener(this)
         }
     }
 
     val listener = object : ViewBoundTouchEventListener() {
 
         override fun touchCancel() {
-            scaleDown?.addListener(releaseListener)
+            if (scaleDown?.isRunning == true)
+                scaleDown.addListener(releaseListener)
+            else scaleUp?.start()
         }
 
         override fun touchUp() {
@@ -41,7 +39,9 @@ fun View.scaleOnPress() {
         }
 
         override fun touchDown() {
-            scaleDown?.start()
+            if (scaleDown?.isRunning == true)
+                scaleDown.addListener(releaseListener)
+            else scaleUp?.start()
         }
     }
 

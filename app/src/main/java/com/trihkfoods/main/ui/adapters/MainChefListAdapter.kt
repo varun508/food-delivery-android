@@ -2,6 +2,8 @@ package com.trihkfoods.main.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemChefMainBinding
 import com.trihkfoods.main.ui.tempmodels.Chef
@@ -30,7 +32,13 @@ class MainChefListAdapter(private val chefs: ArrayList<Chef>) :
         }
 
         fun bind(chef: Chef) {
-            binding.chef = chef
+            binding.run {
+                this.chef = chef
+                rvChefSpecialsMain.layoutManager = LinearLayoutManager(binding.root.context).apply {
+                    orientation = LinearLayout.HORIZONTAL
+                }
+                rvChefSpecialsMain.adapter = MainChefSpecialListAdapter(chef.chefSpecials)
+            }
         }
     }
 }
