@@ -14,6 +14,7 @@ fun View.scaleOnPress() {
     val scaleDown =
         AnimatorInflater.loadAnimator(context, R.animator.scale_down)
             ?.apply { setTarget(this@scaleOnPress) }
+
     val scaleUp =
         AnimatorInflater.loadAnimator(context, R.animator.scale_normal)
             ?.apply { setTarget(this@scaleOnPress) }
@@ -30,6 +31,7 @@ fun View.scaleOnPress() {
     }
 
     val listener = object : ViewBoundTouchEventListener() {
+
         override fun touchCancel() {
             scaleDown?.addListener(releaseListener)
         }

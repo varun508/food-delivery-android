@@ -13,7 +13,7 @@ import com.trihkfoods.main.ui.screens.main.MainActivity
 import com.trihkfoods.main.utils.changeStatusBarColor
 import com.trihkfoods.main.utils.navigateFinishing
 import com.trihkfoods.main.utils.onClick
-import com.trihkfoods.main.bindings.scaleOnPress
+import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_authentication.*
 
 class AuthenticationActivity : AppCompatActivity(), NavController.OnDestinationChangedListener {

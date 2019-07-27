@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.trihkfoods.main.R
-import com.trihkfoods.main.ui.tempmodels.Offer
+import com.trihkfoods.main.databinding.FragmentFoodBinding
 import com.trihkfoods.main.ui.adapters.MainChefListAdapter
 import com.trihkfoods.main.ui.adapters.OfferListAdapter
+import com.trihkfoods.main.ui.tempmodels.Offer
 import kotlinx.android.synthetic.main.fragment_food.*
 
 class FoodFragment : Fragment() {
@@ -20,7 +22,13 @@ class FoodFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_food, container, false)
+        val binding = DataBindingUtil.inflate<FragmentFoodBinding>(
+            inflater,
+            R.layout.fragment_food,
+            container,
+            false
+        )
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,7 +41,7 @@ class FoodFragment : Fragment() {
     private fun inflateDummyOfferList() {
         val offers = arrayListOf<Offer>()
         repeat(4) {
-            offers += Offer("", "",R.drawable.image_temp_offer)
+            offers += Offer("", "", R.drawable.image_temp_offer)
         }
         rvOffers?.run {
             adapter = OfferListAdapter(offers)

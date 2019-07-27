@@ -13,7 +13,7 @@ import com.trihkfoods.main.ui.screens.authentication.AuthenticationActivity
 import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
 import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
-import com.trihkfoods.main.bindings.scaleOnPress
+import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_get_started.*
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
@@ -94,6 +94,7 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
     }
 
 
+    @Suppress("DEPRECATION")
     private fun getHtmlText() =
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
             Html.fromHtml("&#8226;", HtmlCompat.FROM_HTML_MODE_LEGACY)

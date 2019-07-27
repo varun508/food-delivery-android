@@ -15,6 +15,7 @@
         android:layout_marginStart="@dimen/margin_medium"
         android:contentDescription="@string/content_desc_offer_image"
         app:scaleOnPress="@{true}"
+        app:cornerRadius="@{16}"
         app:sourceResource="@{offer.imageResource}" />
 
 </layout>
