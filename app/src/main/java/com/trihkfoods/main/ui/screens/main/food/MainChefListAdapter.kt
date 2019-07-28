@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.trihkfoods.main.databinding.ListItemChefMainBinding
+import com.trihkfoods.main.databinding.ListItemChefExpandableBinding
 import com.trihkfoods.main.ui.tempmodels.Chef
 import kotlinx.android.synthetic.main.list_item_chef_expandable.view.*
 
@@ -37,14 +37,14 @@ class MainChefListAdapter(private val chefs: ArrayList<Chef>) :
         holder.bind(chef)
     }
 
-    class ViewHolder(val binding: ListItemChefMainBinding) :
+    class ViewHolder(val binding: ListItemChefExpandableBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         companion object {
 
             fun from(parent: ViewGroup): ViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
-                val binding = ListItemChefMainBinding.inflate(inflater, parent, false)
+                val binding = ListItemChefExpandableBinding.inflate(inflater, parent, false)
                 return ViewHolder(binding)
             }
         }

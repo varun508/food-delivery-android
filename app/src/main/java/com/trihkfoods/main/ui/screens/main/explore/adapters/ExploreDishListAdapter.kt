@@ -3,7 +3,7 @@ package com.trihkfoods.main.ui.screens.main.explore.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.trihkfoods.main.databinding.ListItemDishBasicBinding
+import com.trihkfoods.main.databinding.ListItemDishHorizontalBinding
 import com.trihkfoods.main.ui.tempmodels.FoodItem
 
 class ExploreDishListAdapter(private val foodItems: ArrayList<FoodItem>) :
@@ -18,14 +18,14 @@ class ExploreDishListAdapter(private val foodItems: ArrayList<FoodItem>) :
         holder.bind(foodItems[position])
     }
 
-    class ViewHolder(val binding: ListItemDishBasicBinding) :
+    class ViewHolder(val binding: ListItemDishHorizontalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         companion object {
 
             fun from(parent: ViewGroup): ViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
-                val binding = ListItemDishBasicBinding.inflate(inflater, parent, false)
+                val binding = ListItemDishHorizontalBinding.inflate(inflater, parent, false)
                 return ViewHolder(binding)
             }
         }
