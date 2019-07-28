@@ -1,82 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/toolbar_size_location">
+    android:layout_height="@dimen/app_toolbar_size"
+    android:background="@drawable/border_bottom_light_gray_regular"
+    android:paddingStart="@dimen/padding_medium"
+    android:paddingEnd="@dimen/padding_medium">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/border_bottom_light_gray_regular">
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/AutoTextBodySmallToBodyRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_semibold"
+        android:maxLines="1"
+        android:text="Home"
+        android:textColor="@color/text_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/manrope_semibold"
-            android:maxLines="1"
-            android:text="Home"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/text_size_body_regular"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/margin_small"
-            android:fontFamily="@font/manrope_bold"
-            android:maxLines="1"
-            android:text="Amrapali Dream Valley"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size_body_regular"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:gravity="center_vertical"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:fontFamily="@font/manrope_bold"
+        android:maxLines="1"
+        android:text="Amrapali Dream Valley"
+        style="@style/AutoTextBodyRegularToBodyBig"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_medium"
-            android:fontFamily="@font/manrope_medium"
-            android:text="Cart"
-            android:textColor="@color/trihk_red"
-            android:textSize="@dimen/text_size_body_regular"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_semibold"
+        android:drawableStart="@drawable/ic_cart_solid_trihk_red"
+        android:text="Cart"
+        android:textColor="@color/trihk_red"
+        android:drawablePadding="@dimen/padding_small"
+        style="@style/AutoTextBodySmallToBodyRegular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="@dimen/margin_small"
-            android:contentDescription="@null"
-            android:rotation="180"
-            android:tint="@color/gray"
-            app:layout_constraintBottom_toBottomOf="@+id/textView8"
-            app:layout_constraintStart_toEndOf="@+id/textView8"
-            app:layout_constraintTop_toTopOf="@+id/textView8"
-            app:srcCompat="@drawable/ic_arrow_left_solid_black" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@null"
+        android:rotation="180"
+        android:tint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        app:srcCompat="@drawable/ic_arrow_left_solid_black" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_small"
-            android:contentDescription="@null"
-            android:tint="@color/trihk_red"
-            app:layout_constraintBottom_toBottomOf="@+id/textView14"
-            app:layout_constraintEnd_toStartOf="@+id/textView14"
-            app:layout_constraintTop_toTopOf="@+id/textView14"
-            app:srcCompat="@drawable/ic_cart_solid" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

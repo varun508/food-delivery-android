@@ -37,7 +37,8 @@
     <dimen name="text_size_body_big">18.0sp</dimen>
     <dimen name="text_size_body_regular">16.0sp</dimen>
 
-    <dimen name="toolbar_size_location">55dp</dimen>
+    <dimen name="app_toolbar_size">55dp</dimen>
+    <dimen name="app_toolbar_size_big">60dp</dimen>
 
 
 </resources>

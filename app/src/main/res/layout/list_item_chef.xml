@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="chef"
+            type="com.trihkfoods.main.ui.tempmodels.Chef" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom_light_gray_regular"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_medium"
+            app:cornerRadius="@{20}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView6"
+            app:sourceResource="@{chef.imageResource}" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/AutoTextBodyRegularToBodyBig"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Shiva Trihk Cook"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/ratingBar"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="4.4"
+            android:stepSize="0.1"
+            android:theme="@style/RatingBarTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView17"
+            style="@style/AutoTextCaptionToBodySmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@drawable/border_bottom_light_gray_regular"
+            android:fontFamily="@font/manrope_semibold"
+            android:paddingBottom="@dimen/padding_small"
+            android:text="North Indian, South Indian, Mughlai"
+            app:layout_constraintEnd_toEndOf="@+id/ratingBar"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView18"
+            style="@style/AutoTextSmallToCaption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:drawableStart="@drawable/ic_dinner_solid_orange"
+            android:drawablePadding="@dimen/padding_regular"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center_vertical"
+            android:text="Serves Veg and Non-Veg"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/textView17"
+            app:layout_constraintStart_toStartOf="@+id/textView17"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <TextView
+            android:id="@+id/textView19"
+            style="@style/AutoTextSmallToCaption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:drawableStart="@drawable/ic_rupee_circle_solid_green"
+            android:drawablePadding="@dimen/padding_regular"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center_vertical"
+            android:text="150 for two"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toStartOf="@+id/textView20"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+        <TextView
+            android:id="@+id/textView20"
+            style="@style/AutoTextSmallToCaption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_delivery_man_solid_trihk_red"
+            android:drawablePadding="@dimen/padding_regular"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center_vertical"
+            android:text="30-40 Mins"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/textView19"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
