@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout>
 
-</LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/padding_big"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_big"
+        android:paddingBottom="@dimen/padding_small">
+
+        <TextView
+            style="@style/AutoTextBodySmallToBodyRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_bold"
+            android:text="ACCOUNT DETAILS"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            style="@style/AutoTextSmallToCaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:fontFamily="@font/manrope_medium"
+            android:text="Invites, Favourites and more"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+</layout>
