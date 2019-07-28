@@ -35,11 +35,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_regular"
-            android:layout_marginEnd="@dimen/margin_big"
             android:fontFamily="@font/manrope_bold"
             android:text="Butter chicken"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView27"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,7 +51,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView25"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/textView25"
-            app:srcCompat="@drawable/ic_non_veg" />
+            app:srcCompat="@drawable/ic_veg" />
 
         <RatingBar
             android:id="@+id/ratingBar2"
@@ -65,8 +64,8 @@
             android:rating="4.4"
             android:stepSize="0.1"
             android:theme="@style/RatingBarTheme"
-            app:layout_constraintStart_toStartOf="@+id/textView25"
-            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+            app:layout_constraintStart_toStartOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
         <TextView
             android:id="@+id/textView22"
@@ -75,10 +74,40 @@
             android:layout_marginTop="@dimen/margin_regular"
             android:drawableStart="@drawable/ic_rupee"
             android:drawablePadding="@dimen/padding_small"
+            android:fontFamily="@font/manrope_bold"
             android:text="80"
             android:textColor="@color/trihk_red"
             app:layout_constraintStart_toStartOf="@+id/ratingBar2"
             app:layout_constraintTop_toBottomOf="@+id/ratingBar2" />
+
+        <TextView
+            android:id="@+id/textView26"
+            style="@style/AutoTextSmallToCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_semibold"
+            android:text="Mughlai"
+            android:textColor="@color/gray"
+            app:layout_constraintStart_toStartOf="@id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+        <TextView
+            android:id="@+id/textView27"
+            style="@style/AutoTextCaptionToBodySmall"
+            backgroundCompatTint="@{@color/trihk_green}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_big"
+            android:background="@drawable/curved_corner_rectangle_radius_small"
+            android:fontFamily="@font/manrope_bold"
+            android:paddingStart="@dimen/padding_big"
+            android:paddingTop="4dp"
+            android:paddingEnd="@dimen/padding_big"
+            android:paddingBottom="4dp"
+            android:text="Add"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView25" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
