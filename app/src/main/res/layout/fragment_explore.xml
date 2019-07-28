@@ -11,7 +11,6 @@
             android:id="@+id/materialToolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/app_toolbar_size_big"
-            android:background="@drawable/border_bottom_light_gray_regular"
             app:contentInsetLeft="@dimen/margin_medium"
             app:contentInsetRight="@dimen/margin_medium">
 
@@ -40,7 +39,11 @@
             android:id="@+id/tlExplore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom_light_gray_regular"
+            app:tabGravity="fill"
+            app:tabIndicator="@drawable/curved_corner_rectangle_trihk_red"
             app:tabIndicatorColor="@color/trihk_red"
+            app:tabIndicatorFullWidth="false"
             app:tabIndicatorHeight="6dp"
             app:tabTextAppearance="@style/TabLayoutTextAppearance" />
 

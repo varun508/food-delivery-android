@@ -19,12 +19,13 @@
         <TextView
             android:id="@+id/textView25"
             style="@style/AutoTextBodyRegularToBodyBig"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_medium"
             android:fontFamily="@font/manrope_bold"
             android:text="Butter chicken"
             android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="parent" />
 
