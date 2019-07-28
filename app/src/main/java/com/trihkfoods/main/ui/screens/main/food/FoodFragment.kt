@@ -52,10 +52,10 @@ class FoodFragment : Fragment() {
 
     private fun inflateDummyChefList() {
         val foodItems = arrayListOf<FoodItem>()
-        repeat(3) { foodItems += FoodItem("", R.drawable.image_temp_food_item) }
+        repeat(3) { foodItems += FoodItem() }
 
         val chefs = arrayListOf<Chef>()
-        repeat(10) { chefs += Chef("", R.drawable.image_temp_chef, foodItems) }
+        repeat(10) { chefs += Chef(chefSpecials = foodItems) }
 
         rvChefs?.run {
             adapter = MainChefListAdapter(chefs)

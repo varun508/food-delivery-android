@@ -1,8 +1,10 @@
 package com.trihkfoods.main.ui.tempmodels
 
+import com.trihkfoods.main.R
+
 data class Chef(
-    val chefId: String,
-    val imageResource: Int,
-    val chefSpecials: List<FoodItem>,
+    val chefId: String ="",
+    val imageResource: Int = R.drawable.image_temp_chef,
+    val chefSpecials: List<FoodItem> ,
     var expanded: Boolean = false
 )
