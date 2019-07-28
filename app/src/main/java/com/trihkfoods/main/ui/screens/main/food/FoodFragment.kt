@@ -10,8 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.FragmentFoodBinding
-import com.trihkfoods.main.ui.adapters.MainChefListAdapter
-import com.trihkfoods.main.ui.adapters.OfferListAdapter
 import com.trihkfoods.main.ui.tempmodels.Chef
 import com.trihkfoods.main.ui.tempmodels.FoodItem
 import com.trihkfoods.main.ui.tempmodels.Offer

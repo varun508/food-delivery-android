@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.adapters
+package com.trihkfoods.main.ui.screens.main.food
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +9,8 @@ import java.util.ArrayList
 
 class OfferListAdapter(private val offers: ArrayList<Offer>) : RecyclerView.Adapter<OfferListAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        ViewHolder.from(parent)
 
     override fun getItemCount() = offers.size
 

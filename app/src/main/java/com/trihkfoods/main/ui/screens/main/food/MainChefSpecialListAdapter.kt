@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.adapters
+package com.trihkfoods.main.ui.screens.main.food
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +9,10 @@ import com.trihkfoods.main.ui.tempmodels.FoodItem
 class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
     RecyclerView.Adapter<MainChefSpecialListAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        ViewHolder.from(
+            parent
+        )
 
     override fun getItemCount() = items.size
 
@@ -25,7 +28,9 @@ class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
             fun from(parent: ViewGroup): ViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = ListItemChefSpecialsMainBinding.inflate(inflater, parent, false)
-                return ViewHolder(binding)
+                return ViewHolder(
+                    binding
+                )
             }
         }
 
