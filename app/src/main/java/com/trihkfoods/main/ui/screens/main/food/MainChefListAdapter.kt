@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemChefMainBinding
 import com.trihkfoods.main.ui.tempmodels.Chef
-import kotlinx.android.synthetic.main.list_item_chef_main.view.*
+import kotlinx.android.synthetic.main.list_item_chef_expandable.view.*
 
 class MainChefListAdapter(private val chefs: ArrayList<Chef>) :
     RecyclerView.Adapter<MainChefListAdapter.ViewHolder>() {

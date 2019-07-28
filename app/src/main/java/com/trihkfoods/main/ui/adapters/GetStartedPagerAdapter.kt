@@ -26,7 +26,7 @@ class GetStartedPagerAdapter(context: Context, private val images: Array<Int>) :
     override fun getCount() = images.size
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val resourceToInflate = R.layout.layout_get_started_slide_item
+        val resourceToInflate = R.layout.list_item_get_started
         val view = mLayoutInflater.inflate(resourceToInflate, container, false)
 
         val backgroundImageView = view.findViewById<ImageView>(R.id.imageViewSlideItemLgs)

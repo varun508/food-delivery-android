@@ -14,15 +14,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="@dimen/padding_medium"
-        android:paddingBottom="@dimen/padding_medium">
+        android:paddingTop="@dimen/padding_big"
+        android:paddingBottom="@dimen/padding_big">
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_big"
+            android:contentDescription="@null"
+            app:cornerRadius="@{24}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView25" />
+            app:layout_constraintTop_toTopOf="@+id/textView25"
+            app:sourceResource="@{dish.imageResource}" />
 
         <TextView
             android:id="@+id/textView25"
