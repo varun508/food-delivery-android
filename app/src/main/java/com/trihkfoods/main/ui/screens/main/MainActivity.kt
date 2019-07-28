@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        changeStatusBarColor(R.color.light_gray)
+        changeStatusBarColor(R.color.white)
         bindUI()
         RecyclerView.RecycledViewPool()
     }
