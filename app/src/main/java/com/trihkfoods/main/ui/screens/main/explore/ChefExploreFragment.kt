@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.trihkfoods.main.R
+import com.trihkfoods.main.databinding.FragmentChefExploreBinding
 
 class ChefExploreFragment : Fragment() {
 
@@ -14,7 +14,8 @@ class ChefExploreFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_chef_explore, container, false)
+        val binding = FragmentChefExploreBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
 
