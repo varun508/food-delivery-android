@@ -41,11 +41,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabIndicatorColor="@color/trihk_red"
-            app:tabIndicatorHeight="6dp" />
+            app:tabIndicatorHeight="6dp"
+            app:tabTextAppearance="@style/TabLayoutTextAppearance" />
 
         <androidx.viewpager.widget.ViewPager
-            android:layout_width="match_parent"
             android:id="@+id/vpExplore"
+            android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </LinearLayout>

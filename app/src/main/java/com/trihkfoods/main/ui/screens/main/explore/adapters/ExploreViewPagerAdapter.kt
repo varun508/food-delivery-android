@@ -12,4 +12,10 @@ class ExploreViewPagerAdapter(fragmentManager: FragmentManager) :
     init {
         addFragments(ChefExploreFragment(), DishExploreFragment())
     }
+
+    override fun getPageTitle(position: Int) = when (position) {
+        0 -> "Chefs"
+        1 -> "Dishes"
+        else -> ""
+    }
 }

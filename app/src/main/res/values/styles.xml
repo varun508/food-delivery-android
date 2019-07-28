@@ -137,5 +137,10 @@
         <item name="colorAccent">@color/trihk_yellow</item>
     </style>
 
+    <style name="TabLayoutTextAppearance">
+        <item name="android:textSize">@dimen/text_size_body_regular</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
+    </style>
+
 
 </resources>
