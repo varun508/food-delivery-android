@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.trihkfoods.main.databinding.FragmentExploreBinding
+import kotlinx.android.synthetic.main.fragment_explore.*
 
 class ExploreFragment : Fragment() {
 
@@ -16,5 +17,10 @@ class ExploreFragment : Fragment() {
     ): View? {
         val binding = FragmentExploreBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 }

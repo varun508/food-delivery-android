@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.widgets.viewpager.adapter
+package com.trihkfoods.main.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

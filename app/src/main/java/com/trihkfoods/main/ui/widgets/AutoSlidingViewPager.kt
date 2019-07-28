@@ -1,12 +1,9 @@
-package com.trihkfoods.main.ui.widgets.viewpager
+package com.trihkfoods.main.ui.widgets
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
-import androidx.core.view.size
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.trihkfoods.main.utils.debugLog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

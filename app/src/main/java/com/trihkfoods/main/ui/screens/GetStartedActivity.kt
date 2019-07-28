@@ -10,7 +10,7 @@ import androidx.core.text.HtmlCompat
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.eventlisteners.BasePageChangeListener
 import com.trihkfoods.main.ui.screens.authentication.AuthenticationActivity
-import com.trihkfoods.main.ui.widgets.viewpager.adapter.GetStartedPagerAdapter
+import com.trihkfoods.main.ui.adapters.GetStartedPagerAdapter
 import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
@@ -71,7 +71,10 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
 
     private fun setupViewPager() {
         autoSlidingViewPagerAgs?.run {
-            adapter = GetStartedPagerAdapter(this@GetStartedActivity, mViewPagerImages)
+            adapter = GetStartedPagerAdapter(
+                this@GetStartedActivity,
+                mViewPagerImages
+            )
             setupAutoPageTransition()
         }
     }

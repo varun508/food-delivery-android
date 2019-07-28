@@ -7,7 +7,7 @@
     tools:context=".ui.screens.GetStartedActivity">
 
 
-    <com.trihkfoods.main.ui.widgets.viewpager.AutoSlidingViewPager
+    <com.trihkfoods.main.ui.widgets.AutoSlidingViewPager
         android:id="@+id/autoSlidingViewPagerAgs"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
