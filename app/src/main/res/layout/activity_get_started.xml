@@ -1,112 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.GetStartedActivity">
 
+<layout>
 
-    <com.trihkfoods.main.widgets.AutoSlidingViewPager
-        android:id="@+id/autoSlidingViewPagerAgs"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:context=".ui.GetStartedActivity">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/blurContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
+        <com.trihkfoods.main.widgets.AutoSlidingViewPager
+            android:id="@+id/autoSlidingViewPagerAgs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
-        <com.github.mmin18.widget.RealtimeBlurView
-            android:id="@+id/realtimeBlurViewAgs"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@id/blurContainer"
-            app:layout_constraintEnd_toEndOf="@id/blurContainer"
-            app:layout_constraintStart_toStartOf="@id/blurContainer"
-            app:layout_constraintTop_toTopOf="@+id/blurContainer"
-            app:realtimeBlurRadius="25dp"
-            app:realtimeOverlayColor="#3bbb" />
-
-
-        <TextSwitcher
-            android:id="@+id/textSwitcherTitleAgs"
-            style="@style/GetStartedTextSwitcherAppearance"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dotLayoutAgs">
-
-            <TextView style="@style/GetStartedTextSwitcherTitleText" />
-
-            <TextView style="@style/GetStartedTextSwitcherTitleText" />
-
-        </TextSwitcher>
-
-        <TextSwitcher
-            android:id="@+id/textSwitcherBodyAgs"
-            style="@style/GetStartedTextSwitcherAppearance"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textSwitcherTitleAgs">
-
-            <TextView style="@style/GetStartedTextSwitcherBodyText" />
-
-            <TextView style="@style/GetStartedTextSwitcherBodyText" />
-
-        </TextSwitcher>
-
-
-        <LinearLayout
-            android:id="@+id/dotLayoutAgs"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/blurContainer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/blurContainer" />
+            android:layout_gravity="bottom">
 
 
-        <TextView
-            android:id="@+id/tvSignInAgs"
-            style="@style/GetStartedPrimaryButtonAppearance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_regular"
-            android:layout_marginEnd="@dimen/margin_medium"
-            android:background="@drawable/curved_corner_rectangle_trihk_red"
-            android:drawableEnd="@drawable/ic_arrow_circle_right_solid_white"
-            android:text="@string/button_text_sign_in"
-            app:layout_constraintBottom_toBottomOf="@+id/tvSetLocationAgs"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tvSetLocationAgs"
-            app:layout_constraintTop_toTopOf="@+id/tvSetLocationAgs" />
+            <com.github.mmin18.widget.RealtimeBlurView
+                android:id="@+id/realtimeBlurViewAgs"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/blurContainer"
+                app:layout_constraintEnd_toEndOf="@id/blurContainer"
+                app:layout_constraintStart_toStartOf="@id/blurContainer"
+                app:layout_constraintTop_toTopOf="@+id/blurContainer"
+                app:realtimeBlurRadius="25dp"
+                app:realtimeOverlayColor="#3bbb" />
 
 
-        <TextView
-            android:id="@+id/tvSetLocationAgs"
-            style="@style/GetStartedPrimaryButtonAppearance"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_medium"
-            android:layout_marginTop="@dimen/margin_biggest"
-            android:layout_marginEnd="@dimen/margin_regular"
-            android:layout_marginBottom="@dimen/margin_big"
-            android:background="@drawable/curved_corner_rectangle_white_50"
-            android:drawableEnd="@drawable/ic_compass_solid_white"
-            android:text="@string/button_text_set_delivery_location"
-            app:layout_constraintBottom_toBottomOf="@+id/blurContainer"
-            app:layout_constraintEnd_toStartOf="@+id/tvSignInAgs"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textSwitcherBodyAgs" />
+            <TextSwitcher
+                android:id="@+id/textSwitcherTitleAgs"
+                style="@style/GetStartedTextSwitcherAppearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dotLayoutAgs">
+
+                <TextView style="@style/GetStartedTextSwitcherTitleText" />
+
+                <TextView style="@style/GetStartedTextSwitcherTitleText" />
+
+            </TextSwitcher>
+
+            <TextSwitcher
+                android:id="@+id/textSwitcherBodyAgs"
+                style="@style/GetStartedTextSwitcherAppearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textSwitcherTitleAgs">
+
+                <TextView style="@style/GetStartedTextSwitcherBodyText" />
+
+                <TextView style="@style/GetStartedTextSwitcherBodyText" />
+
+            </TextSwitcher>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:id="@+id/dotLayoutAgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/blurContainer" />
 
 
-</FrameLayout>
+            <TextView
+                android:id="@+id/tvSignInAgs"
+                style="@style/GetStartedPrimaryButtonAppearance"
+                backgroundCompatTint="@{@color/trihk_red}"
+                scaleOnPress="@{true}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_regular"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:background="@drawable/curved_corner_rectangle_radius_regular"
+                android:drawableEnd="@drawable/ic_arrow_circle_right_solid_white"
+                android:text="@string/button_text_sign_in"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSetLocationAgs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvSetLocationAgs"
+                app:layout_constraintTop_toTopOf="@+id/tvSetLocationAgs" />
+
+
+            <TextView
+                android:id="@+id/tvSetLocationAgs"
+                style="@style/GetStartedPrimaryButtonAppearance"
+                backgroundCompatTint="@{@color/white_50}"
+                scaleOnPress="@{true}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_biggest"
+                android:layout_marginEnd="@dimen/margin_regular"
+                android:layout_marginBottom="@dimen/margin_big"
+                android:background="@drawable/curved_corner_rectangle_radius_regular"
+                android:drawableEnd="@drawable/ic_compass_solid_white"
+                android:text="@string/button_text_set_delivery_location"
+                app:layout_constraintBottom_toBottomOf="@+id/blurContainer"
+                app:layout_constraintEnd_toStartOf="@+id/tvSignInAgs"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textSwitcherBodyAgs" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </FrameLayout>
+</layout>

@@ -8,14 +8,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import com.trihkfoods.main.R
+import com.trihkfoods.main.adapters.GetStartedPagerAdapter
 import com.trihkfoods.main.listener.BasePageChangeListener
 import com.trihkfoods.main.ui.authentication.AuthenticationActivity
-import com.trihkfoods.main.adapters.GetStartedPagerAdapter
 import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress
 import kotlinx.android.synthetic.main.activity_get_started.*
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
 
@@ -55,12 +57,18 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
         )
     }
 
-    private val mColorWhite by lazy { ContextCompat.getColor(this@GetStartedActivity,
-        R.color.white
-    ) }
-    private val mColorAlphaWhite by lazy { ContextCompat.getColor(this@GetStartedActivity,
-        R.color.white_50
-    ) }
+    private val mColorWhite by lazy {
+        ContextCompat.getColor(
+            this@GetStartedActivity,
+            R.color.white
+        )
+    }
+    private val mColorAlphaWhite by lazy {
+        ContextCompat.getColor(
+            this@GetStartedActivity,
+            R.color.white_50
+        )
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
