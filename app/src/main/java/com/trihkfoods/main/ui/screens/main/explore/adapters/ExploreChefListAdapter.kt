@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemChefBinding
-import com.trihkfoods.main.ui.tempmodels.Chef
+import com.trihkfoods.main.tempmodels.Chef
 
 class ExploreChefListAdapter(private val chefs: ArrayList<Chef>) :
     RecyclerView.Adapter<ExploreChefListAdapter.ViewHolder>() {

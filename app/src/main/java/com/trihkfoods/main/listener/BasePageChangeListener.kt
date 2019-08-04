@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.eventlisteners
+package com.trihkfoods.main.listener
 
 import androidx.viewpager.widget.ViewPager
 

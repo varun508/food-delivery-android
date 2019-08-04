@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.adapters
+package com.trihkfoods.main.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

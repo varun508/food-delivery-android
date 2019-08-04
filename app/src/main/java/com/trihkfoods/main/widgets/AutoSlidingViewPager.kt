@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.widgets
+package com.trihkfoods.main.widgets
 
 import android.content.Context
 import android.util.AttributeSet

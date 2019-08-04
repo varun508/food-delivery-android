@@ -3,7 +3,7 @@ package com.trihkfoods.main.ui.screens.main.food
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.trihkfoods.main.ui.tempmodels.Offer
+import com.trihkfoods.main.tempmodels.Offer
 import com.trihkfoods.main.databinding.ListItemOffersBinding
 import java.util.ArrayList
 

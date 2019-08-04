@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.FragmentAccountBinding
-import com.trihkfoods.main.ui.tempmodels.AccountOption
-import com.trihkfoods.main.ui.tempmodels.AccountOptionHeader
+import com.trihkfoods.main.tempmodels.AccountOption
+import com.trihkfoods.main.tempmodels.AccountOptionHeader
 import kotlinx.android.synthetic.main.fragment_account.*
 
 class AccountFragment : Fragment() {

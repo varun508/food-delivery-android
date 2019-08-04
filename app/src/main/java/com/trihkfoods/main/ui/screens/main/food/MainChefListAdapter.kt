@@ -6,7 +6,7 @@ import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemChefExpandableBinding
-import com.trihkfoods.main.ui.tempmodels.Chef
+import com.trihkfoods.main.tempmodels.Chef
 import kotlinx.android.synthetic.main.list_item_chef_expandable.view.*
 
 class MainChefListAdapter(private val chefs: ArrayList<Chef>) :

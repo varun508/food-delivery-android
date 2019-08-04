@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ListItemAccountOptionBinding
 import com.trihkfoods.main.databinding.ListItemAccountOptionHeaderBinding
-import com.trihkfoods.main.ui.tempmodels.AccountOption
-import com.trihkfoods.main.ui.tempmodels.AccountOptionHeader
+import com.trihkfoods.main.tempmodels.AccountOption
+import com.trihkfoods.main.tempmodels.AccountOptionHeader
 
 class AccountOptionListAdapter(private val list: List<Any>) :
     RecyclerView.Adapter<ViewHolder>() {

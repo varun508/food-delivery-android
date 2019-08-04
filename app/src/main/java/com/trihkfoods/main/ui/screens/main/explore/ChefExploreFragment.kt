@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.trihkfoods.main.databinding.FragmentChefExploreBinding
 import com.trihkfoods.main.ui.screens.main.explore.adapters.ExploreChefListAdapter
-import com.trihkfoods.main.ui.tempmodels.Chef
-import com.trihkfoods.main.ui.tempmodels.FoodItem
+import com.trihkfoods.main.tempmodels.Chef
+import com.trihkfoods.main.tempmodels.FoodItem
 import kotlinx.android.synthetic.main.fragment_chef_explore.*
 
 class ChefExploreFragment : Fragment() {

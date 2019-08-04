@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.tempmodels
+package com.trihkfoods.main.tempmodels
 
 import com.trihkfoods.main.R
 

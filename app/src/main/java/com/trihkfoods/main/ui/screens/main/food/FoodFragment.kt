@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.FragmentFoodBinding
-import com.trihkfoods.main.ui.tempmodels.Chef
-import com.trihkfoods.main.ui.tempmodels.FoodItem
-import com.trihkfoods.main.ui.tempmodels.Offer
+import com.trihkfoods.main.tempmodels.Chef
+import com.trihkfoods.main.tempmodels.FoodItem
+import com.trihkfoods.main.tempmodels.Offer
 import kotlinx.android.synthetic.main.fragment_food.*
 
 class FoodFragment : Fragment() {

@@ -1,7 +1,7 @@
 package com.trihkfoods.main.ui.screens.main.explore.adapters
 
 import androidx.fragment.app.FragmentManager
-import com.trihkfoods.main.ui.adapters.BaseFragmentPagerAdapter
+import com.trihkfoods.main.adapters.BaseFragmentPagerAdapter
 import com.trihkfoods.main.ui.screens.main.explore.ChefExploreFragment
 import com.trihkfoods.main.ui.screens.main.explore.DishExploreFragment
 

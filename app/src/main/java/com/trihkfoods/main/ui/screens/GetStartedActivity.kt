@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import com.trihkfoods.main.R
-import com.trihkfoods.main.ui.eventlisteners.BasePageChangeListener
+import com.trihkfoods.main.listener.BasePageChangeListener
 import com.trihkfoods.main.ui.screens.authentication.AuthenticationActivity
-import com.trihkfoods.main.ui.adapters.GetStartedPagerAdapter
+import com.trihkfoods.main.adapters.GetStartedPagerAdapter
 import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
 import com.trihkfoods.main.utils.scaleOnPress

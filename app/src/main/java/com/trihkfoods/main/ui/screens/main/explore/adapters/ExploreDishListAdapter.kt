@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemDishHorizontalBinding
-import com.trihkfoods.main.ui.tempmodels.FoodItem
+import com.trihkfoods.main.tempmodels.FoodItem
 
 class ExploreDishListAdapter(private val foodItems: ArrayList<FoodItem>) :
     RecyclerView.Adapter<ExploreDishListAdapter.ViewHolder>() {

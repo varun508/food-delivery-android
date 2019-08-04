@@ -5,8 +5,8 @@ import android.animation.AnimatorInflater
 import android.view.View
 import androidx.core.animation.doOnEnd
 import com.trihkfoods.main.R
-import com.trihkfoods.main.ui.eventlisteners.AnimationEndListener
-import com.trihkfoods.main.ui.eventlisteners.ViewBoundTouchEventListener
+import com.trihkfoods.main.listener.AnimationEndListener
+import com.trihkfoods.main.listener.ViewBoundTouchEventListener
 
 
 fun View.scaleOnPress() {

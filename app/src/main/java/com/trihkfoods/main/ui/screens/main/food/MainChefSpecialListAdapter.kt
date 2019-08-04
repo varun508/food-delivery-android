@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemDishVerticalBinding
-import com.trihkfoods.main.ui.tempmodels.FoodItem
+import com.trihkfoods.main.tempmodels.FoodItem
 
 class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
     RecyclerView.Adapter<MainChefSpecialListAdapter.ViewHolder>() {
