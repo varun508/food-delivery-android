@@ -51,7 +51,7 @@
                 android:layout_marginStart="@dimen/margin_medium"
                 android:layout_marginEnd="@dimen/margin_medium"
                 android:background="@drawable/curved_corner_rectangle_trihk_red"
-                android:drawableStart="@drawable/ic_search_solid_gray"
+                android:drawableStart="@drawable/ic_search_gray"
                 android:drawablePadding="@dimen/padding_regular"
                 android:ellipsize="end"
                 android:fontFamily="@font/manrope_semibold"

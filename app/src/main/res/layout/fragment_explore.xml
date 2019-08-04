@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/curved_corner_rectangle_trihk_red"
-                android:drawableStart="@drawable/ic_search_solid_gray"
+                android:drawableStart="@drawable/ic_search_gray"
                 android:drawablePadding="@dimen/padding_small"
                 android:fontFamily="@font/manrope_semibold"
                 android:hint="Search for chefs, dishes and cuisines"
