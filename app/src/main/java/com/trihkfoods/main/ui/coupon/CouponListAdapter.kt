@@ -10,14 +10,22 @@ import com.trihkfoods.main.databinding.ListItemApplyCouponBinding
 
 class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        if (viewType == R.layout.list_item_generic_header) ViewHolderGenericHeader.from(parent)
+        else ViewHolderCoupon.from(parent)
 
-    }
 
     override fun getItemCount() = items.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val item = items[position]
+        if(holder is ViewHolderCoupon)
+            holder.bind(item as )
     }
+
+    override fun getItemViewType(position: Int) =
+        if (items[position] is String) R.layout.list_item_generic_header
+        else R.layout.list_item_apply_coupon
 
     class ViewHolderCoupon(binding: ListItemApplyCouponBinding) :
         ViewHolder(binding.root) {
@@ -36,8 +44,7 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
     }
 
 
-    class ViewHolderGenericHeader(itemView: View) :
-        ViewHolder(itemView) {
+    class ViewHolderGenericHeader(itemView: View) : ViewHolder(itemView) {
         companion object {
             fun from(parent: ViewGroup): ViewHolderGenericHeader {
                 val inflater = LayoutInflater.from(parent.context)
@@ -46,7 +53,7 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
             }
         }
 
-        fun bind() {
+        fun bind(text: String) {
 
         }
     }
