@@ -1,6 +1,8 @@
 package com.trihkfoods.main.ui.coupon
 
+import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.trihkfoods.main.databinding.ListItemApplyCouponBinding
@@ -21,6 +23,6 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
         ViewHolder(binding.root)
 
 
-    class ViewHolderAvailable(binding: ListItemApplyCouponBinding) :
-        ViewHolder(binding.root)
+    class ViewHolderGenericHeader(itemView: View) :
+        ViewHolder(itemView)
 }
