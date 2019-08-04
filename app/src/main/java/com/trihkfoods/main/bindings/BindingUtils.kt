@@ -1,6 +1,5 @@
 package com.trihkfoods.main.bindings
 
-import android.graphics.drawable.Drawable
 import android.view.View
 import android.widget.ImageView
 import androidx.core.graphics.drawable.DrawableCompat

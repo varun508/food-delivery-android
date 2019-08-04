@@ -10,10 +10,16 @@
 
     <color name="white_50">#66FFFFFF</color>
     <color name="white_80">#AAFFFFFF</color>
-    <color name="light_gray">#EEEEEE</color>
-    <color name="gray">#AAAAAA</color>
 
     <color name="text_black">#202020</color>
 
     <color name="trihk_red_light">#FFCDD2</color>
+
+    <color name="gray">#AAAAAA</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="lightest_gray">#f7f8fa</color>
+
+
+    <color name="text_gray">#a8a8a8</color>
+    <color name="text_gray_dark">#7e7e7e</color>
 </resources>
