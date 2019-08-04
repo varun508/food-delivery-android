@@ -16,7 +16,7 @@
 
         <TextView
             android:id="@+id/textView28"
-            style="@style/AutoTextBodyBigToTitleRegular"
+            android:textSize="@dimen/text_size_body_regular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_big"
