@@ -33,7 +33,7 @@
     <dimen name="text_size_heading_big">34.0sp</dimen>
     <dimen name="text_size_heading_huge">45.0sp</dimen>
     <dimen name="text_size_title_big">24.0sp</dimen>
-    <dimen name="text_size_title_regular">22.0sp</dimen>
+    <dimen name="text_size_title_regular">20.0sp</dimen>
     <dimen name="text_size_body_big">18.0sp</dimen>
     <dimen name="text_size_body_regular">16.0sp</dimen>
 
