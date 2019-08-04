@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.location.LocationActivity"></activity>
         <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,15 +28,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.GetStartedActivity"
-            android:theme="@style/GetStartedTheme">
-
-        </activity>
-
+            android:theme="@style/GetStartedTheme"></activity>
         <activity
             android:name=".ui.SplashActivity"
-            android:theme="@style/SplashTheme">
-
-        </activity>
+            android:theme="@style/SplashTheme"></activity>
     </application>
 
 </manifest>
