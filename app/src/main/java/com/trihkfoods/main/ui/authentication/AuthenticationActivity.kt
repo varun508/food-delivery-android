@@ -1,7 +1,7 @@
 package com.trihkfoods.main.ui.authentication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
@@ -20,10 +20,11 @@ class AuthenticationActivity : AppCompatActivity(), NavController.OnDestinationC
     private val navController by lazy { findNavController(R.id.navHostFragmentAuth) }
     private var nextDestinationId: Int = R.id.action_phoneNumberFragment_to_registrationFragment
 
+    private lateinit var _binding: ActivityAuthenticationBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding =
-            DataBindingUtil.setContentView<ActivityAuthenticationBinding>(this, R.layout.activity_authentication)
+        _binding = DataBindingUtil.setContentView(this, R.layout.activity_authentication)
 
         changeStatusBarColor(R.color.white)
         setupOnContinueClickListener()
@@ -44,7 +45,11 @@ class AuthenticationActivity : AppCompatActivity(), NavController.OnDestinationC
         }
     }
 
-    override fun onDestinationChanged(controller: NavController, destination: NavDestination, arguments: Bundle?) {
+    override fun onDestinationChanged(
+        controller: NavController,
+        destination: NavDestination,
+        arguments: Bundle?
+    ) {
         destination.label?.run { toString() }.let { label ->
             when (label) {
                 "PhoneVerificationFragment" -> {
@@ -58,7 +63,8 @@ class AuthenticationActivity : AppCompatActivity(), NavController.OnDestinationC
                 }
                 else -> {
                     tvContinueAuthActivity?.text = "Continue"
-                    nextDestinationId = R.id.action_registrationFragment_to_phoneVerificationFragment
+                    nextDestinationId =
+                        R.id.action_registrationFragment_to_phoneVerificationFragment
                 }
             }
         }
