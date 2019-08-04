@@ -13,7 +13,7 @@
     <item
         android:id="@+id/action_explore_fragment"
         android:title="@string/text_bottom_nav_explore"
-        android:icon="@drawable/ic_search"/>
+        android:icon="@drawable/menu_item_explore"/>
 
 
     <item

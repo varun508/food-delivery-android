@@ -19,8 +19,9 @@
 
     <!-- Authentication screen theme. -->
     <style name="BottomNavigationItemText">
-        <item name="android:textSize">@dimen/text_size_body_small</item>
-        <item name="android:fontFamily">@font/manrope_semibold</item>
+        <item name="android:paddingTop">@dimen/padding_small</item>
+        <item name="android:textSize">@dimen/text_size_caption</item>
+        <item name="android:fontFamily">@font/manrope_bold</item>
     </style>
 
 
