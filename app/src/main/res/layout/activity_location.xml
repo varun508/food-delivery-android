@@ -137,7 +137,6 @@
                     android:fontFamily="@font/manrope_extrabold"
                     android:padding="@dimen/padding_medium"
                     android:text="Continue"
-
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size_body_regular" />
 
