@@ -5,7 +5,7 @@
 
         <variable
             name="offer"
-            type="com.trihkfoods.main.ui.tempmodels.Offer" />
+            type="com.trihkfoods.main.tempmodels.Offer" />
     </data>
 
     <ImageView xmlns:android="http://schemas.android.com/apk/res/android"

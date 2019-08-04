@@ -9,7 +9,7 @@
 
         <variable
             name="chef"
-            type="com.trihkfoods.main.ui.tempmodels.Chef" />
+            type="com.trihkfoods.main.tempmodels.Chef" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

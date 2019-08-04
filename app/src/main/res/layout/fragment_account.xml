@@ -6,7 +6,7 @@
 
         <variable
             name="user"
-            type="com.trihkfoods.main.ui.tempmodels.User" />
+            type="com.trihkfoods.main.tempmodels.User" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
