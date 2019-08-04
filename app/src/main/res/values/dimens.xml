@@ -29,7 +29,7 @@
 
     <dimen name="text_size_body_small">14.0sp</dimen>
     <dimen name="text_size_caption">12.0sp</dimen>
-    <dimen name="text_size_small">10.0sp</dimen>
+    <dimen name="text_size_tiny">10.0sp</dimen>
     <dimen name="text_size_title_regular">20.0sp</dimen>
     <dimen name="text_size_body_regular">16.0sp</dimen>
 

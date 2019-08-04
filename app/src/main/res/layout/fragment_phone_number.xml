@@ -3,7 +3,6 @@
 <layout>
 
 
-
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -26,30 +25,32 @@
 
         <TextView
             android:id="@+id/textView2"
-            style="@style/BaseAppTitleTextAppearance"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_extrabold"
             android:text="What's your mobile number?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_title_regular"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
-            style="@style/AutoTextCaptionToBodySmall"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/manrope_medium"
             android:text="However, there is this one question that gets asked more times than everything else put together. And that question is “What's for food today?” “Eat Good, Eat Exciting!”?"
             android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_body_small"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView3"
-            style="@style/AutoTextBodyRegularToBodyBig"
+            android:textSize="@dimen/text_size_title_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/manrope_semibold"
@@ -61,19 +62,15 @@
 
         <EditText
             android:id="@+id/editText"
-            style="@style/AutoTextBodyRegularToBodyBig"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_medium"
-            android:layout_marginTop="@dimen/margin_huge"
-            android:background="@drawable/border_bottom_gray_thick"
-            android:fontFamily="@font/manrope_semibold"
+            android:layout_marginTop="@dimen/margin_huge"        android:fontFamily="@font/manrope_semibold"
             android:hint="Mobile number"
             android:inputType="phone"
             android:maxLength="10"
-            android:paddingTop="@dimen/padding_small"
-            android:paddingBottom="@dimen/padding_small"
             android:textColor="@color/black"
+            android:textSize="@dimen/text_size_title_regular"
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/textView" />

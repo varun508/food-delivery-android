@@ -3,7 +3,6 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -25,21 +24,25 @@
 
         <TextView
             android:id="@+id/textView2"
-            style="@style/BaseAppTitleTextAppearance"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_extrabold"
             android:text="Hello, Varun!"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_title_regular"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
-            style="@style/BaseAppBodyTextAppearance"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_medium"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_body_small"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -48,17 +51,18 @@
 
         <com.alimuzaffar.lib.pin.PinEntryEditText
             android:id="@+id/pinEntryEditText"
-            style="@style/AutoTextBodyRegularToBodyBig"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_biggest"
             android:cursorVisible="true"
             android:digits="1234567890"
+            android:fontFamily="@font/manrope_medium"
             android:inputType="number"
             android:layoutDirection="ltr"
             android:maxLength="6"
             android:textColor="@color/black"
             android:textIsSelectable="false"
+            android:textSize="@dimen/text_size_body_regular"
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -67,22 +71,26 @@
 
         <TextView
             android:id="@+id/textView4"
-            style="@style/BaseAppBodyTextAppearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_medium"
             android:text="Didn't receive the code? Resend"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_body_small"
             app:layout_constraintEnd_toEndOf="@+id/pinEntryEditText"
             app:layout_constraintStart_toStartOf="@+id/pinEntryEditText"
             app:layout_constraintTop_toBottomOf="@+id/pinEntryEditText" />
 
         <TextView
             android:id="@+id/textView10"
-            style="@style/BaseAppBodyTextAppearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
+            android:fontFamily="@font/manrope_medium"
             android:text="in 00:56"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_body_small"
             app:layout_constraintEnd_toEndOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />

@@ -12,22 +12,23 @@
         android:paddingBottom="@dimen/padding_small">
 
         <TextView
-            style="@style/AutoTextBodySmallToBodyRegular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/manrope_bold"
             android:text="ACCOUNT DETAILS"
-            android:textColor="@color/black" />
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_body_small" />
 
 
         <TextView
-            style="@style/AutoTextSmallToCaption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/manrope_medium"
             android:text="Invites, Favourites and more"
-            android:textColor="@color/gray" />
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_caption" />
 
     </LinearLayout>
 </layout>

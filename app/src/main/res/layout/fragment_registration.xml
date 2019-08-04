@@ -24,7 +24,9 @@
 
         <TextView
             android:id="@+id/textView2"
-            style="@style/BaseAppTitleTextAppearance"
+            android:fontFamily="@font/manrope_extrabold"
+            android:textSize="@dimen/text_size_title_regular"
+            android:textColor="@color/black"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Create new account"

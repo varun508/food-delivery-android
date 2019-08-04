@@ -79,7 +79,7 @@
                 android:paddingEnd="@dimen/padding_regular"
                 android:paddingBottom="@dimen/padding_small"
                 android:tint="@color/gray"
-                app:backgroundCompatTint="@{@color/light_gray}"
+                backgroundCompatTint="@{@color/light_gray}"
                 app:layout_constraintBottom_toBottomOf="@+id/textView16"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView16"

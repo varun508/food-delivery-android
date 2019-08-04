@@ -16,7 +16,6 @@
 
         <TextView
             android:id="@+id/textView28"
-            android:textSize="@dimen/text_size_body_regular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_big"
@@ -24,6 +23,7 @@
             android:fontFamily="@font/manrope_bold"
             android:text="Varun Sharma"
             android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_body_regular"
             app:layout_constraintEnd_toStartOf="@+id/textView30"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -31,13 +31,13 @@
 
         <TextView
             android:id="@+id/textView29"
-            style="@style/AutoTextBodySmallToBodyRegular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_regular"
             android:fontFamily="@font/manrope_semibold"
             android:text="imva508@gmail.com"
             android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_body_small"
             app:layout_constraintStart_toStartOf="@+id/textView28"
             app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
@@ -49,6 +49,7 @@
             android:fontFamily="@font/manrope_semibold"
             android:text="Edit"
             android:textColor="@color/trihk_red"
+            android:textSize="@dimen/text_size_body_small"
             app:layout_constraintBottom_toBottomOf="@+id/textView28"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView28" />
