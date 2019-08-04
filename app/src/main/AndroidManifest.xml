@@ -14,10 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.cart.CartActivity"></activity>
+        <activity android:name=".ui.coupon.ApplyCouponActivity"></activity>
+        <activity android:name=".ui.cart.CartActivity" />
         <activity android:name=".ui.profile.ChefProfileActivity" />
-        <activity android:name=".ui.location.LocationActivity"></activity>
-        <activity android:name=".ui.main.MainActivity"></activity>
+        <activity android:name=".ui.location.LocationActivity" />
+        <activity android:name=".ui.main.MainActivity" />
         <activity
             android:name=".ui.authentication.AuthenticationActivity"
             android:windowSoftInputMode="adjustResize" />
