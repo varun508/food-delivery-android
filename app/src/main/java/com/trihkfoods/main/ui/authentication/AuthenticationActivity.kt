@@ -1,15 +1,14 @@
-package com.trihkfoods.main.ui.screens.authentication
+package com.trihkfoods.main.ui.authentication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ActivityAuthenticationBinding
-import com.trihkfoods.main.ui.screens.main.MainActivity
+import com.trihkfoods.main.ui.main.MainActivity
 import com.trihkfoods.main.utils.changeStatusBarColor
 import com.trihkfoods.main.utils.navigateFinishing
 import com.trihkfoods.main.utils.onClick

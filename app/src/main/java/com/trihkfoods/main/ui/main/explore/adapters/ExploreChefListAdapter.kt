@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.screens.main.explore.adapters
+package com.trihkfoods.main.ui.main.explore.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +10,9 @@ class ExploreChefListAdapter(private val chefs: ArrayList<Chef>) :
     RecyclerView.Adapter<ExploreChefListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder.from(parent)
+        ViewHolder.from(
+            parent
+        )
 
     override fun getItemCount() = chefs.size
 
@@ -26,7 +28,9 @@ class ExploreChefListAdapter(private val chefs: ArrayList<Chef>) :
             fun from(parent: ViewGroup): ViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = ListItemChefBinding.inflate(inflater, parent, false)
-                return ViewHolder(binding)
+                return ViewHolder(
+                    binding
+                )
             }
         }
 

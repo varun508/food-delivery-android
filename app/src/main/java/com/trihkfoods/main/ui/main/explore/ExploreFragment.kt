@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.screens.main.explore
+package com.trihkfoods.main.ui.main.explore
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.FragmentExploreBinding
-import com.trihkfoods.main.ui.screens.main.explore.adapters.ExploreViewPagerAdapter
+import com.trihkfoods.main.ui.main.explore.adapters.ExploreViewPagerAdapter
 import kotlinx.android.synthetic.main.fragment_explore.*
 
 class ExploreFragment : Fragment() {
@@ -29,7 +29,10 @@ class ExploreFragment : Fragment() {
     }
 
     private fun setupViewPager() {
-        vpExplore.adapter = ExploreViewPagerAdapter(childFragmentManager)
+        vpExplore.adapter =
+            ExploreViewPagerAdapter(
+                childFragmentManager
+            )
         tlExplore.setupWithViewPager(vpExplore)
         context?.run {
             tlExplore.setTabTextColors(

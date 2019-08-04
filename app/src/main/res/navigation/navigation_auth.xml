@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/phoneNumberFragment"
-        android:name="com.trihkfoods.main.ui.screens.authentication.PhoneNumberFragment"
+        android:name="com.trihkfoods.main.ui.authentication.PhoneNumberFragment"
         android:label="PhoneNumberFragment">
         <action
             android:id="@+id/action_phoneNumberFragment_to_phoneVerificationFragment"
@@ -26,11 +26,11 @@
     </fragment>
     <fragment
         android:id="@+id/phoneVerificationFragment"
-        android:name="com.trihkfoods.main.ui.screens.authentication.PhoneVerificationFragment"
+        android:name="com.trihkfoods.main.ui.authentication.PhoneVerificationFragment"
         android:label="PhoneVerificationFragment" />
     <fragment
         android:id="@+id/registrationFragment"
-        android:name="com.trihkfoods.main.ui.screens.authentication.RegistrationFragment"
+        android:name="com.trihkfoods.main.ui.authentication.RegistrationFragment"
         android:label="RegistrationFragment">
         <action
             android:id="@+id/action_registrationFragment_to_phoneVerificationFragment"

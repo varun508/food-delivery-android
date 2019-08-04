@@ -1,14 +1,14 @@
-package com.trihkfoods.main.ui.screens.main
+package com.trihkfoods.main.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.R
-import com.trihkfoods.main.ui.screens.main.account.AccountFragment
-import com.trihkfoods.main.ui.screens.main.offers.OffersFragment
-import com.trihkfoods.main.ui.screens.main.explore.ExploreFragment
-import com.trihkfoods.main.ui.screens.main.food.FoodFragment
+import com.trihkfoods.main.ui.main.account.AccountFragment
+import com.trihkfoods.main.ui.main.offers.OffersFragment
+import com.trihkfoods.main.ui.main.explore.ExploreFragment
+import com.trihkfoods.main.ui.main.food.FoodFragment
 import com.trihkfoods.main.utils.changeStatusBarColor
 import kotlinx.android.synthetic.main.activity_main.*
 

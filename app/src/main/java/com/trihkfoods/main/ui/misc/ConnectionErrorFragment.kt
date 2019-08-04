@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.screens.misc
+package com.trihkfoods.main.ui.misc
 
 import android.os.Bundle
 import android.view.LayoutInflater

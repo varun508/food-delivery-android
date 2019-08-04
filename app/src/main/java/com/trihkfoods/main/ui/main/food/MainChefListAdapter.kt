@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.screens.main.food
+package com.trihkfoods.main.ui.main.food
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -63,7 +63,8 @@ class MainChefListAdapter(private val chefs: ArrayList<Chef>) :
                     layoutManager = LinearLayoutManager(root.context).apply {
                         orientation = LinearLayout.HORIZONTAL
                     }
-                    adapter = MainChefSpecialListAdapter(chef.chefSpecials)
+                    adapter =
+                        MainChefSpecialListAdapter(chef.chefSpecials)
                 }
             }
         }

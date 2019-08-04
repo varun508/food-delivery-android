@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.screens.main.account
+package com.trihkfoods.main.ui.main.account
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -14,8 +14,12 @@ class AccountOptionListAdapter(private val list: List<Any>) :
     RecyclerView.Adapter<ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        if (viewType == R.layout.list_item_account_option) ViewHolderOption.from(parent)
-        else ViewHolderHeader.from(parent)
+        if (viewType == R.layout.list_item_account_option) ViewHolderOption.from(
+            parent
+        )
+        else ViewHolderHeader.from(
+            parent
+        )
 
     override fun getItemCount() = list.size
 
@@ -40,7 +44,9 @@ class AccountOptionListAdapter(private val list: List<Any>) :
             fun from(parent: ViewGroup): ViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = ListItemAccountOptionHeaderBinding.inflate(inflater, parent, false)
-                return ViewHolderHeader(binding)
+                return ViewHolderHeader(
+                    binding
+                )
             }
         }
 
@@ -57,7 +63,9 @@ class AccountOptionListAdapter(private val list: List<Any>) :
             fun from(parent: ViewGroup): ViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = ListItemAccountOptionBinding.inflate(inflater, parent, false)
-                return ViewHolderOption(binding)
+                return ViewHolderOption(
+                    binding
+                )
             }
         }
 

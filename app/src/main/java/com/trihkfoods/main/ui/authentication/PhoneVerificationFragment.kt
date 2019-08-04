@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui.screens.authentication
+package com.trihkfoods.main.ui.authentication
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,13 +1,9 @@
-package com.trihkfoods.main.ui.screens
+package com.trihkfoods.main.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.trihkfoods.main.R
 import com.trihkfoods.main.utils.navigateFinishing
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class SplashActivity : AppCompatActivity() {
 
