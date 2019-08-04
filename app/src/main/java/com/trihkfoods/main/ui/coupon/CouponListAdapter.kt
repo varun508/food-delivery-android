@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ListItemApplyCouponBinding
 
 class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<ViewHolder>() {
@@ -38,8 +39,10 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
     class ViewHolderGenericHeader(itemView: View) :
         ViewHolder(itemView) {
         companion object {
-            fun from(parent: ViewGroup) {
-
+            fun from(parent: ViewGroup): ViewHolderGenericHeader {
+                val inflater = LayoutInflater.from(parent.context)
+                val view = inflater.inflate(R.layout.list_item_generic_header, parent, false)
+                return ViewHolderGenericHeader(view)
             }
         }
 
