@@ -9,18 +9,21 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_medium"
-        android:background="@drawable/curved_corner_rectangle_stroke_light_gray_transparent_regular"
+        android:background="@drawable/curved_corner_rectangle_radius_regular"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="100dp"
             android:contentDescription="@null"
             app:cornerRadius="@{24}"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -76,7 +79,6 @@
             android:id="@+id/imageView7"
             android:layout_width="10dp"
             android:layout_height="10dp"
-            android:layout_marginStart="@dimen/margin_regular"
             android:layout_marginTop="@dimen/margin_medium"
             app:layout_constraintStart_toStartOf="@+id/imageView6"
             app:layout_constraintTop_toBottomOf="@+id/imageView6"
