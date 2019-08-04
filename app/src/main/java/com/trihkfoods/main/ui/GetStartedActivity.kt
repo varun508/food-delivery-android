@@ -7,8 +7,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
+import androidx.databinding.DataBindingUtil
 import com.trihkfoods.main.R
 import com.trihkfoods.main.adapters.GetStartedPagerAdapter
+import com.trihkfoods.main.databinding.ActivityGetStartedBinding
 import com.trihkfoods.main.listener.BasePageChangeListener
 import com.trihkfoods.main.ui.authentication.AuthenticationActivity
 import com.trihkfoods.main.utils.navigateTo
@@ -71,9 +73,11 @@ class GetStartedActivity : AppCompatActivity(), BasePageChangeListener, Coroutin
     }
 
 
+    private lateinit var _binding: ActivityGetStartedBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_get_started)
+        _binding = DataBindingUtil.setContentView(this, R.layout.activity_get_started)
 
         setupViewPager()
         addDotIndicator()
