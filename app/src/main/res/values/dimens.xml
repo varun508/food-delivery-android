@@ -2,10 +2,10 @@
 <resources>
 
     <dimen name="padding_big">20.0dp</dimen>
-    <dimen name="padding_bigger">30.0dip</dimen>
+    <dimen name="padding_bigger">24.0dip</dimen>
     <dimen name="padding_biggest">45.0dip</dimen>
     <dimen name="padding_medium">16.0dip</dimen>
-    <dimen name="padding_regular">10.0dp</dimen>
+    <dimen name="padding_regular">8.0dp</dimen>
     <dimen name="padding_small">6.0dip</dimen>
     <dimen name="padding_tiny">2.0dip</dimen>
 

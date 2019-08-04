@@ -18,7 +18,7 @@
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="150dp"
-            android:layout_height="80dp"
+            android:layout_height="100dp"
             android:contentDescription="@null"
             app:cornerRadius="@{24}"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +28,10 @@
 
         <TextView
             android:id="@+id/textView21"
-            style="@style/AutoTextCaptionToBodySmall"
+            android:textSize="@dimen/text_size_caption"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_regular"
             android:layout_marginEnd="@dimen/margin_regular"
             android:drawablePadding="@dimen/padding_regular"
             android:fontFamily="@font/manrope_bold"
@@ -62,10 +62,11 @@
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_regular"
             android:drawableStart="@drawable/ic_rupee"
             android:drawablePadding="@dimen/padding_small"
             android:text="80"
+            android:textSize="@dimen/text_size_caption"
             android:fontFamily="@font/manrope_bold"
             android:textColor="@color/trihk_red"
             app:layout_constraintStart_toStartOf="@+id/ratingBar2"
@@ -73,8 +74,8 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:layout_marginStart="@dimen/margin_regular"
             android:layout_marginTop="@dimen/margin_medium"
             app:layout_constraintStart_toStartOf="@+id/imageView6"

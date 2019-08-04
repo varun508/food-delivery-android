@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.list_item_chef_expandable.view.*
 class MainChefListAdapter(private val chefs: ArrayList<Chef>) :
     RecyclerView.Adapter<MainChefListAdapter.ViewHolder>() {
 
-    private var expandedPosition = -1
+    private var lastExpanded: Int = -1
     private val viewPool = RecyclerView.RecycledViewPool()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
@@ -27,8 +27,15 @@ class MainChefListAdapter(private val chefs: ArrayList<Chef>) :
 
         holder.binding.root.run {
             setOnClickListener {
-                chef.expanded = position == expandedPosition
-                expandedPosition = if (chef.expanded) -1 else position
+                if (lastExpanded != -1 && lastExpanded != position && chefs[lastExpanded].expanded) {
+                    chefs[lastExpanded].expanded = false
+                    notifyItemChanged(lastExpanded)
+                }
+
+                chef.expanded = !chef.expanded
+
+                if (chef.expanded) lastExpanded = position
+
                 notifyItemChanged(position)
             }
 

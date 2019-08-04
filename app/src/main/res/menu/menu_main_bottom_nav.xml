@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <item
         android:id="@+id/action_food_fragment"
         android:icon="@drawable/menu_item_trihk"
-        android:title="@string/text_bottom_nav_trihk"
-        />
+        android:title="@string/text_bottom_nav_food" />
 
 
     <item
         android:id="@+id/action_explore_fragment"
-        android:title="@string/text_bottom_nav_explore"
-        android:icon="@drawable/menu_item_explore"/>
+        android:icon="@drawable/menu_item_explore"
+        android:title="@string/text_bottom_nav_explore" />
 
 
     <item
         android:id="@+id/action_cart_fragment"
-        android:title="@string/text_bottom_nav_offers"
-        android:icon="@drawable/menu_item_offers"/>
+        android:icon="@drawable/menu_item_offers"
+        android:title="@string/text_bottom_nav_offers" />
 
     <item
         android:id="@+id/action_account_fragment"
-        android:title="@string/text_bottom_nav_account"
-        android:icon="@drawable/menu_item_user"/>
+        android:icon="@drawable/menu_item_user"
+        android:title="@string/text_bottom_nav_account" />
 
 
 </menu>
