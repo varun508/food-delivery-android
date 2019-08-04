@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.CartActivity"></activity>
+        <activity android:name=".ui.cart.CartActivity"></activity>
         <activity android:name=".ui.profile.ChefProfileActivity" />
         <activity android:name=".ui.location.LocationActivity"></activity>
         <activity android:name=".ui.main.MainActivity"></activity>

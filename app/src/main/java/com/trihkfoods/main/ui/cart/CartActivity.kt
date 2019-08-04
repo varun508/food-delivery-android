@@ -1,4 +1,4 @@
-package com.trihkfoods.main.ui
+package com.trihkfoods.main.ui.cart
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
