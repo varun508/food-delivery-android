@@ -13,18 +13,13 @@ import com.trihkfoods.main.databinding.FragmentRegistrationBinding
 
 class RegistrationFragment : Fragment() {
 
-    private val viewModel by lazy { ViewModelProviders.of(requireActivity())[AuthenticationViewModel::class.java] }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentRegistrationBinding>(
             inflater,
             R.layout.fragment_registration,
             container,
             false
-        ).apply {
-            viewModel = this@RegistrationFragment.viewModel
-        }
-
+        )
         return binding.root
     }
 }

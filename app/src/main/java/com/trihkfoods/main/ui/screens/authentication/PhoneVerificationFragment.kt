@@ -13,18 +13,13 @@ import com.trihkfoods.main.databinding.FragmentPhoneVerificationBinding
 
 class PhoneVerificationFragment : Fragment() {
 
-    private val viewModel by lazy { ViewModelProviders.of(requireActivity())[AuthenticationViewModel::class.java] }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentPhoneVerificationBinding>(
             inflater,
             R.layout.fragment_phone_verification,
             container,
             false
-        ).apply {
-            viewModel = this@PhoneVerificationFragment.viewModel
-        }
-
+        )
         return binding.root
     }
 }

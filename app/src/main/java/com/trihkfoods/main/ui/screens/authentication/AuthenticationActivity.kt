@@ -20,13 +20,11 @@ class AuthenticationActivity : AppCompatActivity(), NavController.OnDestinationC
 
     private val navController by lazy { findNavController(R.id.navHostFragmentAuth) }
     private var nextDestinationId: Int = R.id.action_phoneNumberFragment_to_registrationFragment
-    private val viewModel by lazy { ViewModelProviders.of(this)[AuthenticationViewModel::class.java] }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding =
             DataBindingUtil.setContentView<ActivityAuthenticationBinding>(this, R.layout.activity_authentication)
-        binding.viewModel = viewModel
 
         changeStatusBarColor(R.color.white)
         setupOnContinueClickListener()
