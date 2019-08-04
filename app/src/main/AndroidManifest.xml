@@ -14,15 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.profile.ChefProfileActivity"></activity>
+        <activity android:name=".ui.profile.ChefProfileActivity"/>
         <activity android:name=".ui.location.LocationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".ui.main.MainActivity"></activity>
+        <activity android:name=".ui.main.MainActivity">
+
+        </activity>
         <activity
             android:name=".ui.authentication.AuthenticationActivity"
             android:windowSoftInputMode="adjustResize" />
@@ -31,7 +29,13 @@
             android:theme="@style/GetStartedTheme" />
         <activity
             android:name=".ui.SplashActivity"
-            android:theme="@style/SplashTheme" />
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
