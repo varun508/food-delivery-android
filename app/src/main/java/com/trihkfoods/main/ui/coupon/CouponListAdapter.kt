@@ -3,6 +3,7 @@ package com.trihkfoods.main.ui.coupon
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.trihkfoods.main.R
@@ -62,6 +63,9 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
 
 
     class ViewHolderGenericHeader(itemView: View) : ViewHolder(itemView) {
+
+        private val textView = itemView.findViewById<TextView>(R.id.tvGenericHeader)
+
         companion object {
             fun from(parent: ViewGroup): ViewHolderGenericHeader {
                 val inflater = LayoutInflater.from(parent.context)
@@ -71,7 +75,7 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
         }
 
         fun bind(text: String) {
-
+            textView.text = text
         }
     }
 }
