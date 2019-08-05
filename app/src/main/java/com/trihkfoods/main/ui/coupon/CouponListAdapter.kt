@@ -9,25 +9,35 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ListItemApplyCouponBinding
 import com.trihkfoods.main.databinding.ListItemPaymentOfferBinding
+import com.trihkfoods.main.tempmodels.Coupon
+import com.trihkfoods.main.tempmodels.PaymentOffer
 
 class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        if (viewType == R.layout.list_item_generic_header) ViewHolderGenericHeader.from(parent)
-        else ViewHolderCoupon.from(parent)
-
+        when (viewType) {
+            R.layout.list_item_payment_offer -> ViewHolderPaymentOffer.from(parent)
+            R.layout.list_item_apply_coupon -> ViewHolderCoupon.from(parent)
+            else -> ViewHolderGenericHeader.from(parent)
+        }
 
     override fun getItemCount() = items.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        if (holder is ViewHolderCoupon)
-            holder.bind(item as)
+        when (holder) {
+            is ViewHolderPaymentOffer -> holder.bind()
+            is ViewHolderCoupon -> holder.bind()
+            is ViewHolderGenericHeader -> holder.bind(item as String)
+        }
     }
 
     override fun getItemViewType(position: Int) =
-        if (items[position] is String) R.layout.list_item_generic_header
-        else R.layout.list_item_apply_coupon
+        when (items[position]) {
+            is PaymentOffer -> R.layout.list_item_payment_offer
+            is Coupon -> R.layout.list_item_apply_coupon
+            else -> R.layout.list_item_generic_header
+        }
 
     class ViewHolderCoupon(binding: ListItemApplyCouponBinding) :
         ViewHolder(binding.root) {

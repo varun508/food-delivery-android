@@ -1,8 +1,7 @@
 package com.trihkfoods.main.tempmodels
 
-data class Coupon(
+data class PaymentOffer(
     val id: String,
-    val couponCode: String,
     val imageResource: Int,
     val title: String,
     val body: String,
