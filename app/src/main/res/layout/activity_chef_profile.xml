@@ -20,20 +20,21 @@
             android:id="@+id/imageView11"
             sourceResource="@{chef.backgroundImageResource}"
             android:layout_width="match_parent"
-            android:scaleType="centerCrop"
             android:layout_height="200dp"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/image_temp_chef_background" />
 
 
-        <ImageView
-            cornerRadius="@{24}"
+        <de.hdodenhof.circleimageview.CircleImageView
             sourceResource="@{chef.imageResource}"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             android:layout_marginStart="24dp"
+            app:civ_border_color="@color/light_gray"
+            app:civ_border_width="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView11"
             app:layout_constraintStart_toStartOf="@+id/imageView11"
             app:layout_constraintTop_toBottomOf="@+id/imageView11"
@@ -49,8 +50,8 @@
             android:layout_marginTop="@dimen/margin_medium"
             android:background="@drawable/circle_small"
             android:padding="@dimen/padding_tiny"
-            app:layout_constraintStart_toStartOf="parent"
             android:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_arrow_left_solid_black" />
 
