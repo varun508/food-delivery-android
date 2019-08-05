@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -19,12 +20,12 @@
             android:id="@+id/imageView6"
             android:layout_width="0dp"
             android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:background="@drawable/scrim_black"
             android:contentDescription="@null"
             app:cornerRadius="@{24}"
-            android:background=""
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginStart="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/margin_small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,20 +33,34 @@
 
         <TextView
             android:id="@+id/textView21"
-            android:textSize="@dimen/text_size_caption"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_regular"
-            android:layout_marginEnd="@dimen/margin_regular"
             android:drawablePadding="@dimen/padding_regular"
+            android:layout_marginTop="@dimen/margin_medium"
             android:fontFamily="@font/manrope_bold"
             android:gravity="center_vertical"
             android:text="Butter Chicken"
             android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="@id/imageView7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView7"
-            app:layout_constraintTop_toTopOf="@id/imageView7" />
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:drawablePadding="@dimen/padding_regular"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center_vertical"
+            android:text="In Mughlai"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
 
         <RatingBar
@@ -53,36 +68,39 @@
             style="?android:ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_regular"
+            android:layout_marginBottom="@dimen/margin_regular"
             android:isIndicator="true"
             android:numStars="5"
             android:rating="4.4"
             android:stepSize="0.1"
             android:theme="@style/RatingBarTheme"
-            app:layout_constraintStart_toStartOf="@+id/textView21"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/imageView6" />
 
         <TextView
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_regular"
             android:drawableStart="@drawable/ic_rupee"
             android:drawablePadding="@dimen/padding_small"
-            android:text="80"
-            android:textSize="@dimen/text_size_caption"
             android:fontFamily="@font/manrope_bold"
+            android:text="80"
+            android:layout_marginTop="@dimen/margin_regular"
             android:textColor="@color/trihk_red"
-            app:layout_constraintStart_toStartOf="@+id/ratingBar2"
-            app:layout_constraintTop_toBottomOf="@+id/ratingBar2" />
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            tools:layout_editor_absoluteY="185dp" />
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_marginTop="@dimen/margin_medium"
-            app:layout_constraintStart_toStartOf="@+id/imageView6"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_marginEnd="@dimen/margin_regular"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6"
             app:srcCompat="@drawable/ic_non_veg" />
 
 
