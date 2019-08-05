@@ -145,7 +145,7 @@
             android:visibility="@{chef.expanded ? View.VISIBLE : View.GONE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+            app:layout_constraintTop_toBottomOf="@+id/tvViewAll" />
 
         <TextView
             android:id="@+id/textView23"
@@ -157,14 +157,14 @@
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_body_small"
             android:visibility="@{chef.expanded ? View.VISIBLE : View.GONE}"
-            app:layout_constraintBottom_toBottomOf="@+id/textView24"
-            app:layout_constraintEnd_toStartOf="@+id/textView24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvViewAll"
+            app:layout_constraintEnd_toStartOf="@+id/tvViewAll"
             app:layout_constraintStart_toStartOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/textView24"
+            app:layout_constraintTop_toTopOf="@+id/tvViewAll"
             tools:ignore="RtlSymmetry" />
 
         <TextView
-            android:id="@+id/textView24"
+            android:id="@+id/tvViewAll"
             backgroundCompatTint="@{@color/trihk_red_light}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
