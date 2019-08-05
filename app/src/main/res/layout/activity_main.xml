@@ -34,7 +34,7 @@
         app:menu="@menu/menu_main_bottom_nav" />
 
     <include
-        layout="@layout/layout_cart_fab"
+        layout="@layout/layout_bottom_cart_main"
         android:layout_width="wrap_content"
         android:layout_marginEnd="@dimen/margin_medium"
         android:layout_marginBottom="@dimen/margin_regular"
