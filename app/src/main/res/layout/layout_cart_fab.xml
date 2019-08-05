@@ -8,21 +8,7 @@
     app:cardBackgroundColor="@color/trihk_green"
     app:cardCornerRadius="16dp">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingStart="@dimen/padding_medium"
-        android:paddingTop="@dimen/padding_small"
-        android:paddingEnd="@dimen/padding_medium"
-        android:paddingBottom="@dimen/padding_small">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:tint="@color/white"
-            app:srcCompat="@drawable/ic_cart_solid_trihk_red" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,9 +18,12 @@
             android:fontFamily="@font/manrope_bold"
             android:text="Cart(3)"
             android:textColor="@color/white"
+            android:drawablePadding="@dimen/padding_regular"
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_small"
+            android:drawableStart="@drawable/ic_cart_solid_white"
+            android:paddingEnd="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_small"
             android:textSize="@dimen/text_size_body_small" />
-
-    </LinearLayout>
-
 
 </androidx.cardview.widget.CardView>

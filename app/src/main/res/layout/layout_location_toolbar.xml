@@ -27,7 +27,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/margin_regular"
-        android:layout_marginEnd="@dimen/margin_big"
         android:fontFamily="@font/manrope_bold"
         android:gravity="center_vertical"
         android:singleLine="true"
@@ -35,24 +34,10 @@
         android:textColor="@color/black"
         android:textSize="@dimen/text_size_body_regular"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_cart_solid_trihk_red"
-        android:drawablePadding="@dimen/padding_small"
-        android:fontFamily="@font/manrope_bold"
-        android:text="CART"
-        android:textColor="@color/trihk_red"
-        android:textSize="@dimen/text_size_body_small"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
