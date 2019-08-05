@@ -13,6 +13,8 @@ import com.trihkfoods.main.databinding.FragmentFoodBinding
 import com.trihkfoods.main.tempmodels.Chef
 import com.trihkfoods.main.tempmodels.FoodItem
 import com.trihkfoods.main.tempmodels.Offer
+import com.trihkfoods.main.ui.profile.ChefProfileActivity
+import com.trihkfoods.main.utils.navigateTo
 import kotlinx.android.synthetic.main.fragment_food.*
 
 class FoodFragment : Fragment() {
@@ -58,7 +60,9 @@ class FoodFragment : Fragment() {
         repeat(10) { chefs += Chef(chefSpecials = foodItems) }
 
         rvChefs?.run {
-            adapter = MainChefListAdapter(chefs)
+            adapter = MainChefListAdapter(chefs) {
+                activity?.run { navigateTo(ChefProfileActivity::class.java) }
+            }
             layoutManager = LinearLayoutManager(requireContext())
         }
     }

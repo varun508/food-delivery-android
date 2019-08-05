@@ -17,6 +17,11 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+
+    <style name="ChefProfileTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
     <!-- Authentication screen theme. -->
     <style name="BottomNavigationItemText">
         <item name="android:paddingTop">@dimen/padding_small</item>
