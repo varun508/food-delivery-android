@@ -19,7 +19,7 @@
 
 
     <style name="ChefProfileTheme" parent="AppTheme">
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimaryDark">@color/black</item>
     </style>
 
     <!-- Authentication screen theme. -->
@@ -30,7 +30,7 @@
     </style>
 
 
-    <style name="GetStartedPrimaryButtonAppearance" >
+    <style name="GetStartedPrimaryButtonAppearance">
         <item name="android:drawablePadding">@dimen/padding_regular</item>
         <item name="android:fontFamily">@font/manrope_bold</item>
         <item name="android:gravity">center</item>
