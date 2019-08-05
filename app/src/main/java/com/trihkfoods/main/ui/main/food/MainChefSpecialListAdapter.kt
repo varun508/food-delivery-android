@@ -1,10 +1,17 @@
 package com.trihkfoods.main.ui.main.food
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemDishVerticalBinding
 import com.trihkfoods.main.tempmodels.FoodItem
+import com.trihkfoods.main.utils.onClick
+import kotlinx.android.synthetic.main.layout_add_button.view.*
+import kotlinx.android.synthetic.main.list_item_dish_vertical.view.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
     RecyclerView.Adapter<MainChefSpecialListAdapter.ViewHolder>() {
@@ -36,6 +43,12 @@ class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
 
         fun bind(foodItem: FoodItem) {
             binding.foodItem = foodItem
+            binding.root.run {
+                tvAddToCartDishVertical.onClick {
+                    tvAddToCartDishVertical.visibility = View.GONE
+                    include2.visibility = View.VISIBLE
+                }
+            }
         }
     }
 }

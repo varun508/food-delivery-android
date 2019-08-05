@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/margin_big"
         backgroundCompatTint="@{@color/white}"
+        android:animateLayoutChanges="true"
         android:elevation="8dp"
         android:background="@drawable/curved_corner_rectangle_radius_regular"
         android:orientation="vertical">
@@ -114,8 +115,21 @@
             app:layout_constraintEnd_toEndOf="@+id/viewScrim"
             app:srcCompat="@drawable/ic_non_veg" />
 
+        <include
+            android:id="@+id/include2"
+            layout="@layout/layout_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
         <TextView
+            android:id="@+id/tvAddToCartDishVertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_medium"
@@ -126,6 +140,8 @@
             android:paddingBottom="@dimen/padding_regular"
             android:text="Add"
             android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView22" />
