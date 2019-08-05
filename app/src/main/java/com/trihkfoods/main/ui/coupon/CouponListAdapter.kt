@@ -39,7 +39,7 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
             else -> R.layout.list_item_generic_header
         }
 
-    class ViewHolderCoupon(binding: ListItemApplyCouponBinding) :
+    class ViewHolderCoupon private constructor(binding: ListItemApplyCouponBinding) :
         ViewHolder(binding.root) {
 
         companion object {
@@ -54,7 +54,7 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
         }
     }
 
-    class ViewHolderPaymentOffer(binding: ListItemPaymentOfferBinding) :
+    class ViewHolderPaymentOffer private constructor(binding: ListItemPaymentOfferBinding) :
         ViewHolder(binding.root) {
 
         companion object {
@@ -70,7 +70,7 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
     }
 
 
-    class ViewHolderGenericHeader(itemView: View) : ViewHolder(itemView) {
+    class ViewHolderGenericHeader private constructor(itemView: View) : ViewHolder(itemView) {
 
         private val textView = itemView.findViewById<TextView>(R.id.tvGenericHeader)
 
