@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -9,10 +11,10 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         tools:context=".ui.profile.ChefProfileActivity">
 
 
@@ -29,11 +31,12 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
             sourceResource="@{chef.imageResource}"
-            android:layout_width="130dp"
-            android:layout_height="130dp"
-            android:layout_marginStart="24dp"
-            app:civ_border_color="@color/light_gray"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="@dimen/margin_big"
+            app:civ_border_color="@color/gray"
             app:civ_border_width="4dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView11"
             app:layout_constraintStart_toStartOf="@+id/imageView11"
@@ -54,6 +57,83 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_arrow_left_solid_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@drawable/background_capsule"
+            android:drawableStart="@drawable/ic_favorite_white_24dp"
+            android:drawablePadding="@dimen/padding_regular"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_regular"
+            android:paddingEnd="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_regular"
+            android:text="Add to favourites"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body_small"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+            app:layout_constraintVertical_bias="0.59" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:fontFamily="@font/manrope_extrabold"
+            android:text="Chef Shiva"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_size_title_regular"
+            app:layout_constraintEnd_toStartOf="@+id/ratingBar2"
+            app:layout_constraintStart_toStartOf="@+id/circleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_semibold"
+            android:text="Shiva made his culinary debut in Delhi some 12 years ago and has since moved away from a traditional approach towards an innovative style of cooking. Specialising in Indian Cuisine, Chef Shiva stresses on the importance of using fresh ingredients in every dish and delighting with flavours."
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/text_size_body_small"
+            app:layout_constraintEnd_toEndOf="@+id/textView39"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_semibold"
+            android:text="(1437)"
+            android:layout_marginEnd="@dimen/margin_big"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBar2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar2" />
+
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            style="?android:ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:layout_marginEnd="@dimen/margin_regular"
+            android:numStars="5"
+            android:rating="4.4"
+            android:stepSize="0.1"
+            android:theme="@style/RatingBarTheme"
+            app:layout_constraintBottom_toBottomOf="@+id/textView14"
+            app:layout_constraintEnd_toStartOf="@+id/textView39"
+            app:layout_constraintTop_toTopOf="@+id/textView14" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
