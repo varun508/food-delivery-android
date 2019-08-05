@@ -6,7 +6,6 @@ import androidx.databinding.DataBindingUtil
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ActivityChefProfileBinding
 import com.trihkfoods.main.tempmodels.Chef
-import com.trihkfoods.main.utils.changeStatusBarColor
 
 class ChefProfileActivity : AppCompatActivity() {
 
