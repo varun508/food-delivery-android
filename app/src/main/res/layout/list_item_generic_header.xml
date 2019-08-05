@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/light_gray"
-    android:fontFamily="@font/manrope_semibold"
+    android:fontFamily="@font/manrope_extrabold"
     android:padding="@dimen/padding_medium"
     android:text="Available Coupons"
     android:textColor="@color/black"
-    android:textSize="@dimen/text_size_body_regular" />
+    android:textAllCaps="true"
+    android:textSize="@dimen/text_size_body_small" />
