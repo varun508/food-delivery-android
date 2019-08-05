@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,14 +10,78 @@
             type="com.trihkfoods.main.tempmodels.Offer" />
     </data>
 
-    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/ivListItemOffers"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        backgroundCompatTint="@{@color/trihk_orange}"
+        scaleOnPress="@{true}"
         android:layout_marginStart="@dimen/margin_medium"
-        android:contentDescription="@string/content_desc_offer_image"
-        app:scaleOnPress="@{true}"
-        app:cornerRadius="@{16}"
-        app:sourceResource="@{offer.imageResource}" />
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_corner_rectangle_trihk_red">
+
+
+        <ImageView
+            android:id="@+id/ivListItemOffers"
+            sourceResource="@{offer.imageResource}"
+            android:scaleType="centerCrop"
+            android:layout_width="150dp"
+            cornerRadius="@{16}"
+            android:layout_height="0dp"
+            android:contentDescription="@string/content_desc_offer_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView38"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Get 40% off this cricket season"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toStartOf="@id/ivListItemOffers"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_medium"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:text="Use the code TRIHKET40 to get 40% off on all your orders this month"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintStart_toStartOf="@+id/textView32"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <TextView
+            backgroundCompatTint="@{@color/black}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:background="@drawable/curved_corner_rectangle_trihk_red"
+            android:fontFamily="@font/manrope_bold"
+            android:paddingStart="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_tiny"
+            android:paddingEnd="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_tiny"
+            android:text="Grab Now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView38"
+            app:layout_constraintTop_toBottomOf="@+id/textView38"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
