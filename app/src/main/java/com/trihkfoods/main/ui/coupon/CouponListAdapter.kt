@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ListItemApplyCouponBinding
+import com.trihkfoods.main.databinding.ListItemPaymentOfferBinding
 
 class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<ViewHolder>() {
 
@@ -19,8 +20,8 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
-        if(holder is ViewHolderCoupon)
-            holder.bind(item as )
+        if (holder is ViewHolderCoupon)
+            holder.bind(item as)
     }
 
     override fun getItemViewType(position: Int) =
@@ -35,6 +36,22 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = ListItemApplyCouponBinding.inflate(inflater, parent, false)
                 return ViewHolderCoupon(binding)
+            }
+        }
+
+        fun bind() {
+
+        }
+    }
+
+    class ViewHolderPaymentOffer(binding: ListItemPaymentOfferBinding) :
+        ViewHolder(binding.root) {
+
+        companion object {
+            fun from(parent: ViewGroup): ViewHolderPaymentOffer {
+                val inflater = LayoutInflater.from(parent.context)
+                val binding = ListItemPaymentOfferBinding.inflate(inflater, parent, false)
+                return ViewHolderPaymentOffer(binding)
             }
         }
 
