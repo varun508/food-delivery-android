@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_medium"
                 android:layout_marginEnd="@dimen/margin_medium"
-                android:background="@drawable/curved_corner_rectangle_trihk_red"
+                android:background="@drawable/curved_rectangle_radius_regular_stroke_regular"
                 android:drawableStart="@drawable/ic_search_gray"
                 android:drawablePadding="@dimen/padding_regular"
                 android:ellipsize="end"

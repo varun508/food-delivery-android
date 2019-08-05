@@ -26,4 +26,6 @@
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_main_bottom_nav" />
 
+
+
 </FrameLayout>
