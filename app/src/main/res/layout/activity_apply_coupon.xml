@@ -13,16 +13,6 @@
             android:layout_height="match_parent"
             tools:context=".ui.coupon.ApplyCouponActivity">
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="@drawable/border_bottom_gray_thin"
-                android:paddingBottom="@dimen/padding_big"
-                app:layout_constraintBottom_toBottomOf="@+id/editText6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView9"
@@ -78,12 +68,14 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvApplyCoupon"
                 android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_small"
                 android:layout_height="0dp"
                 android:background="@color/light_gray"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
+                app:layout_constraintTop_toBottomOf="@+id/editText6"
+                tools:listitem="@layout/list_item_apply_coupon" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
