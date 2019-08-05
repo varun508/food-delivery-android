@@ -15,8 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_small"
-        android:background="@color/white"
+        android:background="@drawable/border_bottom_light_gray_regular"
         android:paddingTop="@dimen/padding_big">
 
 
@@ -47,7 +46,7 @@
             android:layout_marginStart="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
             android:fontFamily="@font/manrope_bold"
-            android:text="Shiva Trihk Cook"
+            android:text="Chef Sanjeev"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_body_regular"
             app:layout_constraintEnd_toStartOf="@+id/ratingBar"
@@ -83,7 +82,6 @@
             app:layout_constraintEnd_toEndOf="@+id/ratingBar"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
 
 
         <TextView
