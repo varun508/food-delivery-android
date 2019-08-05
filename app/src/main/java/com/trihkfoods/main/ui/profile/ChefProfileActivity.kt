@@ -1,10 +1,13 @@
 package com.trihkfoods.main.ui.profile
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.trihkfoods.main.R
+import com.trihkfoods.main.databinding.ActivityChefProfileBinding
 
 class ChefProfileActivity : AppCompatActivity() {
+
+    private lateinit var _binding: ActivityChefProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
