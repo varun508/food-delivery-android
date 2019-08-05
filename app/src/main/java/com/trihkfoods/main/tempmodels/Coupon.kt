@@ -5,5 +5,5 @@ data class Coupon(
     val imageResource: Int,
     val title: String,
     val body: String,
-    val tnc: String
+    val tnc: List<String>
 )
