@@ -11,6 +11,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/white"
             tools:context=".ui.coupon.ApplyCouponActivity">
 
 
@@ -37,44 +38,16 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView9"
                 app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
-            <EditText
-                android:id="@+id/editText6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:layout_marginEnd="@dimen/margin_big"
-                android:fontFamily="@font/manrope_medium"
-                android:hint="Coupon code"
-                android:paddingBottom="@dimen/padding_medium"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_body_regular"
-                app:layout_constraintEnd_toStartOf="@+id/textView32"
-                app:layout_constraintStart_toStartOf="@+id/imageView9"
-                app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/margin_medium"
-                android:fontFamily="@font/manrope_semibold"
-                android:text="Apply"
-                android:textColor="@color/trihk_green"
-                android:textSize="@dimen/text_size_body_small"
-                app:layout_constraintBottom_toBottomOf="@+id/editText6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/editText6" />
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvApplyCoupon"
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/margin_small"
                 android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_medium"
                 android:background="@color/light_gray"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText6"
+                app:layout_constraintTop_toBottomOf="@+id/textView15"
                 tools:listitem="@layout/list_item_apply_coupon" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
