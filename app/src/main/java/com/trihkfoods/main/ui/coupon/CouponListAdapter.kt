@@ -26,8 +26,8 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         when (holder) {
-            is ViewHolderPaymentOffer -> holder.bind()
-            is ViewHolderCoupon -> holder.bind()
+            is ViewHolderPaymentOffer -> holder.bind(item as PaymentOffer)
+            is ViewHolderCoupon -> holder.bind(item as Coupon)
             is ViewHolderGenericHeader -> holder.bind(item as String)
         }
     }
@@ -50,8 +50,7 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
             }
         }
 
-        fun bind() {
-
+        fun bind(coupon: Coupon) {
         }
     }
 
@@ -66,8 +65,7 @@ class CouponListAdapter(private val items: List<Any>) : RecyclerView.Adapter<Vie
             }
         }
 
-        fun bind() {
-
+        fun bind(offer: PaymentOffer) {
         }
     }
 
