@@ -39,7 +39,7 @@ class ApplyCouponActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@ApplyCouponActivity).apply {
                 orientation = RecyclerView.VERTICAL
             }
-            adapter = AccountOptionListAdapter(list)
+            adapter = CouponListAdapter(list)
         }
     }
 }
