@@ -78,6 +78,7 @@
             android:id="@+id/textView37"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_semibold"
             android:text="Term and Conditions"
             android:textColor="@color/trihk_green"
             android:textSize="@dimen/text_size_caption"
