@@ -59,6 +59,7 @@ dependencies {
     def moshiVersion = '1.8.0'
     def moshiConverterVersion = '2.4.0'
     def lifecycle_version = '2.0.0'
+    def circleImageViewVersion = '3.0.0'
 
     // Library to add blur effect to views
     implementation "com.github.mmin18:realtimeblurview:$blurviewVersion"
@@ -69,6 +70,9 @@ dependencies {
     // Image loading library
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // CircleImageView
+    implementation "de.hdodenhof:circleimageview:$circleImageViewVersion"
 
     // Kotlin coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
