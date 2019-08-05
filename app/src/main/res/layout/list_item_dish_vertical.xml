@@ -11,8 +11,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="150dp"
+        scaleOnPress="@{true}"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_big"
+        backgroundCompatTint="@{@color/white}"
+        android:elevation="8dp"
         android:background="@drawable/curved_corner_rectangle_radius_regular"
         android:orientation="vertical">
 
@@ -20,9 +23,6 @@
             android:id="@+id/imageView6"
             android:layout_width="0dp"
             android:layout_height="100dp"
-            android:layout_marginStart="@dimen/margin_small"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginEnd="@dimen/margin_small"
             android:background="@drawable/scrim_black"
             android:contentDescription="@null"
             app:cornerRadius="@{24}"
@@ -31,14 +31,25 @@
             app:layout_constraintTop_toTopOf="parent"
             app:sourceResource="@{foodItem.imageResource}" />
 
+        <View
+            android:id="@+id/viewScrim"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/scrim_black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="@+id/imageView6"
+            app:layout_constraintStart_toStartOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
         <TextView
             android:id="@+id/textView21"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:drawablePadding="@dimen/padding_regular"
             android:layout_marginTop="@dimen/margin_medium"
+            android:drawablePadding="@dimen/padding_regular"
             android:fontFamily="@font/manrope_bold"
             android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_regular"
             android:text="Butter Chicken"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_caption"
@@ -75,32 +86,32 @@
             android:rating="4.4"
             android:stepSize="0.1"
             android:theme="@style/RatingBarTheme"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-            app:layout_constraintStart_toStartOf="@+id/imageView6" />
+            app:layout_constraintBottom_toBottomOf="@+id/viewScrim"
+            app:layout_constraintStart_toStartOf="@+id/viewScrim" />
 
         <TextView
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
             android:drawableStart="@drawable/ic_rupee"
             android:drawablePadding="@dimen/padding_small"
             android:fontFamily="@font/manrope_bold"
             android:text="80"
-            android:layout_marginTop="@dimen/margin_regular"
             android:textColor="@color/trihk_red"
             android:textSize="@dimen/text_size_caption"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
             tools:layout_editor_absoluteY="185dp" />
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:layout_marginTop="@dimen/margin_regular"
             android:layout_marginEnd="@dimen/margin_regular"
-            app:layout_constraintEnd_toEndOf="@+id/imageView6"
-            app:layout_constraintTop_toTopOf="@+id/imageView6"
+            android:layout_marginBottom="@dimen/margin_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/viewScrim"
+            app:layout_constraintEnd_toEndOf="@+id/viewScrim"
             app:srcCompat="@drawable/ic_non_veg" />
 
 
