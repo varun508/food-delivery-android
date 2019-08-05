@@ -35,9 +35,7 @@
 
     <include
         layout="@layout/layout_bottom_cart_main"
-        android:layout_width="wrap_content"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_regular"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/mainBottomNav"
         app:layout_constraintEnd_toEndOf="parent" />

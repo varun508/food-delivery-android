@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/trihk_green"
     android:clickable="true"
-    android:focusable="true"
-    app:cardBackgroundColor="@color/trihk_green"
-    app:cardCornerRadius="16dp">
+    android:focusable="true">
 
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_regular"
+        android:layout_marginBottom="@dimen/margin_regular"
+        android:src="@drawable/image_temp_food_item"
+        app:civ_border_color="@color/white"
+        app:civ_border_overlay="true"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="@dimen/margin_regular"
-            android:fontFamily="@font/manrope_bold"
-            android:text="Cart(3)"
-            android:textColor="@color/white"
-            android:drawablePadding="@dimen/padding_regular"
-            android:paddingStart="@dimen/padding_medium"
-            android:paddingTop="@dimen/padding_small"
-            android:drawableStart="@drawable/ic_cart_solid_white"
-            android:paddingEnd="@dimen/padding_medium"
-            android:paddingBottom="@dimen/padding_small"
-            android:textSize="@dimen/text_size_body_small" />
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_bold"
+        android:text="View Cart"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+        app:layout_constraintTop_toTopOf="@+id/circleImageView2" />
 
-</androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/manrope_bold"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="Butter Chicken, Rumali Roti, Panee..."
+        android:textColor="@color/white_80"
+        android:textSize="@dimen/text_size_caption"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintStart_toStartOf="@+id/textView40"
+        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_delete_white_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
