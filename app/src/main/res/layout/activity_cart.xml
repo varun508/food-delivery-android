@@ -114,6 +114,11 @@
             app:layout_constraintTop_toTopOf="@+id/barrier" />
 
 
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_snippet_activity_cart_bottom"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

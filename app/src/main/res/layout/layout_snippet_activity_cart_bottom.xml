@@ -1,8 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:paddingTop="@dimen/padding_regular"
+        android:paddingBottom="@dimen/padding_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:tint="@color/trihk_red"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/textView46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView45"
+        app:srcCompat="@drawable/ic_delivery_man_solid_trihk_red" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_regular"
+        android:text="Deliver to Akshit's place"
+        android:fontFamily="@font/manrope_semibold"
+        android:textSize="@dimen/text_size_caption"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/textView47"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:fontFamily="@font/manrope_medium"
+        android:paddingBottom="@dimen/padding_regular"
+        android:singleLine="true"
+        android:text="B-501, Bulland Heights, Crossings Republik, Ghaziabad, Uttar Pradesh 201016, India"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/text_size_caption"
+        app:layout_constraintEnd_toEndOf="@+id/textView45"
+        app:layout_constraintStart_toStartOf="@+id/textView45"
+        app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:textColor="@color/trihk_red"
+        android:fontFamily="@font/manrope_extrabold"
+        android:textSize="@dimen/text_size_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHANGE"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/trihk_green"
+        app:layout_constraintBottom_toBottomOf="@+id/textView48"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView48" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:layout_marginEnd="8dp"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
+        android:textColor="@color/white"
+        android:fontFamily="@font/manrope_extrabold"
+        android:textSize="@dimen/text_size_body_regular"
+        android:text="Proceed to Pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
