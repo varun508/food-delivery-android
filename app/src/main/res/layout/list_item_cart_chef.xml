@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/border_top_bottom_light_gray_regular"
         android:orientation="vertical"
-        android:paddingTop="@dimen/padding_regular"
+        android:paddingTop="@dimen/padding_medium"
         android:paddingBottom="@dimen/padding_regular">
 
 
@@ -63,7 +63,8 @@
             android:id="@+id/rvCartDish"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_regular"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/circleImageView4"

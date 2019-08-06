@@ -2,6 +2,7 @@ package com.trihkfoods.main.ui.cart
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemCartChefBinding
 import com.trihkfoods.main.tempmodels.Chef
@@ -32,6 +33,9 @@ class CartChefListAdapter(private val chefs: List<Chef>) :
 
         fun bind(chef: Chef) {
             binding.root.run {
+                rvCartDish.adapter = CartDishListAdapter(chef.chefSpecials)
+                rvCartDish.layoutManager =
+                    LinearLayoutManager(context).apply { orientation = RecyclerView.VERTICAL }
             }
         }
     }
