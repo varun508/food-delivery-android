@@ -10,18 +10,25 @@ import com.trihkfoods.main.databinding.ListItemDishHorizontalBinding
 import com.trihkfoods.main.tempmodels.FoodItem
 import com.trihkfoods.main.utils.onClick
 
-class ExploreDishListAdapter(private val foodItems: List<FoodItem>) :
+class ExploreDishListAdapter(private val items: List<Any>) :
     RecyclerView.Adapter<ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        if (viewType == R.layout.list_item_dish_horizontal) ViewHolderFoodItem.from(parent)
+        else ViewHolderChefHeader.from(parent)
 
-    override fun getItemCount() = foodItems.size
+    override fun getItemCount() = items.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(foodItems[position])
+        val item = items[position]
+        if (holder is ViewHolderFoodItem) holder.bind(item as FoodItem)
     }
 
-    class ViewHolderFoodItem(val binding: ListItemDishHorizontalBinding) :
+    override fun getItemViewType(position: Int) =
+        if (items[position] is FoodItem) R.layout.list_item_dish_horizontal
+        else R.layout.list_item_chef_header
+
+    class ViewHolderFoodItem private constructor(val binding: ListItemDishHorizontalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         companion object {
@@ -33,11 +40,11 @@ class ExploreDishListAdapter(private val foodItems: List<FoodItem>) :
             }
         }
 
-        fun bind(foodItem: FoodItem) {
+        fun bind(dish: FoodItem) {
             binding.run {
-                this.dish = foodItem
+                this.dish = dish
                 itemCounterDishHorizontal.doOnDecrement {
-                    if(it == 0){
+                    if (it == 0) {
                         tvAddToCartDishHorizontal.visibility = View.VISIBLE
                         itemCounterDishHorizontal.visibility = View.GONE
                     }
@@ -54,14 +61,14 @@ class ExploreDishListAdapter(private val foodItems: List<FoodItem>) :
         }
     }
 
-    class ViewHolderChefHeader(val binding: ListItemDishHorizontalBinding) :
+    class ViewHolderChefHeader private constructor(val binding: ListItemDishHorizontalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         companion object {
 
             fun from(parent: ViewGroup): ViewHolderChefHeader {
                 val inflater = LayoutInflater.from(parent.context)
-                val view = inflater.inflate(R.layout.list_item_chef_header,parent,false)
+                val view = inflater.inflate(R.layout.list_item_chef_header, parent, false)
                 return ViewHolderChefHeader(view)
             }
         }
