@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -28,7 +26,7 @@
             android:contentDescription="@null"
             app:cornerRadius="@{24}"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView25"
+            app:layout_constraintTop_toTopOf="parent"
             app:sourceResource="@{dish.imageResource}" />
 
 
@@ -47,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_big"
             android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/manrope_bold"
             android:text="Butter chicken"
             android:textColor="@color/black"
@@ -60,12 +59,12 @@
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="12dp"
-            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_regular"
             android:layout_marginBottom="@dimen/margin_regular"
             android:layout_height="12dp"
             app:layout_constraintBottom_toBottomOf="@+id/view2"
             app:layout_constraintEnd_toEndOf="@+id/view2"
-            app:srcCompat="@drawable/ic_veg" />
+            app:srcCompat="@drawable/ic_non_veg" />
 
         <RatingBar
             android:id="@+id/ratingBar2"
@@ -124,9 +123,9 @@
             android:layout_marginEnd="@dimen/margin_medium"
             android:background="@drawable/curved_rectangle_radius_regular_stroke_regular"
             android:fontFamily="@font/manrope_bold"
-            android:paddingStart="@dimen/padding_big"
+            android:paddingStart="@dimen/padding_bigger"
             android:paddingTop="@dimen/padding_regular"
-            android:paddingEnd="@dimen/padding_big"
+            android:paddingEnd="@dimen/padding_bigger"
             android:paddingBottom="@dimen/padding_regular"
             android:text="Add"
             android:textColor="@color/trihk_red"
