@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.FragmentDishExploreBinding
 import com.trihkfoods.main.tempmodels.FoodItem
 import com.trihkfoods.main.ui.main.explore.adapters.ExploreDishListAdapter
@@ -35,7 +36,8 @@ class DishExploreFragment : Fragment() {
 
         rvDishExplore?.run {
             adapter = ExploreDishListAdapter(foodItems)
-            layoutManager = GridLayoutManager(requireContext(), 2)
+            layoutManager =
+                LinearLayoutManager(requireContext()).apply { orientation = RecyclerView.VERTICAL }
         }
     }
 
