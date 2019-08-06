@@ -61,8 +61,8 @@ class ExploreDishListAdapter(private val items: List<Any>) :
         }
     }
 
-    class ViewHolderChefHeader private constructor(val binding: ListItemDishHorizontalBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ViewHolderChefHeader private constructor(itemView:View) :
+        RecyclerView.ViewHolder(itemView) {
 
         companion object {
 
