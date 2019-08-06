@@ -1,11 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium">
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textView51"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_bold"
+            android:text="Bill Details"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_body_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_regular"
+            android:text="Item Total"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintStart_toStartOf="@+id/textView51"
+            app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:fontFamily="@font/manrope_regular"
+            android:text="Charges and Taxes"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintStart_toStartOf="@+id/textView52"
+            app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+        <TextView
+            android:id="@+id/textView56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_rupee"
+            android:drawablePadding="@dimen/padding_small"
+            android:fontFamily="@font/manrope_semibold"
+            android:text="734.00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/textView61"
+            app:layout_constraintTop_toTopOf="@+id/textView53" />
+
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:fontFamily="@font/manrope_regular"
+            android:text="Delivery Fee"
+            android:textColor="@color/text_gray_dark"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintStart_toStartOf="@+id/textView55"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+
+        <TextView
+            android:id="@+id/textView60"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_rupee"
+            android:drawablePadding="@dimen/padding_small"
+            android:fontFamily="@font/manrope_regular"
+            android:text="-100.00"
+            android:textColor="@color/trihk_green"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="@+id/textView55"
+            app:layout_constraintEnd_toEndOf="@+id/textView62"
+            app:layout_constraintTop_toTopOf="@+id/textView55" />
+
+        <TextView
+            android:id="@+id/textView61"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_rupee"
+            android:drawablePadding="@dimen/padding_small"
+            android:fontFamily="@font/manrope_regular"
+            android:text="20.00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/textView60"
+            app:layout_constraintTop_toTopOf="@+id/textView57" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_rupee"
+            android:drawablePadding="@dimen/padding_small"
+            android:fontFamily="@font/manrope_regular"
+            android:text="43.70"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="@+id/textView54"
+            app:layout_constraintEnd_toEndOf="@+id/textView63"
+            app:layout_constraintTop_toTopOf="@+id/textView54" />
+
+        <TextView
+            android:id="@+id/textView63"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:drawableStart="@drawable/ic_rupee"
+            android:drawablePadding="@dimen/padding_small"
+            android:fontFamily="@font/manrope_regular"
+            android:text="690.00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="@+id/textView52"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView52" />
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:fontFamily="@font/manrope_regular"
+            android:text="Total Discount"
+            android:textColor="@color/trihk_green"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintStart_toStartOf="@+id/textView54"
+            app:layout_constraintTop_toBottomOf="@+id/textView54" />
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_regular"
+            android:text="Total Amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintStart_toStartOf="@+id/textView57"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@color/light_gray"
+            app:layout_constraintEnd_toEndOf="@+id/textView60"
+            app:layout_constraintStart_toStartOf="@+id/textView55"
+            app:layout_constraintTop_toBottomOf="@+id/textView55" />
+
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_regular"
+            android:background="@color/light_gray"
+            app:layout_constraintEnd_toEndOf="@+id/textView61"
+            app:layout_constraintStart_toStartOf="@+id/textView57"
+            app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </layout>

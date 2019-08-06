@@ -11,7 +11,6 @@ import com.trihkfoods.main.databinding.FragmentCartBillBinding
 
 class CartBillFragment : Fragment() {
 
-
     private lateinit var _binding: FragmentCartBillBinding
 
     override fun onCreateView(
