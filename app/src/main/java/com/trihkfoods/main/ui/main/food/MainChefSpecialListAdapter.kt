@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemDishVerticalBinding
 import com.trihkfoods.main.tempmodels.FoodItem
 import com.trihkfoods.main.utils.onClick
-import kotlinx.android.synthetic.main.layout_add_button.view.*
+import kotlinx.android.synthetic.main.item_counter.view.*
 import kotlinx.android.synthetic.main.list_item_dish_vertical.view.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
