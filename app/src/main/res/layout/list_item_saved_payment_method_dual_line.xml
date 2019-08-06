@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@drawable/border_bottom_light_gray_regular"
         android:paddingStart="@dimen/padding_medium"
         android:paddingTop="@dimen/padding_regular"
         android:paddingEnd="@dimen/padding_medium"
@@ -55,5 +56,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_more_vert_black_24dp" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
