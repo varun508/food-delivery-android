@@ -25,11 +25,6 @@ constructor(
 ) : LinearLayout(context, attributeSet, defStyle, defRes) {
 
     private var itemCount = 1
-    private val padLeft = getPixelValueFromDP(16f).toInt()
-    private val padTop = getPixelValueFromDP(8f).toInt()
-    private val padRight = getPixelValueFromDP(16f).toInt()
-    private val padBottom = getPixelValueFromDP(8f).toInt()
-
     private lateinit var onIncrement: (value: Int) -> Unit
     private lateinit var onDecrement: (value: Int) -> Unit
 
@@ -43,11 +38,6 @@ constructor(
             context,
             R.drawable.curved_rectangle_radius_regular_stroke_regular
         )
-       // setPadding(padLeft, padTop, padRight, padBottom)
-        layoutTransition = LayoutTransition().apply {
-            disableTransitionType(DISAPPEARING)
-        }
-
         tvItemCount.text = itemCount.toString()
 
         ivIncreaseItemCount.onClick {
