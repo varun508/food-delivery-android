@@ -5,29 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:padding="@dimen/padding_medium">
+    android:paddingStart="@dimen/padding_medium"
+    android:paddingTop="@dimen/padding_regular"
+    android:paddingBottom="@dimen/padding_regular"
+    android:paddingEnd="@dimen/padding_medium">
 
     <ImageView
+        android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:tint="@color/trihk_green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:tint="@color/trihk_yellow"
         app:srcCompat="@drawable/ic_coupon" />
 
     <TextView
         android:id="@+id/textView43"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="62dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginStart="@dimen/margin_medium"
+        android:fontFamily="@font/manrope_semibold"
+        android:text="TRIHKPAY40"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_body_small"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <TextView
+        android:id="@+id/textView44"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:tint="@color/trihk_red"/>
+        android:text="120"
+        android:textSize="@dimen/text_size_caption"
+        android:fontFamily="@font/manrope_semibold"
+        android:drawableStart="@drawable/ic_rupee"
+        android:drawablePadding="@dimen/padding_small"
+        android:textColor="@color/trihk_red"
+        android:layout_marginTop="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="@+id/textView43"
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_delete_white_24dp" />
 
 
 
