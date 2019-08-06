@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.payment.SetPaymentMethodActivity"></activity>
+        <activity android:name=".ui.dish.DishActivity"></activity>
+        <activity android:name=".ui.payment.SetPaymentMethodActivity" />
         <activity android:name=".ui.payment.AddPaymentMethodActivity" />
         <activity android:name=".ui.coupon.ApplyCouponActivity" />
         <activity android:name=".ui.cart.CartActivity" />
