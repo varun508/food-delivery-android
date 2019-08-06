@@ -1,5 +1,7 @@
 package com.trihkfoods.main.widgets
 
+import android.animation.LayoutTransition
+import android.animation.LayoutTransition.DISAPPEARING
 import android.annotation.TargetApi
 import android.content.Context
 import android.os.Build
@@ -41,16 +43,22 @@ constructor(
             context,
             R.drawable.curved_rectangle_radius_regular_stroke_regular
         )
-        setPadding(padLeft, padTop, padRight, padBottom)
+       // setPadding(padLeft, padTop, padRight, padBottom)
+        layoutTransition = LayoutTransition().apply {
+            disableTransitionType(DISAPPEARING)
+        }
 
         tvItemCount.text = itemCount.toString()
 
         ivIncreaseItemCount.onClick {
-
-            onIncrement()
+            tvItemCount.text = (++itemCount).toString()
+            onDecrement(itemCount)
         }
         ivDecreaseItemCount.onClick {
-            onDecrement()
+            if (itemCount == 1)
+                return@onClick onDecrement(0)
+            tvItemCount.text = (--itemCount).toString()
+            onDecrement(itemCount)
         }
     }
 

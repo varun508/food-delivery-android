@@ -44,6 +44,16 @@ class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
         fun bind(foodItem: FoodItem) {
             binding.foodItem = foodItem
             binding.root.run {
+                itemCounterDishVertical.doOnDecrement {
+                    if(it == 0){
+                        tvAddToCartDishVertical.visibility = View.VISIBLE
+                        itemCounterDishVertical.visibility = View.GONE
+                    }
+                }
+
+                itemCounterDishVertical.doOnIncrement {
+
+                }
                 tvAddToCartDishVertical.onClick {
                     tvAddToCartDishVertical.visibility = View.GONE
                     itemCounterDishVertical.visibility = View.VISIBLE
