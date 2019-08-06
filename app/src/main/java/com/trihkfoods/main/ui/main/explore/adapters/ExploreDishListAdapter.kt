@@ -4,13 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ListItemDishHorizontalBinding
 import com.trihkfoods.main.tempmodels.FoodItem
 import com.trihkfoods.main.utils.onClick
-import kotlinx.android.synthetic.main.list_item_dish_horizontal.view.*
 
-class ExploreDishListAdapter(private val foodItems: ArrayList<FoodItem>) :
-    RecyclerView.Adapter<ExploreDishListAdapter.ViewHolder>() {
+class ExploreDishListAdapter(private val foodItems: List<FoodItem>) :
+    RecyclerView.Adapter<ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent)
 
@@ -20,7 +21,7 @@ class ExploreDishListAdapter(private val foodItems: ArrayList<FoodItem>) :
         holder.bind(foodItems[position])
     }
 
-    class ViewHolder(val binding: ListItemDishHorizontalBinding) :
+    class ViewHolderFoodItem(val binding: ListItemDishHorizontalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         companion object {
@@ -28,7 +29,7 @@ class ExploreDishListAdapter(private val foodItems: ArrayList<FoodItem>) :
             fun from(parent: ViewGroup): ViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = ListItemDishHorizontalBinding.inflate(inflater, parent, false)
-                return ViewHolder(binding)
+                return ViewHolderFoodItem(binding)
             }
         }
 
@@ -52,4 +53,19 @@ class ExploreDishListAdapter(private val foodItems: ArrayList<FoodItem>) :
             }
         }
     }
+
+    class ViewHolderChefHeader(val binding: ListItemDishHorizontalBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+
+        companion object {
+
+            fun from(parent: ViewGroup): ViewHolderChefHeader {
+                val inflater = LayoutInflater.from(parent.context)
+                val view = inflater.inflate(R.layout.list_item_chef_header,parent,false)
+                return ViewHolderChefHeader(view)
+            }
+        }
+    }
+
+
 }
