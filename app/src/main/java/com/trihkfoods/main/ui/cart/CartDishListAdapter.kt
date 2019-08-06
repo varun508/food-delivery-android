@@ -5,7 +5,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemCartDishBinding
 
-class CartDishListAdapter {
+class CartDishListAdapter : RecyclerView.Adapter<CartDishListAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+
+    }
+
+    override fun getItemCount(): Int {
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    }
+
 
     class ViewHolder(binding: ListItemCartDishBinding) : RecyclerView.ViewHolder(binding.root) {
         companion object {

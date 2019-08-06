@@ -60,7 +60,7 @@
             app:srcCompat="@drawable/ic_delete_white_24dp" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvCartDishList"
+            android:id="@+id/rvCartDish"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_regular"
