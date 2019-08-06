@@ -115,7 +115,7 @@
             app:layout_constraintEnd_toEndOf="@+id/viewScrim"
             app:srcCompat="@drawable/ic_non_veg" />
 
-        <com.trihkfoods.main.widgets.ItemCounterLayout
+        <com.trihkfoods.main.widgets.ItemCounter
             android:id="@+id/itemCounterDishVertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

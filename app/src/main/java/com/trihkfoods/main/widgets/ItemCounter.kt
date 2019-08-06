@@ -12,7 +12,7 @@ import com.trihkfoods.main.R
 import kotlinx.android.synthetic.main.item_counter.view.*
 
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-class ItemCounterLayout
+class ItemCounter
 @JvmOverloads
 constructor(
     context: Context,
