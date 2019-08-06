@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ActivityAddPaymentMethodBinding
+import com.trihkfoods.main.utils.changeStatusBarColor
 
 class AddPaymentMethodActivity : AppCompatActivity() {
 
@@ -14,5 +15,6 @@ class AddPaymentMethodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_add_payment_method)
+        changeStatusBarColor(R.color.white)
     }
 }
