@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ActivityCartBinding
 import com.trihkfoods.main.utils.changeStatusBarColor
+import kotlinx.android.synthetic.main.activity_cart.*
 
 class CartActivity : AppCompatActivity() {
 
@@ -15,5 +16,6 @@ class CartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_cart)
         changeStatusBarColor(R.color.white)
+
     }
 }
