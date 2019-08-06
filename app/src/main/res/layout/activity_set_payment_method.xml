@@ -6,6 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/light_gray"
         tools:context=".ui.payment.AddPaymentMethodActivity">
 
         <androidx.appcompat.widget.Toolbar
@@ -36,8 +37,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_medium"
-                    android:fontFamily="@font/manrope_extrabold"
-                    android:text="Set Payment Method"
+                    android:text="Pay Rs.773"
+                    android:fontFamily="@font/manrope_bold"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_title_regular"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -48,28 +49,12 @@
         </androidx.appcompat.widget.Toolbar>
 
         <TextView
-            android:id="@+id/textView58"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@color/trihk_green"
-            android:fontFamily="@font/manrope_bold"
-            android:gravity="center"
-            android:paddingTop="@dimen/padding_small"
-            android:paddingBottom="@dimen/padding_small"
-            android:text="Pay Rs.773"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_body_regular"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
-
-        <TextView
             android:id="@+id/textView59"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_medium"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
             android:background="@color/light_gray"
-            android:fontFamily="@font/manrope_semibold"
+            android:fontFamily="@font/manrope_bold"
             android:gravity="start"
             android:paddingStart="@dimen/padding_medium"
             android:paddingTop="@dimen/padding_regular"
@@ -80,7 +65,7 @@
             android:textSize="@dimen/text_size_body_regular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView58" />
+            tools:layout_editor_absoluteY="109dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvSavedPaymentMethod"
@@ -115,13 +100,14 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_chevron_right"
             android:background="@drawable/border_bottom_light_gray_regular"
             android:drawableStart="@drawable/ic_money"
             android:drawablePadding="@dimen/padding_medium"
             android:fontFamily="@font/manrope_semibold"
             android:gravity="start|center_vertical"
             android:padding="@dimen/padding_medium"
-            android:text="Add new payment method"
+            android:text="Cash on delivery"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_body_small"
             app:layout_constraintEnd_toEndOf="parent"
