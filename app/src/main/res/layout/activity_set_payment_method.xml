@@ -71,8 +71,8 @@
             android:id="@+id/rvSavedPaymentMethod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/textView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView59"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="227dp" />
@@ -96,23 +96,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rvSavedPaymentMethod" />
 
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_chevron_right"
-            android:background="@drawable/border_bottom_light_gray_regular"
-            android:drawableStart="@drawable/ic_money"
-            android:drawablePadding="@dimen/padding_medium"
-            android:fontFamily="@font/manrope_semibold"
-            android:gravity="start|center_vertical"
-            android:padding="@dimen/padding_medium"
-            android:text="Cash on delivery"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size_body_small"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView59" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

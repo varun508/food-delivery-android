@@ -21,7 +21,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_paypal" />
+            app:srcCompat="@drawable/ic_amazon_pay_logo" />
 
         <TextView
             android:id="@+id/textView48"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_medium"
             android:fontFamily="@font/manrope_semibold"
-            android:text="Paypal Wallet"
+            android:text="Amazon Pay Wallet"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_body_small"
             app:layout_constraintBottom_toBottomOf="@+id/imageView18"
