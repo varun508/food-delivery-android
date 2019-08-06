@@ -5,16 +5,17 @@
     android:layout_height="wrap_content"
     android:paddingTop="@dimen/padding_small"
     android:paddingBottom="@dimen/padding_small"
-    android:background="@color/gray"
+    android:background="@color/light_gray"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circleImageView3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:src="@drawable/image_temp_chef"
         app:civ_border_color="@color/white"
         app:civ_border_width="4dp"
+        android:layout_marginStart="@dimen/margin_big"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,7 +25,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/manrope_bold"
         android:text="Chef Ranveer"
-        android:layout_marginStart="@dimen/margin_big"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_caption"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/circleImageView3"
         app:layout_constraintStart_toEndOf="@+id/circleImageView3"
