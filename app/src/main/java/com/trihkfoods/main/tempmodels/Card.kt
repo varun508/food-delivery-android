@@ -1,6 +1,10 @@
 package com.trihkfoods.main.tempmodels
 
-data class Card(val id: String="",
-                val name: String="",
-                val number: String="",
-                val image: Int=0)
+import com.trihkfoods.main.R
+
+data class Card(
+    val id: String = "000",
+    val name: String = "Personal Card",
+    val number: String = "5555 XXXX XXXX 4444",
+    val image: Int = R.drawable.ic_mastercard
+)
