@@ -27,7 +27,7 @@ class CartActivity : AppCompatActivity() {
     private fun inflateDummyCartList() {
         val chefs = mutableListOf<Chef>()
         repeat(2) {
-            val dishes = listOf<FoodItem>( FoodItem(), FoodItem())
+            val dishes = listOf( FoodItem(), FoodItem())
             chefs += Chef(chefSpecials = dishes)
         }
         rvCartChef.adapter = CartChefListAdapter(chefs)
