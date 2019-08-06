@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="ContentDescription"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="@dimen/margin_medium"
+        android:id="@+id/ivDecreaseItemCount"
         android:tint="@color/trihk_red"
         app:srcCompat="@drawable/ic_remove_white_16dp" />
 
@@ -17,6 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:fontFamily="@font/manrope_bold"
+        android:id="@+id/tvItemCount"
         android:text="3"
         android:textColor="@color/text_black"
         android:textSize="@dimen/text_size_body_regular" />
@@ -25,6 +27,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/ivIncreaseItemCount"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="@dimen/margin_medium"
         android:tint="@color/trihk_red"
@@ -44,4 +47,4 @@
         android:paddingTop="@dimen/padding_regular"
         android:paddingEnd="@dimen/padding_medium"
         android:paddingBottom="@dimen/padding_regular">
-    <-!>
+    <!-->
