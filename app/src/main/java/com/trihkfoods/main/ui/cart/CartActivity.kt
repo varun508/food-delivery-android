@@ -9,8 +9,12 @@ import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ActivityCartBinding
 import com.trihkfoods.main.tempmodels.Chef
 import com.trihkfoods.main.tempmodels.FoodItem
+import com.trihkfoods.main.ui.payment.SetPaymentMethodActivity
 import com.trihkfoods.main.utils.changeStatusBarColor
+import com.trihkfoods.main.utils.navigateTo
+import com.trihkfoods.main.utils.onClick
 import kotlinx.android.synthetic.main.activity_cart.*
+import kotlinx.android.synthetic.main.layout_snippet_activity_cart_bottom.*
 
 class CartActivity : AppCompatActivity() {
 
@@ -22,12 +26,14 @@ class CartActivity : AppCompatActivity() {
         changeStatusBarColor(R.color.white)
 
         inflateDummyCartList()
+
+        tvProceedToPay.onClick { navigateTo(SetPaymentMethodActivity::class.java) }
     }
 
     private fun inflateDummyCartList() {
         val chefs = mutableListOf<Chef>()
         repeat(2) {
-            val dishes = listOf( FoodItem(), FoodItem())
+            val dishes = listOf(FoodItem(), FoodItem())
             chefs += Chef(chefSpecials = dishes)
         }
         rvCartChef.adapter = CartChefListAdapter(chefs)

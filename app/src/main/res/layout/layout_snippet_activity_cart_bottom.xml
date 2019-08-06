@@ -20,7 +20,7 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="@dimen/margin_medium"
-        app:layout_constraintBottom_toTopOf="@+id/textView48"
+        app:layout_constraintBottom_toTopOf="@+id/tvProceedToPay"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_delivery_man_solid_trihk_red" />
@@ -73,13 +73,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/trihk_green"
-        app:layout_constraintBottom_toBottomOf="@+id/textView48"
+        app:layout_constraintBottom_toBottomOf="@+id/tvProceedToPay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView48" />
+        app:layout_constraintTop_toTopOf="@+id/tvProceedToPay" />
 
     <TextView
-        android:id="@+id/textView48"
+        android:id="@+id/tvProceedToPay"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
