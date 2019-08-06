@@ -34,7 +34,7 @@ class SetPaymentMethodListAdapter(private val items: List<Any>) :
         if (items[position] is Wallet) R.layout.list_item_saved_payment_method_single_line
         else R.layout.list_item_saved_payment_method_dual_line
 
-    class ViewHolderSingleLine private constructor(binding: ListItemSavedPaymentMethodSingleLineBinding) :
+    class ViewHolderSingleLine private constructor(private val binding: ListItemSavedPaymentMethodSingleLineBinding) :
         ViewHolder(binding.root) {
 
         companion object {
@@ -47,12 +47,12 @@ class SetPaymentMethodListAdapter(private val items: List<Any>) :
         }
 
         fun bind(wallet: Wallet) {
-
+            binding.wallet = wallet
         }
 
     }
 
-    class ViewHolderDualLine private constructor(binding: ListItemSavedPaymentMethodDualLineBinding) :
+    class ViewHolderDualLine private constructor(private val binding: ListItemSavedPaymentMethodDualLineBinding) :
         ViewHolder(binding.root) {
 
         companion object {
@@ -65,7 +65,7 @@ class SetPaymentMethodListAdapter(private val items: List<Any>) :
         }
 
         fun bind(card: Card) {
-
+            binding.card = card
         }
     }
 
