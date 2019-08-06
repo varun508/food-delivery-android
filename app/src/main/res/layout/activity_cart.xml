@@ -13,6 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:contentInsetEnd="0dp"
+            android:background="@drawable/border_bottom_gray_thin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -57,8 +58,10 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </androidx.appcompat.widget.Toolbar>
+
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
