@@ -1,16 +1,19 @@
 package com.trihkfoods.main.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
-import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.R
+import com.trihkfoods.main.ui.cart.CartActivity
 import com.trihkfoods.main.ui.main.account.AccountFragment
-import com.trihkfoods.main.ui.main.offers.OffersFragment
 import com.trihkfoods.main.ui.main.explore.ExploreFragment
 import com.trihkfoods.main.ui.main.food.FoodFragment
+import com.trihkfoods.main.ui.main.offers.OffersFragment
 import com.trihkfoods.main.utils.changeStatusBarColor
+import com.trihkfoods.main.utils.navigateTo
+import com.trihkfoods.main.utils.onClick
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_bottom_cart_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,10 +25,10 @@ class MainActivity : AppCompatActivity() {
 
     private val fragmentTags by lazy {
         mapOf(
-                R.id.action_food_fragment to foodFragment.javaClass.simpleName,
-                R.id.action_explore_fragment to exploreFragment.javaClass.simpleName,
-                R.id.action_cart_fragment to offersFragment.javaClass.simpleName,
-                R.id.action_account_fragment to accountFragment.javaClass.simpleName
+            R.id.action_food_fragment to foodFragment.javaClass.simpleName,
+            R.id.action_explore_fragment to exploreFragment.javaClass.simpleName,
+            R.id.action_cart_fragment to offersFragment.javaClass.simpleName,
+            R.id.action_account_fragment to accountFragment.javaClass.simpleName
         )
     }
 
@@ -35,12 +38,16 @@ class MainActivity : AppCompatActivity() {
 
         changeStatusBarColor(R.color.white)
         bindUI()
-        RecyclerView.RecycledViewPool()
+        handleClickEvents()
     }
 
     private fun bindUI() {
         setupNavigationItemListener()
         mainBottomNav.selectedItemId = R.id.action_food_fragment
+    }
+
+    private fun handleClickEvents() {
+        layoutBottomViewCart.onClick { navigateTo(CartActivity::class.java) }
     }
 
     private fun setupNavigationItemListener() {
@@ -60,7 +67,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun FragmentManager.hideLastFragment() {
-        findFragmentByTag(fragmentTags[lastFragmentId])?.let { beginTransaction().hide(it).commit() }
+        findFragmentByTag(fragmentTags[lastFragmentId])?.let {
+            beginTransaction().hide(it).commit()
+        }
     }
 
     private fun FragmentManager.showSelectedFragment(id: Int) {
@@ -72,16 +81,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun FragmentManager.addFragment(id: Int, tag: String) {
         beginTransaction().add(R.id.mainFragmentContainer, getFragmentById(id), tag)
-                .commit()
+            .commit()
     }
 
     private fun getFragmentById(id: Int) =
-            when (id) {
-                R.id.action_food_fragment -> foodFragment
-                R.id.action_explore_fragment -> exploreFragment
-                R.id.action_cart_fragment -> offersFragment
-                R.id.action_account_fragment -> accountFragment
-                else -> foodFragment
-            }
+        when (id) {
+            R.id.action_food_fragment -> foodFragment
+            R.id.action_explore_fragment -> exploreFragment
+            R.id.action_cart_fragment -> offersFragment
+            R.id.action_account_fragment -> accountFragment
+            else -> foodFragment
+        }
 
 }

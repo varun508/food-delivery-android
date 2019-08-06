@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@color/trihk_green"
     android:clickable="true"
+    android:id="@+id/layoutBottomViewCart"
     android:focusable="true">
 
 
