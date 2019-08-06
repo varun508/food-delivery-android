@@ -28,7 +28,8 @@ class SetPaymentMethodActivity : AppCompatActivity() {
         val items = mutableListOf<Any>()
         items += Wallet()
         items += Card()
-        items += Wallet()
+        items += Wallet(image = R.drawable.ic_amazon_pay_logo, name = "Amazon Pay Wallet")
+        items += Wallet(image = R.drawable.ic_freecharge_logo, name = "Freecharge Wallet")
 
         rvSavedPaymentMethod.run {
             adapter = SetPaymentMethodListAdapter(items)
