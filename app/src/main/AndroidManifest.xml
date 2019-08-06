@@ -14,15 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.coupon.ApplyCouponActivity">
-
-        </activity>
+        <activity android:name=".ui.payment.AddPaymentMethodActivity"></activity>
+        <activity android:name=".ui.coupon.ApplyCouponActivity"></activity>
         <activity android:name=".ui.cart.CartActivity" />
         <activity
             android:name=".ui.profile.ChefProfileActivity"
-            android:theme="@style/ChefProfileTheme">
-
-        </activity>
+            android:theme="@style/ChefProfileTheme"></activity>
         <activity android:name=".ui.location.LocationActivity" />
         <activity android:name=".ui.main.MainActivity">
             <intent-filter>
@@ -39,9 +36,7 @@
             android:theme="@style/GetStartedTheme" />
         <activity
             android:name=".ui.SplashActivity"
-            android:theme="@style/SplashTheme">
-
-        </activity>
+            android:theme="@style/SplashTheme"></activity>
     </application>
 
 </manifest>
