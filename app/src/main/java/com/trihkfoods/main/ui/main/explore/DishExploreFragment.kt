@@ -31,11 +31,17 @@ class DishExploreFragment : Fragment() {
 
 
     private fun inflateDummyDishList() {
-        val foodItems = arrayListOf<FoodItem>()
-        repeat(10) { foodItems += FoodItem() }
+        val items = mutableListOf<Any>()
+
+        repeat(5) {
+            items += ""
+            repeat(2) {
+                items += FoodItem()
+            }
+        }
 
         rvDishExplore?.run {
-            adapter = ExploreDishListAdapter(foodItems)
+            adapter = ExploreDishListAdapter(items)
             layoutManager =
                 LinearLayoutManager(requireContext()).apply { orientation = RecyclerView.VERTICAL }
         }
