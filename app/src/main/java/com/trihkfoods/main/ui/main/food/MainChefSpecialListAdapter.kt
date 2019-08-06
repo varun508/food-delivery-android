@@ -46,7 +46,7 @@ class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
             binding.root.run {
                 tvAddToCartDishVertical.onClick {
                     tvAddToCartDishVertical.visibility = View.GONE
-                    include2.visibility = View.VISIBLE
+                    itemCounterDishVertical.visibility = View.VISIBLE
                 }
             }
         }
