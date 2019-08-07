@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
+    <data>
+        <variable
+            name="header"
+            type="com.trihkfoods.main.tempmodels.AccountOptionHeader" />
+    </data>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/manrope_bold"
-            android:text="ACCOUNT DETAILS"
+            android:text="@{header.title}"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_body_small" />
@@ -26,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:fontFamily="@font/manrope_medium"
-            android:text="Invites, Favourites and more"
+            android:text="@{header.subTitle}"
             android:textColor="@color/gray"
             android:textSize="@dimen/text_size_caption" />
 

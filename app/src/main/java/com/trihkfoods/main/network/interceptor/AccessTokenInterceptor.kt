@@ -1,4 +1,4 @@
-package com.trihkfoods.main.data.network.interceptor
+package com.trihkfoods.main.network.interceptor
 
 import okhttp3.Interceptor
 import okhttp3.Response

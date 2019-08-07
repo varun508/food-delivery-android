@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="option"
+            type="com.trihkfoods.main.tempmodels.AccountOption" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/manrope_semibold"
-            android:text="Payment"
+            android:text="@{option.title}"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_body_small"
             app:layout_constraintBottom_toBottomOf="parent"

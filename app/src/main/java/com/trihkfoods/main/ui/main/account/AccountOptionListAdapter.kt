@@ -51,7 +51,7 @@ class AccountOptionListAdapter(private val list: List<Any>) :
         }
 
         fun bind(header: AccountOptionHeader) {
-
+            binding.header = header
         }
     }
 
@@ -70,7 +70,7 @@ class AccountOptionListAdapter(private val list: List<Any>) :
         }
 
         fun bind(option: AccountOption) {
-
+            binding.option = option
         }
     }
 }

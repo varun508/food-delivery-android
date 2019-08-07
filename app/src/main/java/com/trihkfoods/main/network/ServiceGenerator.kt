@@ -1,7 +1,6 @@
-package com.trihkfoods.main.data.network
+package com.trihkfoods.main.network
 
-import com.squareup.moshi.Moshi
-import com.trihkfoods.main.data.network.interceptor.AccessTokenInterceptor
+import com.trihkfoods.main.network.interceptor.AccessTokenInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

@@ -1,7 +1,6 @@
-package com.trihkfoods.main.data.network.response
+package com.trihkfoods.main.network.response
 
 import retrofit2.Response
-import java.io.IOException
 
 
 open class ApiResponse<T> {

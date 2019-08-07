@@ -1,6 +1,6 @@
-package com.trihkfoods.main.data.network.service
+package com.trihkfoods.main.network.service
 
-import com.trihkfoods.main.data.network.response.ApiResponse
+import com.trihkfoods.main.network.response.ApiResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
