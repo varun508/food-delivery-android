@@ -32,8 +32,8 @@ class ChefExploreFragment : Fragment() {
 
     private fun inflateDummyChefList() {
         val foodItems = arrayListOf<FoodItem>()
-
         val chefs = arrayListOf<Chef>()
+
         repeat(10) { chefs += Chef(chefSpecials = foodItems) }
 
         rvChefExplore?.run {

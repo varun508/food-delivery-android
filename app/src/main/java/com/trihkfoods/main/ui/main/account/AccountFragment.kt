@@ -33,8 +33,19 @@ class AccountFragment : Fragment() {
     private fun inflateDummyOptionList() {
         val list = mutableListOf<Any>()
 
-        list += AccountOptionHeader()
-        repeat(5) { list += AccountOption() }
+        list += AccountOptionHeader(title = "Account Settings", subTitle = "Payments, Addresses and more")
+        list += AccountOption("Payment Methods")
+        list += AccountOption("Manage Addresses")
+        list += AccountOption("Favourites")
+        list += AccountOption("Invite")
+        list += AccountOption("Past Orders")
+
+        list += AccountOptionHeader(title = "HELP", subTitle = "Issues and FAQs")
+        list += AccountOption("TRIHK Deals")
+        list += AccountOption("Chat With Us")
+        list += AccountOption("General Issues")
+        list += AccountOption("FAQs")
+
 
         list += AccountOptionHeader()
         repeat(5) { list += AccountOption() }
