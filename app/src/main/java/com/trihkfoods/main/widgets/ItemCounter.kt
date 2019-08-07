@@ -42,6 +42,7 @@ constructor(
             tvItemCount.text = (++itemCount).toString()
             onDecrement(itemCount)
         }
+
         ivDecreaseItemCount.onClick {
             if (itemCount == 1)
                 return@onClick onDecrement(0)

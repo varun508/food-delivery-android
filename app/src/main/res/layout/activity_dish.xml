@@ -70,6 +70,7 @@
             android:id="@+id/textView66"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
+            android:animateLayoutChanges="true"
             android:layout_marginStart="@dimen/margin_big"
             android:layout_marginBottom="@dimen/margin_big"
             app:layout_constraintBottom_toBottomOf="parent"

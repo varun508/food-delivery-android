@@ -22,12 +22,11 @@ class DishActivity : AppCompatActivity() {
             itemCounterDishAct.visibility = View.VISIBLE
         }
 
-        itemCounterDishAct.doOnIncrement {
-
-        }
-
         itemCounterDishAct.doOnDecrement {
-            if(it == 0)
+            if (it == 0) {
+                tvAddToCartDishAct.visibility = View.VISIBLE
+                itemCounterDishAct.visibility = View.GONE
+            }
         }
     }
 }
