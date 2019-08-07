@@ -1,7 +1,5 @@
 package com.trihkfoods.main.widgets
 
-import android.animation.LayoutTransition
-import android.animation.LayoutTransition.DISAPPEARING
 import android.annotation.TargetApi
 import android.content.Context
 import android.os.Build
@@ -25,8 +23,8 @@ constructor(
 ) : LinearLayout(context, attributeSet, defStyle, defRes) {
 
     private var itemCount = 1
-    private lateinit var onIncrement: (value: Int) -> Unit
-    private lateinit var onDecrement: (value: Int) -> Unit
+    private var onIncrement: (value: Int) -> Unit = {}
+    private var onDecrement: (value: Int) -> Unit = {}
 
     init {
         orientation = HORIZONTAL
@@ -52,23 +50,12 @@ constructor(
         }
     }
 
-
-    private fun getPixelValueFromDP(value: Float) = TypedValue.applyDimension(
-        TypedValue.COMPLEX_UNIT_DIP,
-        value,
-        context.resources.displayMetrics
-    )
-
     fun doOnIncrement(block: (value: Int) -> Unit) {
-        if (!::onIncrement.isInitialized) {
-            onIncrement = block
-        }
+        onIncrement = block
     }
 
     fun doOnDecrement(block: (value: Int) -> Unit) {
-        if (!::onDecrement.isInitialized) {
-            onDecrement = block
-        }
+        onDecrement = block
     }
 
 }

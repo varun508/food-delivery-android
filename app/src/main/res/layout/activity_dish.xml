@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.dish.DishActivity">
@@ -11,42 +12,182 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/image_temp_food_item"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_temp_food_item" />
 
         <View
+            android:id="@+id/view7"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/scrim_black_half"/>
+            android:background="@drawable/scrim_black_half"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
 
 
         <ImageView
+            android:id="@+id/imageView20"
             backgroundCompatTint="@{@color/black_60}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/circle_small"
-            android:tint="@color/white"
-            android:padding="@dimen/padding_small"
+            android:layout_marginStart="@dimen/margin_big"
             android:layout_marginTop="@dimen/margin_biggest"
-            android:layout_marginStart="@dimen/margin_medium"
+            android:background="@drawable/circle_small"
+            android:padding="@dimen/padding_small"
+            android:tint="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_arrow_left_solid_black_30dp" />
 
 
-
         <ImageView
             backgroundCompatTint="@{@color/black_60}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/circle_small"
-            android:tint="@color/trihk_red"
-            android:padding="@dimen/padding_small"
             android:layout_marginTop="@dimen/margin_biggest"
             android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@drawable/circle_small"
+            android:padding="@dimen/padding_small"
+            android:tint="@color/trihk_red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_favorite_black_24dp" />
+
+
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="4.4"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:stepSize="0.1"
+            android:theme="@style/RatingBarTheme"
+            app:layout_constraintBottom_toTopOf="@+id/textView70"
+            app:layout_constraintStart_toStartOf="@+id/textView70" />
+
+        <FrameLayout
+            android:id="@+id/textView66"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/margin_big"
+            android:layout_marginBottom="@dimen/margin_big"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/curved_corner_rectangle_trihk_red"
+                android:fontFamily="@font/manrope_bold"
+                android:paddingStart="@dimen/padding_big"
+                android:paddingTop="@dimen/padding_regular"
+                android:paddingEnd="@dimen/padding_big"
+                android:paddingBottom="@dimen/padding_regular"
+                android:text="Add to cart"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body_small"
+                android:id="@+id/tvAddToCartDishAct"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.trihkfoods.main.widgets.ItemCounter
+                android:layout_width="wrap_content"
+                android:id="@+id/itemCounterDishAct"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView67"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Szechuan cuisine is characterized by the use of chilies, garlic and Szechuan peppercorn which gives it a bold, pungent, spicy flavour. A tantalizing and appetizing Szechuan noodle bowl looks like this: perfectly al dente glass noodle topped with tiny bites of chicken breast and stuffed crabsticks"
+            android:layout_marginBottom="@dimen/margin_bigger"
+            android:layout_marginEnd="@dimen/margin_big"
+            app:layout_constraintBottom_toTopOf="@+id/textView66"
+            android:textColor="#CCFFFFFF"
+            android:fontFamily="@font/manrope_medium"
+            android:textSize="@dimen/text_size_body_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView66" />
+
+        <TextView
+            android:id="@+id/textView68"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_semibold"
+            android:text="By"
+            android:textSize="@dimen/text_size_caption"
+            android:textColor="@color/white_50"
+            app:layout_constraintStart_toStartOf="@+id/textView69"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView5" />
+
+        <TextView
+            android:id="@+id/textView69"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_semibold"
+            android:text="Chef Ranveer"
+            android:layout_marginEnd="@dimen/margin_big"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView68" />
+
+        <TextView
+            android:id="@+id/textView70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Butter Chicken"
+            android:fontFamily="@font/manrope_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body_regular"
+            android:layout_marginBottom="@dimen/margin_big"
+            app:layout_constraintBottom_toTopOf="@+id/textView67"
+            app:layout_constraintStart_toStartOf="@+id/textView67" />
+
+        <TextView
+            android:id="@+id/textView71"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:fontFamily="@font/manrope_bold"
+            android:text="(1478) Reviews"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_caption"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBar2"
+            app:layout_constraintStart_toEndOf="@+id/ratingBar2"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar2"
+            app:layout_constraintVertical_bias="0.763" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:src="@drawable/image_temp_chef"
+            app:civ_border_color="@color/white_50"
+            app:civ_border_width="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView66"
+            app:layout_constraintEnd_toStartOf="@+id/textView69" />
+
+        <TextView
+            android:id="@+id/textView72"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs. 120"
+            android:textColor="@color/trihk_red"
+            android:fontFamily="@font/manrope_bold"
+            android:textSize="@dimen/text_size_body_regular"
+            app:layout_constraintBottom_toBottomOf="@+id/textView70"
+            app:layout_constraintEnd_toEndOf="@+id/textView67"
+            app:layout_constraintTop_toTopOf="@+id/textView70" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -24,11 +24,7 @@
             android:theme="@style/ChefProfileTheme" />
         <activity android:name=".ui.location.LocationActivity" />
         <activity android:name=".ui.main.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.authentication.AuthenticationActivity"
@@ -38,7 +34,14 @@
             android:theme="@style/GetStartedTheme" />
         <activity
             android:name=".ui.SplashActivity"
-            android:theme="@style/SplashTheme" />
+            android:theme="@style/SplashTheme" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

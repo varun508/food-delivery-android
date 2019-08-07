@@ -14,8 +14,10 @@ import com.trihkfoods.main.tempmodels.Chef
 import com.trihkfoods.main.tempmodels.FoodItem
 import com.trihkfoods.main.tempmodels.Offer
 import com.trihkfoods.main.ui.dish.DishActivity
+import com.trihkfoods.main.ui.location.LocationActivity
 import com.trihkfoods.main.ui.profile.ChefProfileActivity
 import com.trihkfoods.main.utils.navigateTo
+import com.trihkfoods.main.utils.onClick
 import kotlinx.android.synthetic.main.fragment_food.*
 
 class FoodFragment : Fragment() {
@@ -36,6 +38,8 @@ class FoodFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        include.onClick { activity?.navigateTo(LocationActivity::class.java) }
 
         inflateDummyChefList()
         inflateDummyOfferList()

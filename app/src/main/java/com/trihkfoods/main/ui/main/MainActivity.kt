@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import com.trihkfoods.main.R
 import com.trihkfoods.main.ui.cart.CartActivity
+import com.trihkfoods.main.ui.location.LocationActivity
 import com.trihkfoods.main.ui.main.account.AccountFragment
 import com.trihkfoods.main.ui.main.explore.ExploreFragment
 import com.trihkfoods.main.ui.main.food.FoodFragment
@@ -14,6 +15,7 @@ import com.trihkfoods.main.utils.navigateTo
 import com.trihkfoods.main.utils.onClick
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_bottom_cart_main.*
+import kotlinx.android.synthetic.main.layout_location_toolbar.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun handleClickEvents() {
         layoutBottomViewCart.onClick { navigateTo(CartActivity::class.java) }
-    }
+         }
 
     private fun setupNavigationItemListener() {
         mainBottomNav.setOnNavigationItemSelectedListener {

@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.R
 import com.trihkfoods.main.databinding.ActivityCartBinding
 import com.trihkfoods.main.tempmodels.Chef
+import com.trihkfoods.main.tempmodels.Coupon
 import com.trihkfoods.main.tempmodels.FoodItem
+import com.trihkfoods.main.ui.coupon.ApplyCouponActivity
 import com.trihkfoods.main.ui.payment.SetPaymentMethodActivity
 import com.trihkfoods.main.utils.changeStatusBarColor
 import com.trihkfoods.main.utils.navigateTo
@@ -28,9 +30,11 @@ class CartActivity : AppCompatActivity() {
         inflateDummyCartList()
 
         tvProceedToPay.onClick { navigateTo(SetPaymentMethodActivity::class.java) }
+        include2.onClick { navigateTo(ApplyCouponActivity::class.java) }
     }
 
     private fun inflateDummyCartList() {
+
         val chefs = mutableListOf<Chef>()
         repeat(2) {
             val dishes = listOf(FoodItem(), FoodItem())
