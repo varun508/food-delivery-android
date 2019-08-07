@@ -12,7 +12,8 @@ import kotlinx.android.synthetic.main.list_item_chef_expandable.view.*
 
 class MainChefListAdapter(
     private val chefs: ArrayList<Chef>,
-    private val onViewAllClick: () -> Unit
+    private val onViewAllClick: () -> Unit,
+    private val onDishItemClick: () -> Unit
 ) :
     RecyclerView.Adapter<MainChefListAdapter.ViewHolder>() {
 
@@ -41,7 +42,7 @@ class MainChefListAdapter(
             rvChefSpecialsMain.setRecycledViewPool(viewPool)
             tvViewAll.onClick { onViewAllClick() }
         }
-        holder.bind(chef)
+        holder.bind(chef, onDishItemClick)
     }
 
     class ViewHolder(val binding: ListItemChefExpandableBinding) :
@@ -56,7 +57,7 @@ class MainChefListAdapter(
             }
         }
 
-        fun bind(chef: Chef) {
+        fun bind(chef: Chef, block: () -> Unit) {
             binding.run {
                 this.chef = chef
                 rvChefSpecialsMain.run {
@@ -64,7 +65,7 @@ class MainChefListAdapter(
                         orientation = LinearLayout.HORIZONTAL
                     }
                     adapter =
-                        MainChefSpecialListAdapter(chef.chefSpecials)
+                        MainChefSpecialListAdapter(chef.chefSpecials) { block() }
                 }
             }
         }

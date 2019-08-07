@@ -7,13 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.trihkfoods.main.databinding.ListItemDishVerticalBinding
 import com.trihkfoods.main.tempmodels.FoodItem
 import com.trihkfoods.main.utils.onClick
-import kotlinx.android.synthetic.main.item_counter.view.*
 import kotlinx.android.synthetic.main.list_item_dish_vertical.view.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
-class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
+class MainChefSpecialListAdapter(private val items: List<FoodItem>,private val block: () -> Unit) :
     RecyclerView.Adapter<MainChefSpecialListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
@@ -25,9 +21,10 @@ class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(items[position])
+        holder.binding.root.onClick { block() }
     }
 
-    class ViewHolder(private val binding: ListItemDishVerticalBinding) :
+    class ViewHolder( val binding: ListItemDishVerticalBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         companion object {
@@ -45,7 +42,7 @@ class MainChefSpecialListAdapter(private val items: List<FoodItem>) :
             binding.foodItem = foodItem
             binding.root.run {
                 itemCounterDishVertical.doOnDecrement {
-                    if(it == 0){
+                    if (it == 0) {
                         tvAddToCartDishVertical.visibility = View.VISIBLE
                         itemCounterDishVertical.visibility = View.GONE
                     }

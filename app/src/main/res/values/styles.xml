@@ -17,6 +17,10 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="DishTheme" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
 
     <style name="ChefProfileTheme" parent="AppTheme">
         <item name="colorPrimaryDark">@color/black</item>
