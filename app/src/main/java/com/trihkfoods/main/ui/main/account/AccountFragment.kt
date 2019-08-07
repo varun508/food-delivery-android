@@ -46,10 +46,6 @@ class AccountFragment : Fragment() {
         list += AccountOption("General Issues")
         list += AccountOption("FAQs")
 
-
-        list += AccountOptionHeader()
-        repeat(5) { list += AccountOption() }
-
         rvAccountOption?.run {
             layoutManager = LinearLayoutManager(requireContext()).apply {
                 orientation = RecyclerView.VERTICAL
